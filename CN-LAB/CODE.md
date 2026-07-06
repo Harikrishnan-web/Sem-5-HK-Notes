@@ -593,3 +593,332 @@ public class ChatClient {
 | No user input is needed on the server after receiving a message.     | Both client and server type messages and communicate interactively. |
 
 ---
+
+# **EX. NO. 4: SIMULATION OF DNS USING UDP SOCKETS**
+
+## **AIM**
+
+To create a Java program that simulates a DNS server and client using UDP sockets.
+
+---
+
+# **Simple Algorithm**
+
+## **DNS Server**
+
+**Step 1:** Start the program.
+
+**Step 2:** Create a UDP socket on port **9876**.
+
+**Step 3:** Store domain names and their corresponding IP addresses.
+
+**Step 4:** Wait for a DNS request from the client.
+
+**Step 5:** Receive the domain name.
+
+**Step 6:** Search for the domain name in the DNS table.
+
+**Step 7:** Send the corresponding IP address to the client. If the domain is not found, send **"Domain Not Found"**.
+
+**Step 8:** Repeat the process for other requests.
+
+---
+
+## **DNS Client**
+
+**Step 1:** Start the program.
+
+**Step 2:** Create a UDP socket.
+
+**Step 3:** Enter the domain name.
+
+**Step 4:** Send the domain name to the DNS server.
+
+**Step 5:** Receive the IP address from the server.
+
+**Step 6:** Display the IP address.
+
+**Step 7:** Close the socket.
+
+---
+
+# **Simple DNS Server Program**
+
+```java
+import java.net.*;
+import java.util.HashMap;
+
+public class DNSServer {
+
+    public static void main(String[] args) {
+
+        try {
+            DatagramSocket serverSocket = new DatagramSocket(9876);
+
+            HashMap<String, String> dnsTable = new HashMap<>();
+
+            dnsTable.put("www.google.com", "142.250.183.14");
+            dnsTable.put("www.yahoo.com", "98.137.11.163");
+            dnsTable.put("www.facebook.com", "157.240.229.35");
+            dnsTable.put("www.amazon.com", "205.251.242.103");
+
+            byte[] receiveData = new byte[1024];
+
+            System.out.println("DNS Server Started...");
+
+            while (true) {
+
+                DatagramPacket receivePacket =
+                        new DatagramPacket(receiveData, receiveData.length);
+
+                serverSocket.receive(receivePacket);
+
+                String domain = new String(receivePacket.getData(), 0,
+                        receivePacket.getLength());
+
+                System.out.println("Request: " + domain);
+
+                String ip = dnsTable.getOrDefault(domain, "Domain Not Found");
+
+                byte[] sendData = ip.getBytes();
+
+                DatagramPacket sendPacket =
+                        new DatagramPacket(sendData, sendData.length,
+                                receivePacket.getAddress(),
+                                receivePacket.getPort());
+
+                serverSocket.send(sendPacket);
+            }
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
+```
+
+---
+
+# **Simple DNS Client Program**
+
+```java
+import java.net.*;
+import java.util.Scanner;
+
+public class DNSClient {
+
+    public static void main(String[] args) {
+
+        try {
+
+            DatagramSocket clientSocket = new DatagramSocket();
+
+            Scanner sc = new Scanner(System.in);
+
+            System.out.print("Enter Domain Name: ");
+            String domain = sc.nextLine();
+
+            byte[] sendData = domain.getBytes();
+            byte[] receiveData = new byte[1024];
+
+            InetAddress serverIP = InetAddress.getByName("localhost");
+
+            DatagramPacket sendPacket =
+                    new DatagramPacket(sendData, sendData.length,
+                            serverIP, 9876);
+
+            clientSocket.send(sendPacket);
+
+            DatagramPacket receivePacket =
+                    new DatagramPacket(receiveData, receiveData.length);
+
+            clientSocket.receive(receivePacket);
+
+            String result = new String(receivePacket.getData(), 0,
+                    receivePacket.getLength());
+
+            System.out.println("IP Address: " + result);
+
+            sc.close();
+            clientSocket.close();
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
+```
+
+---
+
+# **How the DNS Simulation Works**
+
+## **DNS Server**
+
+### **1. Create UDP Socket**
+
+```java
+DatagramSocket serverSocket = new DatagramSocket(9876);
+```
+
+Creates a UDP server that listens on **port 9876**.
+
+---
+
+### **2. Create DNS Table**
+
+```java
+HashMap<String, String> dnsTable = new HashMap<>();
+```
+
+Stores domain names and their corresponding IP addresses.
+
+Example:
+
+* [www.google.com](http://www.google.com) → 142.250.183.14
+* [www.yahoo.com](http://www.yahoo.com) → 98.137.11.163
+
+---
+
+### **3. Wait for Client Request**
+
+```java
+serverSocket.receive(receivePacket);
+```
+
+The server waits until a client sends a domain name.
+
+---
+
+### **4. Read the Domain Name**
+
+```java
+String domain = new String(receivePacket.getData(), 0,
+receivePacket.getLength());
+```
+
+Converts the received bytes into a domain name.
+
+---
+
+### **5. Search the DNS Table**
+
+```java
+String ip = dnsTable.getOrDefault(domain, "Domain Not Found");
+```
+
+Looks for the domain name.
+
+* If found → Returns the IP address.
+* Otherwise → Returns **"Domain Not Found"**.
+
+---
+
+### **6. Send Response**
+
+```java
+serverSocket.send(sendPacket);
+```
+
+Sends the IP address back to the client using UDP.
+
+---
+
+## **DNS Client**
+
+### **1. Create UDP Socket**
+
+```java
+DatagramSocket clientSocket = new DatagramSocket();
+```
+
+Creates a UDP client socket.
+
+---
+
+### **2. Read Domain Name**
+
+```java
+Scanner sc = new Scanner(System.in);
+
+String domain = sc.nextLine();
+```
+
+Reads the domain name entered by the user.
+
+---
+
+### **3. Send Request**
+
+```java
+clientSocket.send(sendPacket);
+```
+
+Sends the domain name to the DNS server.
+
+---
+
+### **4. Receive Response**
+
+```java
+clientSocket.receive(receivePacket);
+```
+
+Receives the IP address sent by the server.
+
+---
+
+### **5. Display the Result**
+
+```java
+System.out.println("IP Address: " + result);
+```
+
+Displays the IP address (or **Domain Not Found**) on the screen.
+
+---
+
+### **6. Close the Socket**
+
+```java
+clientSocket.close();
+```
+
+Closes the client socket and ends the program.
+
+---
+
+# **Expected Output**
+
+### **Server**
+
+```
+DNS Server Started...
+
+Request: www.google.com
+
+Request: www.yahoo.com
+```
+
+### **Client**
+
+```
+Enter Domain Name: www.google.com
+
+IP Address: 142.250.183.14
+```
+
+or
+
+```
+Enter Domain Name: www.abc.com
+
+IP Address: Domain Not Found
+```
+
+---
+
+## **RESULT**
+
+Thus, the simulation of DNS using UDP sockets in Java was successfully implemented. The client sends a domain name to the DNS server, and the server returns the corresponding IP address using the UDP communication protocol.
+---
