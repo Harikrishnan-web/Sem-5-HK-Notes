@@ -234,3 +234,362 @@ Content-Length: ...
 Thus, the Java HTTP web client program was developed using TCP socket communication and executed successfully. The web page content received from the server was displayed successfully.
 
 ---
+# **EX. NO. 3A: ECHO CLIENT AND ECHO SERVER USING TCP SOCKETS**
+
+## **AIM**
+
+To create a Java program for Echo Client and Echo Server using TCP sockets.
+
+---
+
+# **Simple Algorithm**
+
+## **Echo Server**
+
+**Step 1:** Start the program.
+
+**Step 2:** Create a server socket on port **6666**.
+
+**Step 3:** Wait for the client to connect.
+
+**Step 4:** Create input and output streams.
+
+**Step 5:** Receive a message from the client.
+
+**Step 6:** Send the same message (echo) back to the client.
+
+**Step 7:** Repeat until **stop** is entered.
+
+**Step 8:** Close the connection and stop the program.
+
+---
+
+## **Echo Client**
+
+**Step 1:** Start the program.
+
+**Step 2:** Connect to the server using **localhost** and port **6666**.
+
+**Step 3:** Create input and output streams.
+
+**Step 4:** Read a message from the user.
+
+**Step 5:** Send the message to the server.
+
+**Step 6:** Receive the echoed message from the server and display it.
+
+**Step 7:** Repeat until **stop** is entered.
+
+**Step 8:** Close the connection and stop the program.
+
+---
+
+# **Simple Echo Server Program**
+
+```java
+import java.io.*;
+import java.net.*;
+
+public class ChatServer {
+
+    public static void main(String[] args) {
+
+        try {
+            ServerSocket server = new ServerSocket(6666);
+            System.out.println("Server started...");
+
+            Socket socket = server.accept();
+            System.out.println("Client connected.");
+
+            DataInputStream in = new DataInputStream(socket.getInputStream());
+            DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+
+            String message;
+
+            while (true) {
+
+                message = in.readUTF();
+                System.out.println("Client: " + message);
+
+                out.writeUTF(message);
+                out.flush();
+
+                if (message.equalsIgnoreCase("stop"))
+                    break;
+            }
+
+            in.close();
+            out.close();
+            socket.close();
+            server.close();
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
+```
+
+---
+
+# **Simple Echo Client Program**
+
+```java
+import java.io.*;
+import java.net.*;
+import java.util.Scanner;
+
+public class ChatClient {
+
+    public static void main(String[] args) {
+
+        try {
+            Socket socket = new Socket("localhost", 6666);
+
+            DataInputStream in = new DataInputStream(socket.getInputStream());
+            DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+
+            Scanner sc = new Scanner(System.in);
+
+            String message;
+
+            while (true) {
+
+                System.out.print("Enter Message: ");
+                message = sc.nextLine();
+
+                out.writeUTF(message);
+                out.flush();
+
+                System.out.println("Server: " + in.readUTF());
+
+                if (message.equalsIgnoreCase("stop"))
+                    break;
+            }
+
+            sc.close();
+            in.close();
+            out.close();
+            socket.close();
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
+```
+
+---
+
+# **How the Echo Program Works**
+
+### **Server**
+
+* Creates a `ServerSocket` on port **6666**.
+* Waits for a client using `accept()`.
+* Receives a message using `readUTF()`.
+* Sends the **same message** back using `writeUTF()`.
+* Continues until **stop** is received.
+* Closes all connections.
+
+### **Client**
+
+* Connects to the server.
+* Reads a message from the keyboard.
+* Sends it to the server.
+* Receives the **same message** (echo) from the server.
+* Displays it on the screen.
+* Stops when **stop** is entered.
+
+---
+
+# **EX. NO. 3B: CHAT APPLICATION USING TCP SOCKETS**
+
+## **AIM**
+
+To create a Java Chat Application using TCP sockets.
+
+---
+
+# **Simple Algorithm**
+
+## **Chat Server**
+
+**Step 1:** Start the program.
+
+**Step 2:** Create a server socket on port **6666**.
+
+**Step 3:** Wait for the client to connect.
+
+**Step 4:** Create input and output streams.
+
+**Step 5:** Receive a message from the client.
+
+**Step 6:** Enter a reply and send it to the client.
+
+**Step 7:** Repeat until **stop** is entered.
+
+**Step 8:** Close the connection and stop the program.
+
+---
+
+## **Chat Client**
+
+**Step 1:** Start the program.
+
+**Step 2:** Connect to the server.
+
+**Step 3:** Create input and output streams.
+
+**Step 4:** Enter a message and send it to the server.
+
+**Step 5:** Receive the server's reply and display it.
+
+**Step 6:** Repeat until **stop** is entered.
+
+**Step 7:** Close the connection and stop the program.
+
+---
+
+# **Simple Chat Server Program**
+
+```java
+import java.io.*;
+import java.net.*;
+import java.util.Scanner;
+
+public class ChatServer {
+
+    public static void main(String[] args) {
+
+        try {
+            ServerSocket server = new ServerSocket(6666);
+            System.out.println("Server started...");
+
+            Socket socket = server.accept();
+
+            DataInputStream in = new DataInputStream(socket.getInputStream());
+            DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+
+            Scanner sc = new Scanner(System.in);
+
+            String message;
+
+            while (true) {
+
+                message = in.readUTF();
+                System.out.println("Client: " + message);
+
+                if (message.equalsIgnoreCase("stop"))
+                    break;
+
+                System.out.print("Reply: ");
+                message = sc.nextLine();
+
+                out.writeUTF(message);
+                out.flush();
+
+                if (message.equalsIgnoreCase("stop"))
+                    break;
+            }
+
+            sc.close();
+            in.close();
+            out.close();
+            socket.close();
+            server.close();
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
+```
+
+---
+
+# **Simple Chat Client Program**
+
+```java
+import java.io.*;
+import java.net.*;
+import java.util.Scanner;
+
+public class ChatClient {
+
+    public static void main(String[] args) {
+
+        try {
+            Socket socket = new Socket("localhost", 6666);
+
+            DataInputStream in = new DataInputStream(socket.getInputStream());
+            DataOutputStream out = new DataOutputStream(socket.getOutputStream());
+
+            Scanner sc = new Scanner(System.in);
+
+            String message;
+
+            while (true) {
+
+                System.out.print("You: ");
+                message = sc.nextLine();
+
+                out.writeUTF(message);
+                out.flush();
+
+                if (message.equalsIgnoreCase("stop"))
+                    break;
+
+                System.out.println("Server: " + in.readUTF());
+            }
+
+            sc.close();
+            in.close();
+            out.close();
+            socket.close();
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}
+```
+
+---
+
+# **How the Chat Application Works**
+
+### **Chat Server**
+
+1. Creates a `ServerSocket` on port **6666**.
+2. Waits for the client to connect.
+3. Receives a message using `readUTF()`.
+4. Displays the client's message.
+5. Reads a reply from the keyboard.
+6. Sends the reply using `writeUTF()`.
+7. Repeats until **stop** is entered.
+8. Closes the socket and streams.
+
+---
+
+### **Chat Client**
+
+1. Connects to the server using `Socket`.
+2. Takes a message from the user.
+3. Sends it to the server using `writeUTF()`.
+4. Receives the server's reply using `readUTF()`.
+5. Displays the reply.
+6. Continues chatting until **stop** is entered.
+7. Closes all streams and the socket.
+
+---
+
+### **Difference Between Echo and Chat Applications**
+
+| **Echo Application**                                                 | **Chat Application**                                                |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| The server sends back the **same message** received from the client. | The server sends its **own reply** to the client.                   |
+| Used to test communication.                                          | Used for two-way communication.                                     |
+| No user input is needed on the server after receiving a message.     | Both client and server type messages and communicate interactively. |
+
+---
