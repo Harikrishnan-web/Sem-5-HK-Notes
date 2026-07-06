@@ -1,0 +1,19 @@
+## EX NO. 1 – Networking Commands
+
+| **Command**                        | **Use (Purpose)**                                                | **What it Displays**                                                                                                                              |
+| ---------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ipconfig`                         | Displays the basic TCP/IP network configuration of the computer. | IP address, Subnet Mask, and Default Gateway.                                                                                                     |
+| `ipconfig /all`                    | Displays complete network configuration details.                 | Host name, MAC (Physical) address, IP address, Subnet Mask, Default Gateway, DNS Server, DHCP Server, DHCP status, and other adapter information. |
+| `ipconfig /renew`                  | Requests a new IP address from the DHCP server.                  | Assigns and displays the newly obtained IP address and updates the network configuration.                                                         |
+| `ipconfig /release`                | Releases the current DHCP-assigned IP address.                   | Removes the current IP address from the network adapter until a new one is assigned.                                                              |
+| `netstat`                          | Displays active network connections.                             | Active TCP connections between the local computer and remote hosts.                                                                               |
+| `netstat -a`                       | Displays all active connections and listening ports.             | Active TCP/UDP connections and all listening ports.                                                                                               |
+| `netstat -n`                       | Displays connections in numerical format.                        | IP addresses and port numbers without resolving host names.                                                                                       |
+| `netstat -r`                       | Displays the routing table.                                      | Routing table showing network destinations, gateways, interfaces, and metrics.                                                                    |
+| `netstat -s`                       | Displays network protocol statistics.                            | Statistics for TCP, UDP, IPv4, IPv6, ICMP, and other network protocols.                                                                           |
+| `nslookup <domain_name>`           | Queries the DNS server to resolve a domain name.                 | DNS server details and the IP address of the specified domain.                                                                                    |
+| `nslookup <IP_address>`            | Performs a reverse DNS lookup.                                   | The domain name associated with the specified IP address (if available).                                                                          |
+| `tracert <hostname or IP address>` | Traces the path taken by packets to a destination.               | List of intermediate routers (hops), response time for each hop, and the destination reached.                                                     |
+| `ping <hostname or IP address>`    | Tests connectivity between the local system and a remote host.   | Reply status, packet loss statistics, round-trip time (RTT), and TTL (Time to Live) values.                                                       |
+
+---
