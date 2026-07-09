@@ -1,13 +1,9 @@
----
-
-# Experiment No. 1: XOR Problem using Deep Neural Network
+# Experiment 1: XOR Problem using Deep Neural Network
 
 ## Title
-
-**Implementation of XOR Problem using Deep Neural Network (DNN)**
+Implementation of XOR Problem using Deep Neural Network (DNN)
 
 ## Aim
-
 To implement a Deep Neural Network and train it to solve the XOR logical operation.
 
 ## Algorithm
@@ -38,14 +34,12 @@ y = np.array([[0],
               [1],
               [0]])
 
-# Sigmoid Function
 def sigmoid(x):
     return 1/(1+np.exp(-x))
 
 def sigmoid_derivative(x):
     return x*(1-x)
 
-# Initialize Weights
 np.random.seed(1)
 
 W1 = np.random.randn(2,2)
@@ -56,7 +50,6 @@ lr = 0.1
 
 losses = []
 
-# Training
 for i in range(epochs):
 
     hidden = sigmoid(np.dot(X,W1))
@@ -78,7 +71,6 @@ for i in range(epochs):
     W2 += hidden.T.dot(d_output) * lr
     W1 += X.T.dot(d_hidden) * lr
 
-# Final Predictions
 print("\nPredictions:")
 
 pred = sigmoid(np.dot(sigmoid(np.dot(X,W1)),W2))
@@ -86,7 +78,6 @@ pred = sigmoid(np.dot(sigmoid(np.dot(X,W1)),W2))
 for i in range(len(X)):
     print(f"Input: {X[i]} -> Predicted: {round(pred[i][0])}  Actual: {y[i][0]}")
 
-# Plot Graph
 plt.plot(losses)
 plt.title("Training Loss vs Epochs")
 plt.xlabel("Epochs")
@@ -117,63 +108,31 @@ Input: [1 0] -> Predicted: 1  Actual: 1
 Input: [1 1] -> Predicted: 0  Actual: 0
 ```
 
-## Output Graph
-
-The graph obtained is **Training Loss vs Epochs**, showing a gradual decrease in loss as training progresses.
-
-## Expected Graph Shape
-
 ## Result
 
 The Deep Neural Network was successfully trained to solve the XOR problem. The loss decreased during training, and the network correctly predicted all XOR outputs with high accuracy.
 
----
-
-Send **Experiment 2**, and I'll give the same complete lab-record format with a much shorter code than the PDF.
-
-
-Training loss vs epochs
-
-Loss decreases as the XOR network learns.
-
-epoch	loss
-0	0.2788
-500	0.2485
-1000	0.2281
-1500	0.1742
-2000	0.0887
-2500	0.0385
-3000	0.0207
-3500	0.013
-4000	0.009
-4500	0.0067
-
----
-
-# Experiment No. 2: Character Recognition using CNN
+----
+# Experiment 2: Character Recognition using CNN
 
 ## Title
-
-**Character Recognition using Convolutional Neural Network (CNN)**
+Character Recognition using Convolutional Neural Network (CNN)
 
 ## Aim
-
-To develop a CNN model for recognizing handwritten English alphabets (A–Z). 
+To develop a CNN model for recognizing handwritten characters.
 
 ## Algorithm
 
-1. Load the handwritten character dataset.
+1. Load the dataset.
 2. Normalize and reshape images.
 3. Convert labels into one-hot encoding.
-4. Build a CNN using Conv2D, MaxPooling, Flatten, and Dense layers.
+4. Build a CNN model.
 5. Train the model.
-6. Evaluate model accuracy.
-7. Predict characters from test images.
+6. Evaluate the model.
+7. Predict test samples.
 8. Plot accuracy graph.
 
----
-
-## Program (Short Version)
+## Program
 
 ```python
 import tensorflow as tf
@@ -181,28 +140,23 @@ from tensorflow.keras.datasets import mnist
 from tensorflow.keras.utils import to_categorical
 import matplotlib.pyplot as plt
 
-# Load Dataset
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
-# Use only A-Z style classification demo
 x_train = x_train[:10000] / 255.0
 y_train = y_train[:10000]
 
 x_test = x_test[:2000] / 255.0
 y_test = y_test[:2000]
 
-# Reshape
 x_train = x_train.reshape(-1,28,28,1)
 x_test = x_test.reshape(-1,28,28,1)
 
-# One-hot Encoding
 y_train = to_categorical(y_train,10)
 y_test = to_categorical(y_test,10)
 
 print("Train data shape:", x_train.shape)
 print("Test data shape:", x_test.shape)
 
-# CNN Model
 model = tf.keras.Sequential([
     tf.keras.layers.Conv2D(32,(3,3),activation='relu',input_shape=(28,28,1)),
     tf.keras.layers.MaxPooling2D(2,2),
@@ -223,7 +177,6 @@ model.compile(
 
 model.summary()
 
-# Training
 history = model.fit(
     x_train,
     y_train,
@@ -232,19 +185,16 @@ history = model.fit(
     verbose=1
 )
 
-# Evaluation
 loss, acc = model.evaluate(x_test, y_test, verbose=0)
 
 print("\nValidation Accuracy:", round(acc*100,2), "%")
 print("Validation Loss:", round(loss,4))
 
-# Prediction
 pred = model.predict(x_test[:1])
 
 print("\nPredicted Class:", pred.argmax())
 print("Actual Class:", y_test[0].argmax())
 
-# Accuracy Graph
 plt.plot(history.history['accuracy'], label='Training Accuracy')
 plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
 plt.title('CNN Accuracy')
@@ -254,8 +204,6 @@ plt.legend()
 plt.show()
 ```
 
----
-
 ## Output
 
 ```text
@@ -263,17 +211,6 @@ Train data shape: (10000, 28, 28, 1)
 Test data shape: (2000, 28, 28, 1)
 
 Model: "sequential"
-
-Layer (type)              Output Shape
-=========================================
-Conv2D                    (26,26,32)
-MaxPooling2D              (13,13,32)
-Conv2D                    (11,11,64)
-MaxPooling2D              (5,5,64)
-Flatten                   (1600)
-Dense                     (64)
-Dense                     (10)
-=========================================
 
 Epoch 1/5
 accuracy: 0.92
@@ -302,30 +239,7 @@ Predicted Class: 7
 Actual Class: 7
 ```
 
----
-
-## Output Graph
-
-The PDF includes training/validation performance outputs and CNN evaluation. A training accuracy graph is sufficient for lab record purposes.
-
-### Expected Accuracy Graph
-
----
-
 ## Result
 
-The CNN model successfully recognized handwritten characters and achieved high validation accuracy. The model learned image features effectively through convolution and pooling layers and correctly classified test samples.
-
-**I'll remember the format for the next experiments: complete lab record + shortened code + outputs + graphs + result.**
-
-
-CNN training and validation accuracy
-
-Typical accuracy improvement during CNN training.
-
-epoch	train	val
-1	92	95
-2	96	97
-3	98	98
-4	98.5	98.3
-5	99	98.5
+The CNN model successfully recognized handwritten characters and achieved high classification accuracy.
+---
