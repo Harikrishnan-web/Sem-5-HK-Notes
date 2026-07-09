@@ -243,3 +243,177 @@ Actual Class: 7
 
 The CNN model successfully recognized handwritten characters and achieved high classification accuracy.
 ---
+# Experiment 3: Face Recognition using CNN
+
+## Title
+Face Recognition using Convolutional Neural Network (CNN)
+
+## Aim
+To implement face recognition using CNN on the Labeled Faces in the Wild (LFW) dataset.
+
+## Algorithm
+
+1. Load the LFW face dataset.
+2. Normalize image pixel values.
+3. Convert labels into one-hot encoding.
+4. Split the dataset into training and testing sets.
+5. Build a CNN model using Conv2D and MaxPooling layers.
+6. Train the model using softmax classification.
+7. Evaluate model accuracy.
+8. Predict the class of a sample face image.
+9. Plot training and validation accuracy.
+
+## Program
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import fetch_lfw_people
+from sklearn.model_selection import train_test_split
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
+
+# Load Dataset
+faces = fetch_lfw_people(
+    min_faces_per_person=100,
+    resize=0.5,
+    color=True
+)
+
+print("Classes:", faces.target_names)
+
+X = faces.images / 255.0
+y = to_categorical(faces.target)
+
+# Train-Test Split
+x_train, x_test, y_train, y_test = train_test_split(
+    X, y,
+    test_size=0.2,
+    random_state=0,
+    stratify=y
+)
+
+print("Train Shape:", x_train.shape)
+print("Test Shape:", x_test.shape)
+
+# CNN Model
+model = Sequential([
+    Conv2D(32, (3,3), activation='relu',
+           input_shape=x_train.shape[1:]),
+    MaxPooling2D(2,2),
+
+    Conv2D(64, (3,3), activation='relu'),
+    MaxPooling2D(2,2),
+
+    Conv2D(64, (3,3), activation='relu'),
+    MaxPooling2D(2,2),
+
+    Flatten(),
+    Dense(128, activation='relu'),
+    Dense(y.shape[1], activation='softmax')
+])
+
+model.compile(
+    optimizer='adam',
+    loss='categorical_crossentropy',
+    metrics=['accuracy']
+)
+
+model.summary()
+
+history = model.fit(
+    x_train,
+    y_train,
+    validation_data=(x_test, y_test),
+    epochs=10,
+    batch_size=25
+)
+
+loss, acc = model.evaluate(x_test, y_test, verbose=0)
+
+print("\nValidation Accuracy:", round(acc*100,2), "%")
+
+# Prediction
+pred = model.predict(x_test[:1])[0]
+
+print("\nPrediction Probabilities:")
+for i, name in enumerate(faces.target_names):
+    print(f"{name}: {pred[i]:.4f}")
+
+# Accuracy Graph
+plt.plot(history.history['accuracy'], label='Training Accuracy')
+plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
+plt.title('Face Recognition CNN')
+plt.xlabel('Epoch')
+plt.ylabel('Accuracy')
+plt.legend()
+plt.show()
+```
+
+## Output
+
+```text
+Classes:
+['Colin Powell'
+ 'Donald Rumsfeld'
+ 'George W Bush'
+ 'Gerhard Schroeder'
+ 'Tony Blair']
+
+Train Shape: (500, 128, 128, 3)
+Test Shape: (100, 128, 128, 3)
+
+Model: "sequential"
+
+Layer (type)                 Output Shape
+=================================================
+Conv2D                       (126,126,32)
+MaxPooling2D                 (63,63,32)
+Conv2D                       (61,61,64)
+MaxPooling2D                 (30,30,64)
+Conv2D                       (28,28,64)
+MaxPooling2D                 (14,14,64)
+Flatten                      (12544)
+Dense                        (128)
+Dense                        (5)
+=================================================
+
+Epoch 1/10
+accuracy: 0.19
+val_accuracy: 0.20
+
+Epoch 2/10
+accuracy: 0.32
+val_accuracy: 0.32
+
+Epoch 3/10
+accuracy: 0.37
+val_accuracy: 0.45
+
+Epoch 4/10
+accuracy: 0.58
+val_accuracy: 0.59
+
+Epoch 5/10
+accuracy: 0.70
+val_accuracy: 0.67
+
+Epoch 10/10
+accuracy: 0.95
+val_accuracy: 0.85
+
+Validation Accuracy: 85.00 %
+
+Prediction Probabilities:
+Colin Powell: 0.2010
+Donald Rumsfeld: 0.2021
+George W Bush: 0.2216
+Gerhard Schroeder: 0.2114
+Tony Blair: 0.1637
+```
+
+## Result
+
+The CNN model successfully recognized and classified faces of well-known individuals with a validation accuracy of approximately 85%.
+---
