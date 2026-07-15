@@ -836,3 +836,481 @@ data[data.density>100]
 | Single column               | Multiple columns               |
 | Has one index               | Has row and column indexes     |
 | Created using `pd.Series()` | Created using `pd.DataFrame()` |
+---
+# 3. Pandas Data Operations
+
+### Definition
+
+Pandas Data Operations are used to manipulate, analyze, clean, and transform data.
+
+### Operations
+
+* Row & Column Selection
+* Filtering
+* Handling Missing Values
+* String Operations
+* Counting Values
+* Plotting
+* Universal Functions (UFuncs)
+* DataFrame & Series Operations 
+
+---
+
+# 2. Row and Column Selection
+
+### Select Column
+
+```python
+df["Name"]
+```
+
+### Select Multiple Columns
+
+```python
+df[["Name", "Age"]]
+```
+
+### Select Row
+
+```python
+df.loc[0]
+```
+
+### Select Multiple Rows
+
+```python
+df.loc[0:2]
+```
+
+### Select Specific Rows & Columns
+
+```python
+df.loc[0:2, ["Name", "Age"]]
+```
+
+---
+
+# 3. Filtering Data
+
+### Definition
+
+Returns only rows satisfying a condition.
+
+### Code
+
+```python
+df[df["Age"] > 18]
+```
+
+```python
+df[df["Gender"] == "Male"]
+```
+
+```python
+df[(df["Age"] > 18) & (df["Marks"] > 80)]
+```
+
+```python
+df[(df["Age"] > 18) | (df["Marks"] > 80)]
+```
+
+---
+
+# 4. String Operations
+
+All string functions use **`.str`**
+
+### Lowercase
+
+```python
+df["Name"].str.lower()
+```
+
+### Uppercase
+
+```python
+df["Name"].str.upper()
+```
+
+### Remove Spaces
+
+```python
+df["Name"].str.strip()
+```
+
+### Split
+
+```python
+df["Name"].str.split()
+```
+
+### Replace
+
+```python
+df["Name"].str.replace("a","A")
+```
+
+### Contains
+
+```python
+df["Name"].str.contains("a")
+```
+
+### Starts With
+
+```python
+df["Name"].str.startswith("A")
+```
+
+### Ends With
+
+```python
+df["Name"].str.endswith("n")
+```
+
+### Length
+
+```python
+df["Name"].str.len()
+```
+
+### Count Character
+
+```python
+df["Name"].str.count("a")
+```
+
+### Repeat
+
+```python
+df["Name"].str.repeat(2)
+```
+
+### Find Position
+
+```python
+df["Name"].str.find("a")
+```
+
+### Numeric Check
+
+```python
+df["Name"].str.isnumeric()
+```
+
+### Common Methods
+
+| Method       | Purpose          |
+| ------------ | ---------------- |
+| lower()      | Lowercase        |
+| upper()      | Uppercase        |
+| strip()      | Remove spaces    |
+| split()      | Split string     |
+| contains()   | Check substring  |
+| replace()    | Replace text     |
+| repeat()     | Repeat string    |
+| count()      | Count characters |
+| startswith() | Check beginning  |
+| endswith()   | Check ending     |
+| find()       | Find position    |
+| isnumeric()  | Numeric check    |
+
+
+
+---
+
+# 5. Count Values
+
+### Definition
+
+Counts occurrences of unique values.
+
+### Code
+
+```python
+df["Gender"].value_counts()
+```
+
+```python
+df["Department"].value_counts()
+```
+
+
+
+---
+
+# 6. Plotting with Pandas
+
+### Syntax
+
+```python
+df.plot()
+```
+
+### Line Plot
+
+```python
+df.plot()
+```
+
+### Bar Plot
+
+```python
+df.plot(kind="bar")
+```
+
+### Histogram
+
+```python
+df.plot(kind="hist")
+```
+
+### Pie Chart
+
+```python
+df["Gender"].value_counts().plot(kind="pie")
+```
+
+
+
+---
+
+# 7. Universal Functions (UFuncs)
+
+### Definition
+
+NumPy functions that work directly on Pandas objects.
+
+### Code
+
+```python
+import numpy as np
+
+np.exp(df["Age"])
+```
+
+```python
+np.sqrt(df["Marks"])
+```
+
+```python
+np.sin(df["Marks"])
+```
+
+```python
+np.log(df["Salary"])
+```
+
+### Arithmetic Methods
+
+| Operator | Method     |
+| -------- | ---------- |
+| +        | add()      |
+| -        | sub()      |
+| *        | mul()      |
+| /        | div()      |
+| //       | floordiv() |
+| %        | mod()      |
+| **       | pow()      |
+
+
+
+---
+
+# 8. Operations Between DataFrame and Series
+
+### Row-wise Operation
+
+```python
+df - df.iloc[0]
+```
+
+### Column-wise Operation
+
+```python
+df.subtract(df["Marks"], axis=0)
+```
+
+### Addition
+
+```python
+df.add(10)
+```
+
+### Multiplication
+
+```python
+df.mul(2)
+```
+
+### Division
+
+```python
+df.div(2)
+```
+
+### Power
+
+```python
+df.pow(2)
+```
+
+
+
+---
+
+# 9. Element-wise Operation vs Broadcasting
+
+## Element-wise
+
+```python
+a = np.array([1,2,3])
+b = np.array([4,5,6])
+
+a+b
+```
+
+## Broadcasting
+
+```python
+a = np.array([[1,2,3],
+              [4,5,6]])
+
+b = np.array([10,20,30])
+
+a+b
+```
+
+| Element-wise         | Broadcasting          |
+| -------------------- | --------------------- |
+| Same shape           | Different shapes      |
+| One-to-one operation | Smaller array expands |
+
+
+
+---
+
+# 10. Handling Missing Data
+
+### Definition
+
+Missing data means values are unavailable.
+
+### Represented By
+
+* None
+* NaN
+
+### Missing Data Functions
+
+| Function      | Purpose                 |
+| ------------- | ----------------------- |
+| isnull()      | Detect missing values   |
+| notnull()     | Detect available values |
+| fillna()      | Replace missing values  |
+| dropna()      | Remove missing values   |
+| replace()     | Replace values          |
+| interpolate() | Estimate missing values |
+
+---
+
+## Checking Missing Values
+
+```python
+df.isnull()
+```
+
+```python
+df.notnull()
+```
+
+```python
+df.isnull().sum()
+```
+
+```python
+df[df.isnull().any(axis=1)]
+```
+
+---
+
+## Filling Missing Values
+
+### Replace with 0
+
+```python
+df.fillna(0)
+```
+
+### Replace with Mean
+
+```python
+df["Salary"].fillna(df["Salary"].mean())
+```
+
+### Replace with Median
+
+```python
+df["Salary"].fillna(df["Salary"].median())
+```
+
+### Replace Specific Value
+
+```python
+df.replace(np.nan,100)
+```
+
+### Interpolation
+
+```python
+df.interpolate()
+```
+
+---
+
+## Dropping Missing Values
+
+### Drop Rows
+
+```python
+df.dropna()
+```
+
+### Drop Columns
+
+```python
+df.dropna(axis=1)
+```
+
+### Drop Rows with All NaN
+
+```python
+df.dropna(how="all")
+```
+
+### Drop Rows Having Less Than Required Values
+
+```python
+df.dropna(thresh=3)
+```
+
+---
+
+## None vs NaN
+
+| None                  | NaN                    |
+| --------------------- | ---------------------- |
+| Python object         | Floating-point value   |
+| Used with object type | Used with numeric data |
+| Slower                | Faster                 |
+
+### Key Points
+
+* `isnull()` and `isna()` are equivalent.
+* `fillna()` replaces missing values.
+* `dropna()` removes missing values.
+* `interpolate()` estimates missing values.
+* Prefer **NaN** for numerical computations. 
+
+---
+---
