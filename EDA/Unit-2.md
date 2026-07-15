@@ -1755,3 +1755,486 @@ MultiIndex is converted into normal columns.
 | `unstack()`     | Rows → Columns           |
 
 ---
+
+# 6. Combining Datasets with `append()` in Pandas
+
+### Definition
+
+`append()` is used to add rows from one DataFrame or Series to another.
+
+> **Note:** `append()` is deprecated in newer Pandas versions. `pd.concat()` is recommended.
+
+### Syntax
+
+```python
+df1.append(df2, ignore_index=True)
+```
+
+---
+
+# 2. Appending DataFrames
+
+### Code
+
+```python
+import pandas as pd
+
+df1 = pd.DataFrame({
+    "Name":["Hari","John"],
+    "Age":[20,22]
+})
+
+df2 = pd.DataFrame({
+    "Name":["David","Sam"],
+    "Age":[25,21]
+})
+
+result = df1.append(df2, ignore_index=True)
+
+print(result)
+```
+
+### Output
+
+```
+    Name  Age
+0   Hari   20
+1   John   22
+2  David   25
+3    Sam   21
+```
+
+---
+
+# 3. Appending with Different Columns
+
+### Code
+
+```python
+import pandas as pd
+
+df1 = pd.DataFrame({
+    "Name":["Hari","John"],
+    "Age":[20,22]
+})
+
+df2 = pd.DataFrame({
+    "Name":["David"],
+    "Salary":[50000]
+})
+
+result = df1.append(df2, ignore_index=True)
+
+print(result)
+```
+
+### Output
+
+```
+    Name   Age   Salary
+0   Hari  20.0      NaN
+1   John  22.0      NaN
+2  David   NaN  50000.0
+```
+
+### Key Points
+
+* Missing columns are filled with **NaN**.
+* Column names are automatically aligned. 
+
+---
+
+# 4. Appending a Series
+
+### Code
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    "Name":["Hari","John"],
+    "Age":[20,22]
+})
+
+new_row = pd.Series(
+["David",25],
+index=["Name","Age"]
+)
+
+df = df.append(new_row, ignore_index=True)
+
+print(df)
+```
+
+### Output
+
+```
+    Name  Age
+0   Hari   20
+1   John   22
+2  David   25
+```
+
+### Key Points
+
+* Series index must match DataFrame columns.
+* `ignore_index=True` creates a new index. 
+
+---
+
+# 5. Combining Datasets: `merge()` and `join()`
+
+## merge()
+
+### Definition
+
+Combines DataFrames based on one or more common columns.
+
+### Syntax
+
+```python
+pd.merge(df1, df2, on="column")
+```
+
+### Code
+
+```python
+import pandas as pd
+
+student = pd.DataFrame({
+    "ID":[1,2,3],
+    "Name":["Hari","John","Sam"]
+})
+
+marks = pd.DataFrame({
+    "ID":[1,2,3],
+    "Marks":[90,85,88]
+})
+
+result = pd.merge(student, marks, on="ID")
+
+print(result)
+```
+
+### Output
+
+```
+   ID  Name  Marks
+0   1  Hari     90
+1   2  John     85
+2   3   Sam     88
+```
+
+---
+
+## Types of Merge
+
+### Inner Merge
+
+```python
+pd.merge(df1, df2, how="inner")
+```
+
+Returns common rows.
+
+---
+
+### Left Merge
+
+```python
+pd.merge(df1, df2, how="left")
+```
+
+Returns all rows from left DataFrame.
+
+---
+
+### Right Merge
+
+```python
+pd.merge(df1, df2, how="right")
+```
+
+Returns all rows from right DataFrame.
+
+---
+
+### Outer Merge
+
+```python
+pd.merge(df1, df2, how="outer")
+```
+
+Returns all rows from both DataFrames.
+
+---
+
+## join()
+
+### Definition
+
+Joins DataFrames using their indexes.
+
+### Syntax
+
+```python
+df1.join(df2)
+```
+
+### Code
+
+```python
+import pandas as pd
+
+df1 = pd.DataFrame({
+    "Name":["Hari","John"]
+})
+
+df2 = pd.DataFrame({
+    "Marks":[90,85]
+})
+
+print(df1.join(df2))
+```
+
+### Output
+
+```
+   Name  Marks
+0  Hari     90
+1  John     85
+```
+
+### Difference
+
+| merge()             | join()                |
+| ------------------- | --------------------- |
+| Joins using columns | Joins using index     |
+| More flexible       | Simpler               |
+| Uses `on=`          | Uses index by default |
+
+
+
+---
+
+# 6. Aggregation and Grouping
+
+### Definition
+
+Grouping divides data into groups and performs calculations on each group.
+
+### Syntax
+
+```python
+df.groupby("column")
+```
+
+### Code
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    "Department":["IT","IT","HR","HR"],
+    "Salary":[50000,60000,40000,45000]
+})
+
+print(df.groupby("Department").sum())
+```
+
+### Output
+
+```
+            Salary
+Department
+HR           85000
+IT          110000
+```
+
+---
+
+## Common Aggregate Functions
+
+```python
+df.groupby("Department").mean()
+```
+
+```python
+df.groupby("Department").max()
+```
+
+```python
+df.groupby("Department").min()
+```
+
+```python
+df.groupby("Department").count()
+```
+
+```python
+df.groupby("Department").sum()
+```
+
+```python
+df.groupby("Department").std()
+```
+
+### Key Points
+
+* `groupby()` splits data into groups.
+* Aggregate functions perform calculations on each group. 
+
+---
+
+# 7. Pivot Tables
+
+### Definition
+
+A Pivot Table summarizes data by grouping rows and columns.
+
+### Syntax
+
+```python
+pd.pivot_table()
+```
+
+### Code
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    "Department":["IT","IT","HR","HR"],
+    "Gender":["M","F","M","F"],
+    "Salary":[50000,60000,40000,45000]
+})
+
+table = pd.pivot_table(
+    df,
+    values="Salary",
+    index="Department",
+    columns="Gender",
+    aggfunc="mean"
+)
+
+print(table)
+```
+
+### Output
+
+```
+Gender            F        M
+Department
+HR          45000.0  40000.0
+IT          60000.0  50000.0
+```
+
+### Key Points
+
+* Summarizes data.
+* Similar to Excel Pivot Table.
+* Supports multiple aggregation functions. 
+
+---
+
+# 8. Aggregating Multiple Functions with `aggfunc`
+
+### Code
+
+```python
+import pandas as pd
+
+table = pd.pivot_table(
+    df,
+    values="Salary",
+    index="Department",
+    aggfunc=["sum","mean","max","min","count"]
+)
+
+print(table)
+```
+
+### Output
+
+```
+               sum     mean     max     min   count
+            Salary   Salary  Salary  Salary Salary
+Department
+HR           85000  42500.0   45000   40000      2
+IT          110000  55000.0   60000   50000      2
+```
+
+### Common `aggfunc`
+
+| Function | Purpose            |
+| -------- | ------------------ |
+| sum      | Total              |
+| mean     | Average            |
+| min      | Minimum            |
+| max      | Maximum            |
+| count    | Count              |
+| std      | Standard Deviation |
+
+
+
+---
+
+# 9. Multi-Index in Pivot Table
+
+### Definition
+
+A Pivot Table can have multiple row or column indexes.
+
+### Code
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    "Department":["IT","IT","HR","HR"],
+    "Gender":["M","F","M","F"],
+    "Year":[2023,2024,2023,2024],
+    "Salary":[50000,60000,40000,45000]
+})
+
+table = pd.pivot_table(
+    df,
+    values="Salary",
+    index=["Department","Year"],
+    aggfunc="sum"
+)
+
+print(table)
+```
+
+### Output
+
+```
+                  Salary
+Department Year
+HR         2023    40000
+           2024    45000
+IT         2023    50000
+           2024    60000
+```
+
+### Multiple Columns
+
+```python
+table = pd.pivot_table(
+    df,
+    values="Salary",
+    index="Department",
+    columns=["Gender","Year"],
+    aggfunc="sum"
+)
+
+print(table)
+```
+
+### Key Points
+
+* Multiple columns can be used in `index`.
+* Multiple columns can be used in `columns`.
+* Produces a MultiIndex Pivot Table. 
+---
