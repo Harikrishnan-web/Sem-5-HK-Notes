@@ -1312,5 +1312,5 @@ df.dropna(thresh=3)
 * `interpolate()` estimates missing values.
 * Prefer **NaN** for numerical computations. 
 
----
+
 ---
