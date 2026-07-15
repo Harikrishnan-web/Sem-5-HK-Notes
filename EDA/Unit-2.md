@@ -1,8 +1,10 @@
 # Unit-2
 
-# Data Manipulation using Pandas
+## Data manipulation using Pandas
+
 ---
-# 1. Why Data Manipulation?
+
+## 1. Why data manipulation?
 
 ### Definition
 
@@ -10,20 +12,20 @@ Data Manipulation (Data Wrangling) is the process of cleaning, organizing, and t
 
 ### Need
 
-* Removes missing values (NaN, Null, NA)
-* Removes unnecessary rows and columns
-* Improves data quality
-* Prepares data for analysis and Machine Learning
+- Removes missing values (NaN, Null, NA)
+- Removes unnecessary rows and columns
+- Improves data quality
+- Prepares data for analysis and Machine Learning
 
 ### Key Points
 
-* Raw data is usually incomplete and inconsistent.
-* Clean data gives accurate results.
-* Pandas is mainly used for data manipulation. 
+- Raw data is usually incomplete and inconsistent.
+- Clean data gives accurate results.
+- Pandas is mainly used for data manipulation.
 
 ---
 
-# 2. What is Pandas?
+## 2. What is Pandas?
 
 ### Definition
 
@@ -31,20 +33,20 @@ Pandas is an open-source Python library built on top of NumPy for data manipulat
 
 ### Features
 
-* Fast and efficient
-* Handles missing values
-* Supports heterogeneous data
-* Easy data analysis
-* Similar to Excel tables and SQL operations
+- Fast and efficient
+- Handles missing values
+- Supports heterogeneous data
+- Easy data analysis
+- Similar to Excel tables and SQL operations
 
 ### Main Objects
 
 1. **Series** – One-dimensional labeled array.
-2. **DataFrame** – Two-dimensional table with rows and columns. 
+2. **DataFrame** – Two-dimensional table with rows and columns.
 
 ---
 
-# 3. Installing Pandas
+## 3. Installing Pandas
 
 ### Command
 
@@ -58,11 +60,9 @@ pip install pandas
 import pandas as pd
 ```
 
-
-
 ---
 
-# 4. Creating a DataFrame
+## 4. Creating a DataFrame
 
 ### Definition
 
@@ -99,13 +99,13 @@ print(student)
 
 ### Key Points
 
-* Stores data in tabular form.
-* Index starts from **0** by default.
-* Index can be changed. 
+- Stores data in tabular form.
+- Index starts from **0** by default.
+- Index can be changed.
 
 ---
 
-# 5. Adding Data Using append()
+## 5. Adding data using `append()`
 
 ### Definition
 
@@ -132,13 +132,13 @@ print(student)
 
 ### Key Points
 
-* New row must be a **Series**.
-* `ignore_index=True` creates new index values.
-* Returns a new DataFrame. 
+- New row must be a **Series**.
+- `ignore_index=True` creates new index values.
+- Returns a new DataFrame.
 
 ---
 
-# 6. Data Exploration
+## 6. Data Exploration
 
 ### Definition
 
@@ -163,29 +163,29 @@ print(student.corr())
 
 ### Important Points
 
-### `.shape`
+#### `.shape`
 
-* Returns number of rows and columns.
+- Returns number of rows and columns.
 
-### `.info()`
+#### `.info()`
 
 Shows:
 
-* Number of rows
-* Number of columns
-* Column names
-* Data types
-* Non-null values
-* Memory usage
+- Number of rows
+- Number of columns
+- Column names
+- Data types
+- Non-null values
+- Memory usage
 
-### `.corr()`
+#### `.corr()`
 
-* Finds correlation between numerical columns.
-* Correlation value ranges from **-1 to +1**. 
+- Finds correlation between numerical columns.
+- Correlation value ranges from **-1 to +1**.
 
 ---
 
-# 7. Statistical Summary with `describe()`
+## 7. Statistical Summary with `describe()`
 
 ### Definition
 
@@ -218,23 +218,23 @@ print(student.describe())
 
 ### Uses
 
-* Understand data distribution
-* Detect outliers
-* Summarize numerical data 
+- Understand data distribution
+- Detect outliers
+- Summarize numerical data
 
 ---
 
-# 8. Dropping Columns and Rows
+## 8. Dropping Columns and Rows
 
-## Drop Column
+### Drop Column
 
-### Syntax
+#### Syntax
 
 ```python
 df.drop(column_name, axis=1)
 ```
 
-### Code
+#### Code
 
 ```python
 student = student.drop("Age", axis=1)
@@ -242,15 +242,15 @@ student = student.drop("Age", axis=1)
 
 ---
 
-## Drop Row
+### Drop Row
 
-### Syntax
+#### Syntax
 
 ```python
 df.drop(row_index, axis=0)
 ```
 
-### Code
+#### Code
 
 ```python
 student = student.drop(2, axis=0)
@@ -263,11 +263,9 @@ student = student.drop(2, axis=0)
 | `axis=0` | Rows    |
 | `axis=1` | Columns |
 
-
-
 ---
 
-# 9. Data Manipulation on Larger Datasets
+## 9. Data Manipulation on Larger Datasets
 
 ### Purpose
 
@@ -285,22 +283,24 @@ Used to quickly understand large datasets before analysis.
 
 ### Benefits
 
-* Understand dataset structure
-* Find missing values
-* Identify data types
-* Analyze relationships
-* Prepare data for Machine Learning 
+- Understand dataset structure
+- Find missing values
+- Identify data types
+- Analyze relationships
+- Prepare data for Machine Learning
+
 ---
-# 2.Pandas Objects
+
+## 2. Pandas Objects
 
 Pandas mainly provides **two data structures (objects)**:
 
 1. **Series** – One-dimensional labeled array.
-2. **DataFrame** – Two-dimensional table made up of multiple Series. 
+2. **DataFrame** – Two-dimensional table made up of multiple Series.
 
 ---
 
-# 2. Pandas Series
+## 2. Pandas Series
 
 ### Definition
 
@@ -308,22 +308,22 @@ A **Series** is a one-dimensional labeled array that can store any data type.
 
 ### Features
 
-* One-dimensional
-* Has index labels
-* More flexible than NumPy arrays
-* Similar to a dictionary
+- One-dimensional
+- Has index labels
+- More flexible than NumPy arrays
+- Similar to a dictionary
 
 ---
 
-## Creating a Series
+### Creating a Series
 
-### Syntax
+#### Syntax
 
 ```python
 pd.Series(data)
 ```
 
-### Code
+#### Code
 
 ```python
 import pandas as pd
@@ -334,7 +334,7 @@ print(data)
 
 ---
 
-## Accessing Series
+### Accessing Series
 
 ```python
 data[1]      # 20
@@ -343,7 +343,7 @@ data[1:3]    # 20,30
 
 ---
 
-## Important Attributes
+### Important Attributes
 
 ```python
 data.values    # Returns values
@@ -352,7 +352,7 @@ data.index     # Returns index
 
 ---
 
-## Creating Series with Custom Index
+### Creating Series with Custom Index
 
 ```python
 data = pd.Series([10,20,30], index=["A","B","C"])
@@ -366,7 +366,7 @@ data["B"]
 
 ---
 
-## Creating Series from Dictionary
+### Creating Series from Dictionary
 
 ```python
 population = pd.Series({
@@ -378,21 +378,21 @@ population = pd.Series({
 
 ---
 
-## Ways to Create Series
+### Ways to Create Series
 
-### From List
+#### From List
 
 ```python
 pd.Series([2,4,6])
 ```
 
-### From Scalar
+#### From Scalar
 
 ```python
 pd.Series(5,index=[1,2,3])
 ```
 
-### From Dictionary
+#### From Dictionary
 
 ```python
 pd.Series({1:"A",2:"B"})
@@ -400,14 +400,14 @@ pd.Series({1:"A",2:"B"})
 
 ### Key Points
 
-* Stores one column of data.
-* Every value has an index.
-* Supports slicing and indexing.
-* Can be created from list, scalar or dictionary. 
+- Stores one column of data.
+- Every value has an index.
+- Supports slicing and indexing.
+- Can be created from list, scalar or dictionary.
 
 ---
 
-# 3. Pandas DataFrame
+## 3. Pandas DataFrame
 
 ### Definition
 
@@ -415,14 +415,14 @@ A **DataFrame** is a two-dimensional table consisting of multiple Series.
 
 ### Features
 
-* Rows and columns
-* Different data types
-* Labeled axes
-* Easy data manipulation
+- Rows and columns
+- Different data types
+- Labeled axes
+- Easy data manipulation
 
 ---
 
-## Example
+### Example
 
 ```python
 population = pd.Series({"A":100,"B":200})
@@ -438,7 +438,7 @@ print(states)
 
 ---
 
-## Important Attributes
+### Important Attributes
 
 ```python
 states.index
@@ -448,28 +448,28 @@ states["Area"]
 
 ---
 
-## Ways to Create DataFrame
+### Ways to Create DataFrame
 
-### From Series
+#### From Series
 
 ```python
 pd.DataFrame(population)
 ```
 
-### From List of Dictionaries
+#### From List of Dictionaries
 
 ```python
 data=[{"A":1,"B":2},{"A":3,"B":4}]
 pd.DataFrame(data)
 ```
 
-### From Dictionary
+#### From Dictionary
 
 ```python
 pd.DataFrame({"Population":population,"Area":area})
 ```
 
-### From NumPy Array
+#### From NumPy Array
 
 ```python
 pd.DataFrame(np.random.rand(3,2),
@@ -478,14 +478,14 @@ columns=["A","B"])
 
 ### Key Points
 
-* Collection of Series.
-* Two-dimensional.
-* Supports row and column indexing.
-* Different columns can have different data types. 
+- Collection of Series.
+- Two-dimensional.
+- Supports row and column indexing.
+- Different columns can have different data types.
 
 ---
 
-# 4. The Pandas Index Object
+## 4. The Pandas Index Object
 
 ### Definition
 
@@ -493,7 +493,7 @@ Index is an immutable object used to label rows and columns.
 
 ---
 
-## Creating Index
+### Creating Index
 
 ```python
 import pandas as pd
@@ -503,7 +503,7 @@ ind = pd.Index([2,3,5,7,11])
 
 ---
 
-## Accessing
+### Accessing
 
 ```python
 ind[1]
@@ -512,7 +512,7 @@ ind[::2]
 
 ---
 
-## Index Attributes
+### Index Attributes
 
 ```python
 ind.size
@@ -523,7 +523,7 @@ ind.dtype
 
 ---
 
-## Immutability
+### Immutability
 
 ```python
 ind[1]=0
@@ -537,7 +537,7 @@ TypeError
 
 ---
 
-## Set Operations
+### Set Operations
 
 ```python
 indA = pd.Index([1,3,5,7])
@@ -550,13 +550,13 @@ indA ^ indB    # Symmetric Difference
 
 ### Key Points
 
-* Immutable (cannot be modified).
-* Supports set operations.
-* Similar to NumPy array but stores labels. 
+- Immutable (cannot be modified).
+- Supports set operations.
+- Similar to NumPy array but stores labels.
 
 ---
 
-# 5. Data Indexing and Selection
+## 5. Data Indexing and Selection
 
 ### Definition
 
@@ -564,16 +564,16 @@ Data Indexing and Selection means accessing specific rows or columns from Series
 
 ### Supports
 
-* Indexing
-* Slicing
-* Masking
-* Fancy Indexing
+- Indexing
+- Slicing
+- Masking
+- Fancy Indexing
 
-Like NumPy but with additional features. 
+Like NumPy but with additional features.
 
 ---
 
-# 6. Data Selection in Series
+## 6. Data Selection in Series
 
 ### Series as Dictionary
 
@@ -588,7 +588,7 @@ data["b"]
 
 ---
 
-## Dictionary Methods
+### Dictionary Methods
 
 ```python
 "a" in data
@@ -600,7 +600,7 @@ list(data.items())
 
 ---
 
-## Adding New Value
+### Adding New Value
 
 ```python
 data["e"]=50
@@ -608,27 +608,27 @@ data["e"]=50
 
 ---
 
-## Series as Array
+### Series as Array
 
-### Slicing
+#### Slicing
 
 ```python
 data["a":"c"]
 ```
 
-### Position Slicing
+#### Position Slicing
 
 ```python
 data[0:2]
 ```
 
-### Masking
+#### Masking
 
 ```python
 data[data>20]
 ```
 
-### Fancy Indexing
+#### Fancy Indexing
 
 ```python
 data[["a","c"]]
@@ -636,18 +636,18 @@ data[["a","c"]]
 
 ### Note
 
-* Label slicing includes last label.
-* Position slicing excludes last position. 
+- Label slicing includes last label.
+- Position slicing excludes last position.
 
 ---
 
-# 7. loc, iloc and ix
+## 7. loc, iloc and ix
 
-## loc
+### loc
 
 Uses **label (explicit index).**
 
-### Syntax
+#### Syntax
 
 ```python
 data.loc[label]
@@ -662,11 +662,11 @@ data.loc[1:3]
 
 ---
 
-## iloc
+### iloc
 
 Uses **integer position (implicit index).**
 
-### Syntax
+#### Syntax
 
 ```python
 data.iloc[position]
@@ -681,7 +681,7 @@ data.iloc[1:3]
 
 ---
 
-## ix
+### ix
 
 Hybrid of loc and iloc.
 
@@ -689,31 +689,31 @@ Hybrid of loc and iloc.
 
 ### Best Practice
 
-* Use **loc** for labels.
-* Use **iloc** for positions. 
+- Use **loc** for labels.
+- Use **iloc** for positions.
 
 ---
 
-# 8. Data Selection in DataFrame
+## 8. Data Selection in DataFrame
 
 ### Definition
 
 A DataFrame behaves like:
 
-* Dictionary of Series
-* Two-dimensional array
+- Dictionary of Series
+- Two-dimensional array
 
 ---
 
-## Accessing Columns
+### Accessing Columns
 
-### Dictionary Style
+#### Dictionary Style
 
 ```python
 data["area"]
 ```
 
-### Attribute Style
+#### Attribute Style
 
 ```python
 data.area
@@ -721,7 +721,7 @@ data.area
 
 ---
 
-## Adding New Column
+### Adding New Column
 
 ```python
 data["density"] = data["pop"]/data["area"]
@@ -729,7 +729,7 @@ data["density"] = data["pop"]/data["area"]
 
 ---
 
-## Raw Values
+### Raw Values
 
 ```python
 data.values
@@ -737,7 +737,7 @@ data.values
 
 ---
 
-## Transpose
+### Transpose
 
 ```python
 data.T
@@ -745,7 +745,7 @@ data.T
 
 ---
 
-## iloc
+### iloc
 
 ```python
 data.iloc[:3,:2]
@@ -753,7 +753,7 @@ data.iloc[:3,:2]
 
 ---
 
-## loc
+### loc
 
 ```python
 data.loc[:,"area":"pop"]
@@ -761,7 +761,7 @@ data.loc[:,"area":"pop"]
 
 ---
 
-## Masking
+### Masking
 
 ```python
 data.loc[data.density>100,
@@ -770,7 +770,7 @@ data.loc[data.density>100,
 
 ---
 
-## Modify Value
+### Modify Value
 
 ```python
 data.iloc[0,2]=90
@@ -778,16 +778,16 @@ data.iloc[0,2]=90
 
 ### Key Points
 
-* `[]` selects columns.
-* `loc` uses labels.
-* `iloc` uses positions.
-* Supports adding and modifying columns. 
+- `[]` selects columns.
+- `loc` uses labels.
+- `iloc` uses positions.
+- Supports adding and modifying columns.
 
 ---
 
-# 9. Additional Indexing Conventions
+## 9. Additional Indexing Conventions
 
-## Row Label Slicing
+### Row Label Slicing
 
 ```python
 data["Florida":"Illinois"]
@@ -795,7 +795,7 @@ data["Florida":"Illinois"]
 
 ---
 
-## Row Position Slicing
+### Row Position Slicing
 
 ```python
 data[1:3]
@@ -803,7 +803,7 @@ data[1:3]
 
 ---
 
-## Row Masking
+### Row Masking
 
 ```python
 data[data.density>100]
@@ -811,13 +811,13 @@ data[data.density>100]
 
 ### Key Points
 
-* Row slicing by labels includes end label.
-* Position slicing excludes last position.
-* Boolean masking filters rows satisfying a condition. 
+- Row slicing by labels includes end label.
+- Position slicing excludes last position.
+- Boolean masking filters rows satisfying a condition.
 
 ---
 
-# **Difference: loc vs iloc**
+## **Difference: loc vs iloc**
 
 | loc                           | iloc                   |
 | ----------------------------- | ---------------------- |
@@ -828,7 +828,7 @@ data[data.density>100]
 
 ---
 
-# **Difference: Series vs DataFrame**
+## **Difference: Series vs DataFrame**
 
 | Series                      | DataFrame                      |
 | --------------------------- | ------------------------------ |
@@ -836,8 +836,10 @@ data[data.density>100]
 | Single column               | Multiple columns               |
 | Has one index               | Has row and column indexes     |
 | Created using `pd.Series()` | Created using `pd.DataFrame()` |
+
 ---
-# 3. Pandas Data Operations
+
+## 3. Pandas Data Operations
 
 ### Definition
 
@@ -845,18 +847,18 @@ Pandas Data Operations are used to manipulate, analyze, clean, and transform dat
 
 ### Operations
 
-* Row & Column Selection
-* Filtering
-* Handling Missing Values
-* String Operations
-* Counting Values
-* Plotting
-* Universal Functions (UFuncs)
-* DataFrame & Series Operations 
+- Row & Column Selection
+- Filtering
+- Handling Missing Values
+- String Operations
+- Counting Values
+- Plotting
+- Universal Functions (UFuncs)
+- DataFrame & Series Operations
 
 ---
 
-# 2. Row and Column Selection
+## 2. Row and Column Selection
 
 ### Select Column
 
@@ -890,7 +892,7 @@ df.loc[0:2, ["Name", "Age"]]
 
 ---
 
-# 3. Filtering Data
+## 3. Filtering Data
 
 ### Definition
 
@@ -916,7 +918,7 @@ df[(df["Age"] > 18) | (df["Marks"] > 80)]
 
 ---
 
-# 4. String Operations
+## 4. String Operations
 
 All string functions use **`.str`**
 
@@ -1015,11 +1017,9 @@ df["Name"].str.isnumeric()
 | find()       | Find position    |
 | isnumeric()  | Numeric check    |
 
-
-
 ---
 
-# 5. Count Values
+## 5. Count Values
 
 ### Definition
 
@@ -1035,11 +1035,9 @@ df["Gender"].value_counts()
 df["Department"].value_counts()
 ```
 
-
-
 ---
 
-# 6. Plotting with Pandas
+## 6. Plotting with Pandas
 
 ### Syntax
 
@@ -1071,11 +1069,9 @@ df.plot(kind="hist")
 df["Gender"].value_counts().plot(kind="pie")
 ```
 
-
-
 ---
 
-# 7. Universal Functions (UFuncs)
+## 7. Universal Functions (UFuncs)
 
 ### Definition
 
@@ -1113,11 +1109,9 @@ np.log(df["Salary"])
 | %        | mod()      |
 | **       | pow()      |
 
-
-
 ---
 
-# 8. Operations Between DataFrame and Series
+## 8. Operations Between DataFrame and Series
 
 ### Row-wise Operation
 
@@ -1155,13 +1149,11 @@ df.div(2)
 df.pow(2)
 ```
 
-
-
 ---
 
-# 9. Element-wise Operation vs Broadcasting
+## 9. Element-wise Operation vs Broadcasting
 
-## Element-wise
+### Element-wise
 
 ```python
 a = np.array([1,2,3])
@@ -1170,7 +1162,7 @@ b = np.array([4,5,6])
 a+b
 ```
 
-## Broadcasting
+### Broadcasting
 
 ```python
 a = np.array([[1,2,3],
@@ -1186,11 +1178,9 @@ a+b
 | Same shape           | Different shapes      |
 | One-to-one operation | Smaller array expands |
 
-
-
 ---
 
-# 10. Handling Missing Data
+## 10. Handling Missing Data
 
 ### Definition
 
@@ -1198,8 +1188,8 @@ Missing data means values are unavailable.
 
 ### Represented By
 
-* None
-* NaN
+- None
+- NaN
 
 ### Missing Data Functions
 
@@ -1214,7 +1204,7 @@ Missing data means values are unavailable.
 
 ---
 
-## Checking Missing Values
+### Checking Missing Values
 
 ```python
 df.isnull()
@@ -1234,33 +1224,33 @@ df[df.isnull().any(axis=1)]
 
 ---
 
-## Filling Missing Values
+### Filling Missing Values
 
-### Replace with 0
+#### Replace with 0
 
 ```python
 df.fillna(0)
 ```
 
-### Replace with Mean
+#### Replace with Mean
 
 ```python
 df["Salary"].fillna(df["Salary"].mean())
 ```
 
-### Replace with Median
+#### Replace with Median
 
 ```python
 df["Salary"].fillna(df["Salary"].median())
 ```
 
-### Replace Specific Value
+#### Replace Specific Value
 
 ```python
 df.replace(np.nan,100)
 ```
 
-### Interpolation
+#### Interpolation
 
 ```python
 df.interpolate()
@@ -1268,27 +1258,27 @@ df.interpolate()
 
 ---
 
-## Dropping Missing Values
+### Dropping Missing Values
 
-### Drop Rows
+#### Drop Rows
 
 ```python
 df.dropna()
 ```
 
-### Drop Columns
+#### Drop Columns
 
 ```python
 df.dropna(axis=1)
 ```
 
-### Drop Rows with All NaN
+#### Drop Rows with All NaN
 
 ```python
 df.dropna(how="all")
 ```
 
-### Drop Rows Having Less Than Required Values
+#### Drop Rows Having Less Than Required Values
 
 ```python
 df.dropna(thresh=3)
@@ -1296,7 +1286,7 @@ df.dropna(thresh=3)
 
 ---
 
-## None vs NaN
+### None vs NaN
 
 | None                  | NaN                    |
 | --------------------- | ---------------------- |
@@ -1306,16 +1296,15 @@ df.dropna(thresh=3)
 
 ### Key Points
 
-* `isnull()` and `isna()` are equivalent.
-* `fillna()` replaces missing values.
-* `dropna()` removes missing values.
-* `interpolate()` estimates missing values.
-* Prefer **NaN** for numerical computations. 
-
+- `isnull()` and `isna()` are equivalent.
+- `fillna()` replaces missing values.
+- `dropna()` removes missing values.
+- `interpolate()` estimates missing values.
+- Prefer **NaN** for numerical computations.
 
 ---
 
-# 4. What is Hierarchical Indexing (MultiIndex)?
+## 4. What is Hierarchical Indexing (MultiIndex)?
 
 ### Definition
 
@@ -1323,20 +1312,20 @@ Hierarchical Indexing (MultiIndex) allows a Series or DataFrame to have **multip
 
 ### Uses
 
-* Represents higher-dimensional data.
-* Groups related data.
-* Makes filtering and reshaping easier.
+- Represents higher-dimensional data.
+- Groups related data.
+- Makes filtering and reshaping easier.
 
 ### Key Points
 
-* Series → 1D
-* DataFrame → 2D
-* MultiIndex → 3D+ like structure
-* Can be created for both rows and columns. 
+- Series → 1D
+- DataFrame → 2D
+- MultiIndex → 3D+ like structure
+- Can be created for both rows and columns.
 
 ---
 
-# 2. Creating a Hierarchical Index
+## 2. Creating a Hierarchical Index
 
 ### Syntax
 
@@ -1379,11 +1368,9 @@ Year Month
 2024 Jan      1300     300
 ```
 
-
-
 ---
 
-# 3. Selecting Data in Hierarchical Index
+## 3. Selecting Data in Hierarchical Index
 
 ### Select all data of 2023
 
@@ -1433,11 +1420,9 @@ Year  Month
 2024  Jan      300
 ```
 
-
-
 ---
 
-# 4. Swap Levels (swaplevel)
+## 4. Swap Levels (swaplevel)
 
 ### Definition
 
@@ -1467,13 +1452,11 @@ Jan   2024    1300    300
 
 ### Key Point
 
-* Does not modify the original DataFrame unless assigned.
-
-
+- Does not modify the original DataFrame unless assigned.
 
 ---
 
-# 5. Sorting Hierarchical Index
+## 5. Sorting Hierarchical Index
 
 ### Definition
 
@@ -1501,11 +1484,9 @@ Year Month
 2023 Feb     1200   250
 ```
 
-
-
 ---
 
-# 6. Summary Statistics by Index Level
+## 6. Summary Statistics by Index Level
 
 ### Syntax
 
@@ -1543,11 +1524,9 @@ Year
 2024  1300   300
 ```
 
-
-
 ---
 
-# 7. set_index()
+## 7. set_index()
 
 ### Definition
 
@@ -1589,11 +1568,9 @@ A B
 print(df.set_index(['A','B'],drop=False))
 ```
 
-
-
 ---
 
-# 8. reset_index()
+## 8. reset_index()
 
 ### Definition
 
@@ -1620,11 +1597,9 @@ print(df.reset_index())
 2      2  3  6  9
 ```
 
-
-
 ---
 
-# 9. MultiIndex in Columns
+## 9. MultiIndex in Columns
 
 ### Syntax
 
@@ -1669,11 +1644,9 @@ Quarter    Q1  Q2     Q1  Q2
 1         200 250     30  35
 ```
 
-
-
 ---
 
-# 10. stack()
+## 10. stack()
 
 ### Definition
 
@@ -1704,7 +1677,7 @@ print(df.stack())
 
 ---
 
-# 11. unstack()
+## 11. unstack()
 
 ### Definition
 
@@ -1724,7 +1697,7 @@ print(df.unstack(level="Month"))
 
 ---
 
-# 12. reset_index() on MultiIndex
+## 12. reset_index() on MultiIndex
 
 ### Code
 
@@ -1736,11 +1709,9 @@ print(df.reset_index())
 
 MultiIndex is converted into normal columns.
 
-
-
 ---
 
-# Difference
+## Difference
 
 | Method          | Purpose                  |
 | --------------- | ------------------------ |
@@ -1756,7 +1727,7 @@ MultiIndex is converted into normal columns.
 
 ---
 
-# 6. Combining Datasets with `append()` in Pandas
+## 6. Combining Datasets with `append()` in Pandas
 
 ### Definition
 
@@ -1772,7 +1743,7 @@ df1.append(df2, ignore_index=True)
 
 ---
 
-# 2. Appending DataFrames
+## 2. Appending DataFrames
 
 ### Code
 
@@ -1806,7 +1777,7 @@ print(result)
 
 ---
 
-# 3. Appending with Different Columns
+## 3. Appending with Different Columns
 
 ### Code
 
@@ -1839,12 +1810,12 @@ print(result)
 
 ### Key Points
 
-* Missing columns are filled with **NaN**.
-* Column names are automatically aligned. 
+- Missing columns are filled with **NaN**.
+- Column names are automatically aligned.
 
 ---
 
-# 4. Appending a Series
+## 4. Appending a Series
 
 ### Code
 
@@ -1877,26 +1848,26 @@ print(df)
 
 ### Key Points
 
-* Series index must match DataFrame columns.
-* `ignore_index=True` creates a new index. 
+- Series index must match DataFrame columns.
+- `ignore_index=True` creates a new index.
 
 ---
 
-# 5. Combining Datasets: `merge()` and `join()`
+## 5. Combining Datasets: `merge()` and `join()`
 
-## merge()
+### merge()
 
-### Definition
+#### Definition
 
 Combines DataFrames based on one or more common columns.
 
-### Syntax
+#### Syntax
 
 ```python
 pd.merge(df1, df2, on="column")
 ```
 
-### Code
+#### Code
 
 ```python
 import pandas as pd
@@ -1916,7 +1887,7 @@ result = pd.merge(student, marks, on="ID")
 print(result)
 ```
 
-### Output
+#### Output
 
 ```
    ID  Name  Marks
@@ -1927,9 +1898,9 @@ print(result)
 
 ---
 
-## Types of Merge
+### Types of Merge
 
-### Inner Merge
+#### Inner Merge
 
 ```python
 pd.merge(df1, df2, how="inner")
@@ -1939,7 +1910,7 @@ Returns common rows.
 
 ---
 
-### Left Merge
+#### Left Merge
 
 ```python
 pd.merge(df1, df2, how="left")
@@ -1949,7 +1920,7 @@ Returns all rows from left DataFrame.
 
 ---
 
-### Right Merge
+#### Right Merge
 
 ```python
 pd.merge(df1, df2, how="right")
@@ -1959,7 +1930,7 @@ Returns all rows from right DataFrame.
 
 ---
 
-### Outer Merge
+#### Outer Merge
 
 ```python
 pd.merge(df1, df2, how="outer")
@@ -1969,19 +1940,19 @@ Returns all rows from both DataFrames.
 
 ---
 
-## join()
+### join()
 
-### Definition
+#### Definition
 
 Joins DataFrames using their indexes.
 
-### Syntax
+#### Syntax
 
 ```python
 df1.join(df2)
 ```
 
-### Code
+#### Code
 
 ```python
 import pandas as pd
@@ -1997,7 +1968,7 @@ df2 = pd.DataFrame({
 print(df1.join(df2))
 ```
 
-### Output
+#### Output
 
 ```
    Name  Marks
@@ -2013,11 +1984,9 @@ print(df1.join(df2))
 | More flexible       | Simpler               |
 | Uses `on=`          | Uses index by default |
 
-
-
 ---
 
-# 6. Aggregation and Grouping
+## 6. Aggregation and Grouping
 
 ### Definition
 
@@ -2053,7 +2022,7 @@ IT          110000
 
 ---
 
-## Common Aggregate Functions
+### Common Aggregate Functions
 
 ```python
 df.groupby("Department").mean()
@@ -2081,12 +2050,12 @@ df.groupby("Department").std()
 
 ### Key Points
 
-* `groupby()` splits data into groups.
-* Aggregate functions perform calculations on each group. 
+- `groupby()` splits data into groups.
+- Aggregate functions perform calculations on each group.
 
 ---
 
-# 7. Pivot Tables
+## 7. Pivot Tables
 
 ### Definition
 
@@ -2131,13 +2100,13 @@ IT          60000.0  50000.0
 
 ### Key Points
 
-* Summarizes data.
-* Similar to Excel Pivot Table.
-* Supports multiple aggregation functions. 
+- Summarizes data.
+- Similar to Excel Pivot Table.
+- Supports multiple aggregation functions.
 
 ---
 
-# 8. Aggregating Multiple Functions with `aggfunc`
+## 8. Aggregating Multiple Functions with `aggfunc`
 
 ### Code
 
@@ -2175,11 +2144,9 @@ IT          110000  55000.0   60000   50000      2
 | count    | Count              |
 | std      | Standard Deviation |
 
-
-
 ---
 
-# 9. Multi-Index in Pivot Table
+## 9. Multi-Index in Pivot Table
 
 ### Definition
 
@@ -2234,22 +2201,24 @@ print(table)
 
 ### Key Points
 
-* Multiple columns can be used in `index`.
-* Multiple columns can be used in `columns`.
-* Produces a MultiIndex Pivot Table. 
----
-# Vectorized String Operations in Pandas
+- Multiple columns can be used in `index`.
+- Multiple columns can be used in `columns`.
+- Produces a MultiIndex Pivot Table.
 
-## Definition
+---
+
+## Vectorized String Operations in Pandas
+
+### Definition
 
 Vectorized String Operations allow string manipulation on an entire **Series** or **DataFrame column** at once using the **`.str`** accessor.
 
 ### Advantages
 
-* Faster than loops.
-* Works on the whole column.
-* Automatically ignores **NaN** values.
-* Easy to clean and process text data.
+- Faster than loops.
+- Works on the whole column.
+- Automatically ignores **NaN** values.
+- Easy to clean and process text data.
 
 ### Syntax
 
@@ -2257,11 +2226,9 @@ Vectorized String Operations allow string manipulation on an entire **Series** o
 Series.str.method()
 ```
 
-
-
 ---
 
-# Creating a String Series
+## Creating a String Series
 
 ```python
 import pandas as pd
@@ -2279,7 +2246,7 @@ print(data)
 
 ---
 
-# 1. Convert to Lowercase
+## 1. Convert to Lowercase
 
 ### Syntax
 
@@ -2305,7 +2272,7 @@ print(data.str.lower())
 
 ---
 
-# 2. Convert to Uppercase
+## 2. Convert to Uppercase
 
 ### Syntax
 
@@ -2331,7 +2298,7 @@ print(data.str.upper())
 
 ---
 
-# 3. Convert First Letter to Capital
+## 3. Convert First Letter to Capital
 
 ### Syntax
 
@@ -2347,7 +2314,7 @@ print(data.str.title())
 
 ---
 
-# 4. Capitalize First Letter
+## 4. Capitalize First Letter
 
 ### Syntax
 
@@ -2363,7 +2330,7 @@ print(data.str.capitalize())
 
 ---
 
-# 5. Remove Spaces
+## 5. Remove Spaces
 
 ### Syntax
 
@@ -2381,7 +2348,7 @@ print(data.str.strip())
 
 ---
 
-# 6. Remove Left Spaces
+## 6. Remove Left Spaces
 
 ### Syntax
 
@@ -2397,7 +2364,7 @@ print(data.str.lstrip())
 
 ---
 
-# 7. Remove Right Spaces
+## 7. Remove Right Spaces
 
 ### Syntax
 
@@ -2413,7 +2380,7 @@ print(data.str.rstrip())
 
 ---
 
-# 8. Find String Length
+## 8. Find String Length
 
 ### Syntax
 
@@ -2429,7 +2396,7 @@ print(data.str.len())
 
 ---
 
-# 9. Split String
+## 9. Split String
 
 ### Syntax
 
@@ -2445,7 +2412,7 @@ print(data.str.split())
 
 ---
 
-# 10. Join Strings
+## 10. Join Strings
 
 ### Syntax
 
@@ -2461,7 +2428,7 @@ print(data.str.cat(sep=", "))
 
 ---
 
-# 11. Replace Text
+## 11. Replace Text
 
 ### Syntax
 
@@ -2477,7 +2444,7 @@ print(data.str.replace("Python","Java"))
 
 ---
 
-# 12. Check Substring
+## 12. Check Substring
 
 ### Syntax
 
@@ -2493,7 +2460,7 @@ print(data.str.contains("Data"))
 
 ---
 
-# 13. Starts With
+## 13. Starts With
 
 ### Syntax
 
@@ -2509,7 +2476,7 @@ print(data.str.startswith("P"))
 
 ---
 
-# 14. Ends With
+## 14. Ends With
 
 ### Syntax
 
@@ -2525,7 +2492,7 @@ print(data.str.endswith("n"))
 
 ---
 
-# 15. Find Position
+## 15. Find Position
 
 ### Syntax
 
@@ -2541,7 +2508,7 @@ print(data.str.find("a"))
 
 ---
 
-# 16. Count Occurrences
+## 16. Count Occurrences
 
 ### Syntax
 
@@ -2557,7 +2524,7 @@ print(data.str.count("a"))
 
 ---
 
-# 17. Repeat String
+## 17. Repeat String
 
 ### Syntax
 
@@ -2573,7 +2540,7 @@ print(data.str.repeat(2))
 
 ---
 
-# 18. Check Lowercase
+## 18. Check Lowercase
 
 ### Syntax
 
@@ -2589,7 +2556,7 @@ print(data.str.islower())
 
 ---
 
-# 19. Check Uppercase
+## 19. Check Uppercase
 
 ### Syntax
 
@@ -2605,7 +2572,7 @@ print(data.str.isupper())
 
 ---
 
-# 20. Check Numeric
+## 20. Check Numeric
 
 ### Syntax
 
@@ -2623,7 +2590,7 @@ print(num.str.isnumeric())
 
 ---
 
-# 21. Find All Matches
+## 21. Find All Matches
 
 ### Syntax
 
@@ -2639,7 +2606,7 @@ print(data.str.findall("a"))
 
 ---
 
-# 22. Extract Pattern
+## 22. Extract Pattern
 
 ### Syntax
 
@@ -2660,7 +2627,7 @@ print(email.str.extract(r'(.+)@(.+)'))
 
 ---
 
-# 23. Slice Strings
+## 23. Slice Strings
 
 ### Syntax
 
@@ -2676,7 +2643,7 @@ print(data.str.slice(0,4))
 
 ---
 
-# 24. Swap Upper and Lower Case
+## 24. Swap Upper and Lower Case
 
 ### Syntax
 
@@ -2692,7 +2659,7 @@ print(data.str.swapcase())
 
 ---
 
-# Common Vectorized String Methods
+## Common Vectorized String Methods
 
 | Method         | Purpose                     |
 | -------------- | --------------------------- |
@@ -2723,9 +2690,8 @@ print(data.str.swapcase())
 
 ### Key Points
 
-* Use **`.str`** before every string method.
-* Vectorized operations work on the **entire Series**.
-* Handles **NaN** values automatically.
-* Faster than using loops.
-* Mainly used for **cleaning and preprocessing text data**. 
----
+- Use **`.str`** before every string method.
+- Vectorized operations work on the **entire Series**.
+- Handles **NaN** values automatically.
+- Faster than using loops.
+- Mainly used for **cleaning and preprocessing text data**.
