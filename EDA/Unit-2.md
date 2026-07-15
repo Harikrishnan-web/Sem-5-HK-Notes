@@ -1314,3 +1314,444 @@ df.dropna(thresh=3)
 
 
 ---
+
+# 4. What is Hierarchical Indexing (MultiIndex)?
+
+### Definition
+
+Hierarchical Indexing (MultiIndex) allows a Series or DataFrame to have **multiple levels of indexing**.
+
+### Uses
+
+* Represents higher-dimensional data.
+* Groups related data.
+* Makes filtering and reshaping easier.
+
+### Key Points
+
+* Series → 1D
+* DataFrame → 2D
+* MultiIndex → 3D+ like structure
+* Can be created for both rows and columns. 
+
+---
+
+# 2. Creating a Hierarchical Index
+
+### Syntax
+
+```python
+pd.MultiIndex.from_tuples()
+```
+
+### Code
+
+```python
+import pandas as pd
+
+index = pd.MultiIndex.from_tuples(
+[
+    ('2023','Jan'),
+    ('2023','Feb'),
+    ('2024','Jan')
+],
+names=['Year','Month']
+)
+
+df = pd.DataFrame(
+{
+    'Sales':[1000,1200,1300],
+    'Profit':[200,250,300]
+},
+index=index
+)
+
+print(df)
+```
+
+### Output
+
+```
+             Sales  Profit
+Year Month
+2023 Jan      1000     200
+     Feb      1200     250
+2024 Jan      1300     300
+```
+
+
+
+---
+
+# 3. Selecting Data in Hierarchical Index
+
+### Select all data of 2023
+
+```python
+print(df.loc['2023'])
+```
+
+### Output
+
+```
+       Sales  Profit
+Month
+Jan     1000    200
+Feb     1200    250
+```
+
+---
+
+### Select January 2023
+
+```python
+print(df.loc[('2023','Jan')])
+```
+
+### Output
+
+```
+Sales     1000
+Profit     200
+Name: (2023, Jan)
+```
+
+---
+
+### Select Profit Column
+
+```python
+print(df["Profit"])
+```
+
+### Output
+
+```
+Year  Month
+2023  Jan      200
+      Feb      250
+2024  Jan      300
+```
+
+
+
+---
+
+# 4. Swap Levels (swaplevel)
+
+### Definition
+
+Interchanges two index levels.
+
+### Syntax
+
+```python
+df.swaplevel(level1,level2)
+```
+
+### Code
+
+```python
+print(df.swaplevel(0,1))
+```
+
+### Output
+
+```
+             Sales  Profit
+Month Year
+Jan   2023    1000    200
+Feb   2023    1200    250
+Jan   2024    1300    300
+```
+
+### Key Point
+
+* Does not modify the original DataFrame unless assigned.
+
+
+
+---
+
+# 5. Sorting Hierarchical Index
+
+### Definition
+
+Sorts MultiIndex based on a level.
+
+### Syntax
+
+```python
+df.sort_index(level=n)
+```
+
+### Code
+
+```python
+print(df.sort_index(level=1))
+```
+
+### Output
+
+```
+             Sales Profit
+Year Month
+2023 Jan     1000   200
+2024 Jan     1300   300
+2023 Feb     1200   250
+```
+
+
+
+---
+
+# 6. Summary Statistics by Index Level
+
+### Syntax
+
+```python
+df.sum(level="Month")
+```
+
+### Code
+
+```python
+print(df.sum(level="Month"))
+```
+
+### Output
+
+```
+       Sales  Profit
+Month
+Jan     2300     500
+Feb     1200     250
+```
+
+### Another Example
+
+```python
+print(df.sum(level="Year"))
+```
+
+### Output
+
+```
+      Sales Profit
+Year
+2023  2200   450
+2024  1300   300
+```
+
+
+
+---
+
+# 7. set_index()
+
+### Definition
+
+Moves one or more columns to the row index.
+
+### Syntax
+
+```python
+df.set_index(columns)
+```
+
+### Code
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+'A':[1,2,3],
+'B':[4,5,6],
+'C':[7,8,9]
+})
+
+print(df.set_index(['A','B']))
+```
+
+### Output
+
+```
+      C
+A B
+1 4   7
+2 5   8
+3 6   9
+```
+
+### Keep Columns
+
+```python
+print(df.set_index(['A','B'],drop=False))
+```
+
+
+
+---
+
+# 8. reset_index()
+
+### Definition
+
+Moves index back into normal columns.
+
+### Syntax
+
+```python
+df.reset_index()
+```
+
+### Code
+
+```python
+print(df.reset_index())
+```
+
+### Output
+
+```
+   index  A  B  C
+0      0  1  4  7
+1      1  2  5  8
+2      2  3  6  9
+```
+
+
+
+---
+
+# 9. MultiIndex in Columns
+
+### Syntax
+
+```python
+pd.MultiIndex.from_arrays()
+```
+
+### Code
+
+```python
+import pandas as pd
+
+arrays = [
+['Sales','Sales','Profit','Profit'],
+['Q1','Q2','Q1','Q2']
+]
+
+column_index = pd.MultiIndex.from_arrays(
+arrays,
+names=['Metric','Quarter']
+)
+
+data = [
+[100,150,20,25],
+[200,250,30,35]
+]
+
+df = pd.DataFrame(
+data,
+columns=column_index
+)
+
+print(df)
+```
+
+### Output
+
+```
+Metric   Sales      Profit
+Quarter    Q1  Q2     Q1  Q2
+0         100 150     20  25
+1         200 250     30  35
+```
+
+
+
+---
+
+# 10. stack()
+
+### Definition
+
+Moves column level to row index.
+
+### Syntax
+
+```python
+df.stack()
+```
+
+### Code
+
+```python
+print(df.stack())
+```
+
+### Output
+
+```
+             Sales Profit
+  Quarter
+0 Q1        100    20
+  Q2        150    25
+1 Q1        200    30
+  Q2        250    35
+```
+
+---
+
+# 11. unstack()
+
+### Definition
+
+Moves row index level to columns.
+
+### Syntax
+
+```python
+df.unstack(level="Month")
+```
+
+### Code
+
+```python
+print(df.unstack(level="Month"))
+```
+
+---
+
+# 12. reset_index() on MultiIndex
+
+### Code
+
+```python
+print(df.reset_index())
+```
+
+### Output
+
+MultiIndex is converted into normal columns.
+
+
+
+---
+
+# Difference
+
+| Method          | Purpose                  |
+| --------------- | ------------------------ |
+| `from_tuples()` | Create row MultiIndex    |
+| `from_arrays()` | Create column MultiIndex |
+| `loc[]`         | Select hierarchical data |
+| `swaplevel()`   | Exchange index levels    |
+| `sort_index()`  | Sort MultiIndex          |
+| `set_index()`   | Columns → Index          |
+| `reset_index()` | Index → Columns          |
+| `stack()`       | Columns → Rows           |
+| `unstack()`     | Rows → Columns           |
+
+---
