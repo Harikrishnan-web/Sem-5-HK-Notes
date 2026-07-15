@@ -291,3 +291,548 @@ Used to quickly understand large datasets before analysis.
 * Analyze relationships
 * Prepare data for Machine Learning 
 ---
+# 2.Pandas Objects
+
+Pandas mainly provides **two data structures (objects)**:
+
+1. **Series** – One-dimensional labeled array.
+2. **DataFrame** – Two-dimensional table made up of multiple Series. 
+
+---
+
+# 2. Pandas Series
+
+### Definition
+
+A **Series** is a one-dimensional labeled array that can store any data type.
+
+### Features
+
+* One-dimensional
+* Has index labels
+* More flexible than NumPy arrays
+* Similar to a dictionary
+
+---
+
+## Creating a Series
+
+### Syntax
+
+```python
+pd.Series(data)
+```
+
+### Code
+
+```python
+import pandas as pd
+
+data = pd.Series([10, 20, 30, 40])
+print(data)
+```
+
+---
+
+## Accessing Series
+
+```python
+data[1]      # 20
+data[1:3]    # 20,30
+```
+
+---
+
+## Important Attributes
+
+```python
+data.values    # Returns values
+data.index     # Returns index
+```
+
+---
+
+## Creating Series with Custom Index
+
+```python
+data = pd.Series([10,20,30], index=["A","B","C"])
+```
+
+Access:
+
+```python
+data["B"]
+```
+
+---
+
+## Creating Series from Dictionary
+
+```python
+population = pd.Series({
+    "India":140,
+    "USA":33,
+    "Japan":12
+})
+```
+
+---
+
+## Ways to Create Series
+
+### From List
+
+```python
+pd.Series([2,4,6])
+```
+
+### From Scalar
+
+```python
+pd.Series(5,index=[1,2,3])
+```
+
+### From Dictionary
+
+```python
+pd.Series({1:"A",2:"B"})
+```
+
+### Key Points
+
+* Stores one column of data.
+* Every value has an index.
+* Supports slicing and indexing.
+* Can be created from list, scalar or dictionary. 
+
+---
+
+# 3. Pandas DataFrame
+
+### Definition
+
+A **DataFrame** is a two-dimensional table consisting of multiple Series.
+
+### Features
+
+* Rows and columns
+* Different data types
+* Labeled axes
+* Easy data manipulation
+
+---
+
+## Example
+
+```python
+population = pd.Series({"A":100,"B":200})
+area = pd.Series({"A":50,"B":80})
+
+states = pd.DataFrame({
+    "Population":population,
+    "Area":area
+})
+
+print(states)
+```
+
+---
+
+## Important Attributes
+
+```python
+states.index
+states.columns
+states["Area"]
+```
+
+---
+
+## Ways to Create DataFrame
+
+### From Series
+
+```python
+pd.DataFrame(population)
+```
+
+### From List of Dictionaries
+
+```python
+data=[{"A":1,"B":2},{"A":3,"B":4}]
+pd.DataFrame(data)
+```
+
+### From Dictionary
+
+```python
+pd.DataFrame({"Population":population,"Area":area})
+```
+
+### From NumPy Array
+
+```python
+pd.DataFrame(np.random.rand(3,2),
+columns=["A","B"])
+```
+
+### Key Points
+
+* Collection of Series.
+* Two-dimensional.
+* Supports row and column indexing.
+* Different columns can have different data types. 
+
+---
+
+# 4. The Pandas Index Object
+
+### Definition
+
+Index is an immutable object used to label rows and columns.
+
+---
+
+## Creating Index
+
+```python
+import pandas as pd
+
+ind = pd.Index([2,3,5,7,11])
+```
+
+---
+
+## Accessing
+
+```python
+ind[1]
+ind[::2]
+```
+
+---
+
+## Index Attributes
+
+```python
+ind.size
+ind.shape
+ind.ndim
+ind.dtype
+```
+
+---
+
+## Immutability
+
+```python
+ind[1]=0
+```
+
+**Output**
+
+```
+TypeError
+```
+
+---
+
+## Set Operations
+
+```python
+indA = pd.Index([1,3,5,7])
+indB = pd.Index([3,5,7,9])
+
+indA & indB    # Intersection
+indA | indB    # Union
+indA ^ indB    # Symmetric Difference
+```
+
+### Key Points
+
+* Immutable (cannot be modified).
+* Supports set operations.
+* Similar to NumPy array but stores labels. 
+
+---
+
+# 5. Data Indexing and Selection
+
+### Definition
+
+Data Indexing and Selection means accessing specific rows or columns from Series or DataFrame.
+
+### Supports
+
+* Indexing
+* Slicing
+* Masking
+* Fancy Indexing
+
+Like NumPy but with additional features. 
+
+---
+
+# 6. Data Selection in Series
+
+### Series as Dictionary
+
+```python
+data = pd.Series(
+[10,20,30,40],
+index=["a","b","c","d"]
+)
+
+data["b"]
+```
+
+---
+
+## Dictionary Methods
+
+```python
+"a" in data
+
+data.keys()
+
+list(data.items())
+```
+
+---
+
+## Adding New Value
+
+```python
+data["e"]=50
+```
+
+---
+
+## Series as Array
+
+### Slicing
+
+```python
+data["a":"c"]
+```
+
+### Position Slicing
+
+```python
+data[0:2]
+```
+
+### Masking
+
+```python
+data[data>20]
+```
+
+### Fancy Indexing
+
+```python
+data[["a","c"]]
+```
+
+### Note
+
+* Label slicing includes last label.
+* Position slicing excludes last position. 
+
+---
+
+# 7. loc, iloc and ix
+
+## loc
+
+Uses **label (explicit index).**
+
+### Syntax
+
+```python
+data.loc[label]
+```
+
+Example
+
+```python
+data.loc[1]
+data.loc[1:3]
+```
+
+---
+
+## iloc
+
+Uses **integer position (implicit index).**
+
+### Syntax
+
+```python
+data.iloc[position]
+```
+
+Example
+
+```python
+data.iloc[1]
+data.iloc[1:3]
+```
+
+---
+
+## ix
+
+Hybrid of loc and iloc.
+
+**Note:** Deprecated (not used in latest Pandas).
+
+### Best Practice
+
+* Use **loc** for labels.
+* Use **iloc** for positions. 
+
+---
+
+# 8. Data Selection in DataFrame
+
+### Definition
+
+A DataFrame behaves like:
+
+* Dictionary of Series
+* Two-dimensional array
+
+---
+
+## Accessing Columns
+
+### Dictionary Style
+
+```python
+data["area"]
+```
+
+### Attribute Style
+
+```python
+data.area
+```
+
+---
+
+## Adding New Column
+
+```python
+data["density"] = data["pop"]/data["area"]
+```
+
+---
+
+## Raw Values
+
+```python
+data.values
+```
+
+---
+
+## Transpose
+
+```python
+data.T
+```
+
+---
+
+## iloc
+
+```python
+data.iloc[:3,:2]
+```
+
+---
+
+## loc
+
+```python
+data.loc[:,"area":"pop"]
+```
+
+---
+
+## Masking
+
+```python
+data.loc[data.density>100,
+["pop","density"]]
+```
+
+---
+
+## Modify Value
+
+```python
+data.iloc[0,2]=90
+```
+
+### Key Points
+
+* `[]` selects columns.
+* `loc` uses labels.
+* `iloc` uses positions.
+* Supports adding and modifying columns. 
+
+---
+
+# 9. Additional Indexing Conventions
+
+## Row Label Slicing
+
+```python
+data["Florida":"Illinois"]
+```
+
+---
+
+## Row Position Slicing
+
+```python
+data[1:3]
+```
+
+---
+
+## Row Masking
+
+```python
+data[data.density>100]
+```
+
+### Key Points
+
+* Row slicing by labels includes end label.
+* Position slicing excludes last position.
+* Boolean masking filters rows satisfying a condition. 
+
+---
+
+# **Difference: loc vs iloc**
+
+| loc                           | iloc                   |
+| ----------------------------- | ---------------------- |
+| Uses labels                   | Uses integer positions |
+| End label included in slicing | End position excluded  |
+| Example: `df.loc["A"]`        | Example: `df.iloc[0]`  |
+| Explicit indexing             | Implicit indexing      |
+
+---
+
+# **Difference: Series vs DataFrame**
+
+| Series                      | DataFrame                      |
+| --------------------------- | ------------------------------ |
+| One-dimensional             | Two-dimensional                |
+| Single column               | Multiple columns               |
+| Has one index               | Has row and column indexes     |
+| Created using `pd.Series()` | Created using `pd.DataFrame()` |
