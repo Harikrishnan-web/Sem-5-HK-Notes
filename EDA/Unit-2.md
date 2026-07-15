@@ -2238,3 +2238,494 @@ print(table)
 * Multiple columns can be used in `columns`.
 * Produces a MultiIndex Pivot Table. 
 ---
+# Vectorized String Operations in Pandas
+
+## Definition
+
+Vectorized String Operations allow string manipulation on an entire **Series** or **DataFrame column** at once using the **`.str`** accessor.
+
+### Advantages
+
+* Faster than loops.
+* Works on the whole column.
+* Automatically ignores **NaN** values.
+* Easy to clean and process text data.
+
+### Syntax
+
+```python
+Series.str.method()
+```
+
+
+
+---
+
+# Creating a String Series
+
+```python
+import pandas as pd
+
+data = pd.Series([
+    "Hari Krishnan",
+    "Python",
+    "PANDAS",
+    "Data Science",
+    None
+])
+
+print(data)
+```
+
+---
+
+# 1. Convert to Lowercase
+
+### Syntax
+
+```python
+Series.str.lower()
+```
+
+### Code
+
+```python
+print(data.str.lower())
+```
+
+### Output
+
+```
+0    hari krishnan
+1    python
+2    pandas
+3    data science
+4    None
+```
+
+---
+
+# 2. Convert to Uppercase
+
+### Syntax
+
+```python
+Series.str.upper()
+```
+
+### Code
+
+```python
+print(data.str.upper())
+```
+
+### Output
+
+```
+0    HARI KRISHNAN
+1    PYTHON
+2    PANDAS
+3    DATA SCIENCE
+4    None
+```
+
+---
+
+# 3. Convert First Letter to Capital
+
+### Syntax
+
+```python
+Series.str.title()
+```
+
+### Code
+
+```python
+print(data.str.title())
+```
+
+---
+
+# 4. Capitalize First Letter
+
+### Syntax
+
+```python
+Series.str.capitalize()
+```
+
+### Code
+
+```python
+print(data.str.capitalize())
+```
+
+---
+
+# 5. Remove Spaces
+
+### Syntax
+
+```python
+Series.str.strip()
+```
+
+### Code
+
+```python
+data = pd.Series([" Hari "," Python "," Pandas "])
+
+print(data.str.strip())
+```
+
+---
+
+# 6. Remove Left Spaces
+
+### Syntax
+
+```python
+Series.str.lstrip()
+```
+
+### Code
+
+```python
+print(data.str.lstrip())
+```
+
+---
+
+# 7. Remove Right Spaces
+
+### Syntax
+
+```python
+Series.str.rstrip()
+```
+
+### Code
+
+```python
+print(data.str.rstrip())
+```
+
+---
+
+# 8. Find String Length
+
+### Syntax
+
+```python
+Series.str.len()
+```
+
+### Code
+
+```python
+print(data.str.len())
+```
+
+---
+
+# 9. Split String
+
+### Syntax
+
+```python
+Series.str.split()
+```
+
+### Code
+
+```python
+print(data.str.split())
+```
+
+---
+
+# 10. Join Strings
+
+### Syntax
+
+```python
+Series.str.cat()
+```
+
+### Code
+
+```python
+print(data.str.cat(sep=", "))
+```
+
+---
+
+# 11. Replace Text
+
+### Syntax
+
+```python
+Series.str.replace(old,new)
+```
+
+### Code
+
+```python
+print(data.str.replace("Python","Java"))
+```
+
+---
+
+# 12. Check Substring
+
+### Syntax
+
+```python
+Series.str.contains()
+```
+
+### Code
+
+```python
+print(data.str.contains("Data"))
+```
+
+---
+
+# 13. Starts With
+
+### Syntax
+
+```python
+Series.str.startswith()
+```
+
+### Code
+
+```python
+print(data.str.startswith("P"))
+```
+
+---
+
+# 14. Ends With
+
+### Syntax
+
+```python
+Series.str.endswith()
+```
+
+### Code
+
+```python
+print(data.str.endswith("n"))
+```
+
+---
+
+# 15. Find Position
+
+### Syntax
+
+```python
+Series.str.find()
+```
+
+### Code
+
+```python
+print(data.str.find("a"))
+```
+
+---
+
+# 16. Count Occurrences
+
+### Syntax
+
+```python
+Series.str.count()
+```
+
+### Code
+
+```python
+print(data.str.count("a"))
+```
+
+---
+
+# 17. Repeat String
+
+### Syntax
+
+```python
+Series.str.repeat()
+```
+
+### Code
+
+```python
+print(data.str.repeat(2))
+```
+
+---
+
+# 18. Check Lowercase
+
+### Syntax
+
+```python
+Series.str.islower()
+```
+
+### Code
+
+```python
+print(data.str.islower())
+```
+
+---
+
+# 19. Check Uppercase
+
+### Syntax
+
+```python
+Series.str.isupper()
+```
+
+### Code
+
+```python
+print(data.str.isupper())
+```
+
+---
+
+# 20. Check Numeric
+
+### Syntax
+
+```python
+Series.str.isnumeric()
+```
+
+### Code
+
+```python
+num = pd.Series(["123","ABC","456"])
+
+print(num.str.isnumeric())
+```
+
+---
+
+# 21. Find All Matches
+
+### Syntax
+
+```python
+Series.str.findall()
+```
+
+### Code
+
+```python
+print(data.str.findall("a"))
+```
+
+---
+
+# 22. Extract Pattern
+
+### Syntax
+
+```python
+Series.str.extract()
+```
+
+### Code
+
+```python
+email = pd.Series([
+    "hari@gmail.com",
+    "john@yahoo.com"
+])
+
+print(email.str.extract(r'(.+)@(.+)'))
+```
+
+---
+
+# 23. Slice Strings
+
+### Syntax
+
+```python
+Series.str.slice(start,stop)
+```
+
+### Code
+
+```python
+print(data.str.slice(0,4))
+```
+
+---
+
+# 24. Swap Upper and Lower Case
+
+### Syntax
+
+```python
+Series.str.swapcase()
+```
+
+### Code
+
+```python
+print(data.str.swapcase())
+```
+
+---
+
+# Common Vectorized String Methods
+
+| Method         | Purpose                     |
+| -------------- | --------------------------- |
+| `lower()`      | Convert to lowercase        |
+| `upper()`      | Convert to uppercase        |
+| `title()`      | Title case                  |
+| `capitalize()` | First letter capital        |
+| `strip()`      | Remove spaces               |
+| `lstrip()`     | Remove left spaces          |
+| `rstrip()`     | Remove right spaces         |
+| `split()`      | Split string                |
+| `cat()`        | Join strings                |
+| `replace()`    | Replace text                |
+| `contains()`   | Check substring             |
+| `startswith()` | Check starting text         |
+| `endswith()`   | Check ending text           |
+| `find()`       | Find position               |
+| `count()`      | Count occurrences           |
+| `repeat()`     | Repeat string               |
+| `len()`        | String length               |
+| `islower()`    | Check lowercase             |
+| `isupper()`    | Check uppercase             |
+| `isnumeric()`  | Check numeric               |
+| `findall()`    | Find all matches            |
+| `extract()`    | Extract pattern using regex |
+| `slice()`      | Slice string                |
+| `swapcase()`   | Swap upper/lower case       |
+
+### Key Points
+
+* Use **`.str`** before every string method.
+* Vectorized operations work on the **entire Series**.
+* Handles **NaN** values automatically.
+* Faster than using loops.
+* Mainly used for **cleaning and preprocessing text data**. 
+---
