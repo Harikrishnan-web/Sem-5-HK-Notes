@@ -391,3 +391,123 @@
 * Saha I, Paul B. *Essentials of Biostatistics & Research Methodology*. 
 * Dobe M. *Health promotion and Education: Foundations for Changing Health Behavior*. 
 ---
+# Process of Health Promotion Research: Integrity and Rigor
+## Lecture-1/4
+**Lecturer Details**
+
+* Dr. Arista Lahiri, MD, MBA
+* Assistant Professor (Community Medicine)
+* Dr. B. C. Roy Multi-Speciality Medical Research Centre, Indian Institute of Technology Kharagpur
+* Email: [alahiri@bcrmrc.iitkgp.ac.in](mailto:alahiri@bcrmrc.iitkgp.ac.in) 
+
+**Lecture Focus**
+
+* Values in health promotion research
+* Scholarship, grantsmanship, and ethics
+* Integrity and rigor in research 
+
+## **High Value Principles in Health Promotion Research**
+
+* The lecture emphasizes that health promotion research demands vigilant attention to:
+
+  * **Integrity** — best demonstrated through scholarships
+  * **Rigor** — best observed in grantsmanship
+  * **Ethics** — shown through approval of the empowered Ethics Committee before the research begins 
+* These three values are presented as the core principles that guide meaningful health promotion research. 
+
+## **Scholarship and Integrity**
+
+* Scholarship means the researcher has an inherent curiosity about the research questions and a strong dedication to expanding the knowledge base in health promotion. 
+* Integrity is a key feature of scholarship. 
+* Integrity ensures a fair test of the research questions. 
+* Integrity means that a preconceived desire to prove or disprove the hypothesis must not interfere with the research process. 
+* The lecture points out that research itself forces objectivity, but adherence to the process depends on the researcher’s self-report, which is why integrity is vital. 
+
+### **How Scholarship Reflects Integrity**
+
+* Scholarship is not just interest in research for its own sake.
+* It should show discipline-specific curiosity and a willingness to move the field of health promotion forward.
+* In health promotion, this means curiosity should be linked to improving people’s lives and preventing disease and illness.
+* A scholarship application is expected to reflect this kind of purpose and commitment. 
+
+### **Why Integrity Matters**
+
+* If a researcher has already secured prior scholarships, that can strengthen the appearance of integrity in later applications.
+* Funding bodies often view prior success as evidence that the researcher has the integrity needed for the discipline.
+* Even then, the researcher must still explain how the work will benefit people and why they are the right candidate for support. 
+
+### **Integrity in Practice**
+
+* Integrity means not allowing personal desire to interfere with reporting the truth.
+* The lecture warns against false reporting.
+* Example:
+
+  * If an intervention was meant for 100 people but was actually given to only 50, reporting that it was given to 100 would be false reporting.
+  * This distorts the evidence, misleads future research, and wastes resources. 
+
+## **Grantsmanship and Rigor**
+
+* Grantsmanship is a vital part of the research process. 
+* Funding is not an explicit step in the research process, but it is an implicit demand that makes the entire research enterprise possible. 
+* Executing rigor is expensive and resource-driven. 
+* Obtaining funds for health promotion research is highly competitive. 
+* Grant awards depend on several factors, including:
+
+  * Quality of the research proposal
+  * Relevance of the topic and population
+  * The current degree of engagement in the iterative research process
+  * The status of the idea or concept being pursued 
+
+### **How Grantsmanship Relates to Rigor**
+
+* Rigor requires proper resources.
+* To follow a protocol line by line and make every measurement accurate, the researcher needs trained manpower, equipped devices, and other resources.
+* Therefore, grantsmanship is closely linked with rigor because grants pay for the costs of doing research properly. 
+
+### **Why Health Promotion Funding Is Competitive**
+
+* Health promotion research is often preventive rather than curative.
+* Because many funding systems give more attention to curative work, preventive and health promotion projects may receive a smaller share of available resources.
+* That makes competitive grant writing especially important in this field. 
+
+## **Attention to Ethics**
+
+* Vigilant attention to ethics is the most critical issue in health promotion. 
+* The lecture compares this to the Hippocratic Oath and states that health promotion researchers must follow the principle: **First, do no harm**. 
+* Health promotion research is highly regulated by local and federal organizations that protect the rights of participants, including gatekeepers in some cases. 
+* Health promotion research usually involves humans and often deals with very personal and protected behaviors. 
+
+### **Why Ethics Needs Special Care**
+
+* Health promotion aims to do good for the community.
+* The intervention should not harm people, worsen disease risk, or create disability.
+* Ethical review before the study begins is essential, but ethical responsibility continues during fieldwork as well. 
+
+### **Ethical Complexity in Health Promotion**
+
+* The lecture notes that an intervention may improve health but still create other harms.
+* Example:
+
+  * A health promotion intervention may improve one outcome but harm a person’s livelihood.
+* This is why health promotion ethics are not always simple yes-or-no decisions.
+* The researcher must think carefully about whether the intervention is appropriate for the study population. 
+
+## **How the Three Values Fit Together**
+
+* Scholarships showcase integrity. 
+* Research grants pay for the expenses needed to achieve rigor. 
+* Ethics is the most important of the three values in the health promotion research process. 
+* Competence and proficiency in scholarship, grantsmanship, and ethics should be a high priority for meaningful health promotion research. 
+
+## **Lecture Summary**
+
+* **Scholarship** reflects curiosity, commitment, and integrity.
+* **Grantsmanship** supports the resources needed to carry out rigorous research.
+* **Ethics** protects participants and ensures that the study does no harm.
+* Together, these three values form the foundation for meaningful health promotion research.
+
+## **Resources Mentioned**
+
+* Salazar LF, Crosby RA, DiClemente RJ. *Research methods in health promotion*. 
+* Saha I, Paul B. *Essentials of Biostatistics & Research Methodology*. 
+* Guttman, N. (2017), *Ethical issues in health promotion and communication interventions*. 
