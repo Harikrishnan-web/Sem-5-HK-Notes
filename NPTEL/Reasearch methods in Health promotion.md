@@ -511,3 +511,114 @@
 * Salazar LF, Crosby RA, DiClemente RJ. *Research methods in health promotion*. 
 * Saha I, Paul B. *Essentials of Biostatistics & Research Methodology*. 
 * Guttman, N. (2017), *Ethical issues in health promotion and communication interventions*. 
+---
+# Ethics in Health Promotion Research
+## Lecture-1/5
+**Lecturer Details**
+
+* Dr. Sweety Suman Jha, MBBS, MD
+* Senior Resident, Community Medicine
+* Dr. B. C. Roy Multi-Speciality Medical Research Centre, Indian Institute of Technology Kharagpur
+* Email: [ssjha@bcrmrc.iitkgp.ac.in](mailto:ssjha@bcrmrc.iitkgp.ac.in) 
+
+**Lecture Focus**
+
+* Basic principles
+* Informed consent process
+* Ethical concerns regarding health promotion communication interventions 
+
+## **Ethics in Health Promotion Research: Overview**
+
+* Health promotion research commonly involves biomedical or behavioral research. 
+* Health promotion practice involves implementing biomedical or behavioral interventions. 
+* Protection of human subjects and program participants is essential to minimize risk and maximize benefit in both research and practice. 
+* Ethical conduct should be fundamental to any type of research, especially research involving human subjects. 
+* Health promotion research often studies behaviors that are sensitive, such as mental health issues, sexual behavior, and substance use. 
+* Health promotion communication interventions raise ethical issues because they aim to influence people’s views and lifestyles and are often shaped by government agencies or powerful public/private organizations. 
+
+## **Basic Principles of Medical Research Ethics**
+
+### **Autonomy**
+
+* Autonomy means respect for individual rights.
+* It is the right of an individual to decide whether to participate in research or not. 
+* A person cannot be forced to participate in any study, whether intervention-based or non-interventional. 
+
+### **Beneficence**
+
+* The researcher should act in the best interest of the research participant. 
+* The aim is to bring about more beneficial consequences than harmful ones. 
+
+### **Non-maleficence**
+
+* Non-maleficence means first do no harm. 
+* The research procedure must not harm the participant. 
+* The lecture stresses that even innovative or important research must still avoid harming participants. 
+
+### **Justice**
+
+* Justice means equal justice for all. 
+* All individuals should have equal opportunity to participate in research. 
+* No one should be unfairly compelled to participate, especially vulnerable populations. 
+* The lecture points out that vulnerable groups such as prisoners, commercial sex workers, institutionalized children, payment dwellers, and similar groups must not be forced into studies. 
+
+## **Informed Consent Process**
+
+* Informed consent is a process in which the research participant has full access to rightful information related to the research, understands it fully, and signs agreement voluntarily. 
+* The informed consent document has two parts:
+
+  * Patient/participant information sheet
+  * Informed consent form 
+* The document should be mandatorily translated into the local language. 
+* The informed consent document should be reviewed and approved by the Institutional Ethics Committee before being administered for signature. 
+* Assent refers to agreement provided by persons who are not of legal age to participate in research. 
+* The lecture stresses that the participant must know the purpose of the study, why the researcher is approaching them, and what the possible consequences of participation are. 
+* Privacy and confidentiality must be clearly promised to participants as part of the consent process. 
+
+## **Ethical Concerns Regarding Health Promotion Communication Interventions**
+
+### **Privacy, Autonomy, and Freedom of Choice**
+
+* A key ethical concern is infringing on people’s privacy. 
+* Another concern is interfering with the right to freedom of choice and autonomy in the name of promoting health. 
+* Ethical issues can appear at every stage of the intervention:
+
+  * conception of goals
+  * informed consent
+  * participation of the intended population in design
+  * assessment of outcomes 
+* Strategic decisions about which population should or should not be targeted are also ethical concerns. 
+* The kind of persuasive arguments and visual appeals used in the intervention also matter ethically. 
+
+### **Designing Interventions for Benefit**
+
+* Health promotion interventions should respect people’s privacy and their autonomy to make free choices without manipulation. 
+* They should be designed and implemented so they benefit most people and use public resources efficiently and effectively. 
+
+### **Relevance of Solutions**
+
+* Communication interventions that do not provide relevant solutions for the specific problems or barriers preventing recommended health practices raise a central ethical concern. 
+* If people are not given solutions to the barriers they must overcome, they are less likely to adopt the recommended action or protect themselves. 
+* The lecture gives the example of children being advised to do physical activity but not having a playground or proper space; in such a case, the intervention must also address the barrier. 
+
+### **Digital Media and the Digital Divide**
+
+* Digital media can widely disseminate health promotion information in many formats and are now a major source of health information for many people. 
+* People with limited digital literacy, no physical access to computing facilities, or inadequate skills and competencies are less able to access or use online health information. 
+* Public health emergencies that depend mainly on digital media can create an information gap. 
+* Vulnerable groups such as the aged, the homeless, recent immigrants, rural residents, and poor populations are more likely to be at risk when digital media is the main route for information provision. 
+* Digital interventions therefore raise ethical issues related to the digital divide and privacy. 
+
+## **Key Takeaways**
+
+* Ethical issues must always be the first concern in health promotion research and practice. 
+* Digital media interventions need special attention because of privacy issues and unequal access. 
+* Ethical issues should be identified especially in goals that appear most important or in strategies that seem most effective. 
+* The lecture closes by emphasizing that ethics is not separate from health promotion work; it must be built into every stage of research and intervention. 
+
+## **Resources Mentioned**
+
+* Guttman, N. (2017), *Ethical issues in health promotion and communication interventions*. 
+* Salazar LF, Crosby RA, DiClemente RJ. *Research methods in health promotion*. 
+* Saha I, Paul B. *Essentials of Biostatistics & Research Methodology*. 
+---
