@@ -17,7 +17,7 @@
 | `ping <hostname or IP address>`    | Tests connectivity between the local system and a remote host.   | Reply status, packet loss statistics, round-trip time (RTT), and TTL (Time to Live) values.                                                       |
 
 ---
-## **EX. NO. 2: HTTP WEB CLIENT PROGRAM**
+## **EX. NO. 2: HTTP WEB CLIENT PROGRAM** j
 
 ### **AIM**
 
