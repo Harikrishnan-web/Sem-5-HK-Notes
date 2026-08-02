@@ -944,3 +944,209 @@ Prepare questions regarding:
 * Multilevel interventions generally outperform single-level interventions in producing long-term behavior change.
 ---
 ## lecture 5/2
+# Social Science Techniques
+
+* **Lecture:** Social Science Techniques
+* **Course:** Research Methods in Health Promotion
+* **Faculty:** Dr. Sweety Suman Jha, MBBS, MD, Senior Resident (Community Medicine), Dr. B.C. Roy Multi-Speciality Medical Research Centre, IIT Kharagpur. 
+
+## Topics Covered
+
+* Sociology and Psychology in Public Health
+* Behavioral Economics and Health
+* Sociology
+* Psychology
+* Culture
+* Behavioral Economics 
+
+## Sociology in Public Health
+
+* The sociological analysis of health and illness dates back to the beginnings of sociology as a systematic discipline in the late 1800s.
+* Public health is influenced by:
+
+  * Cultural conditions
+  * Socioeconomic conditions
+  * Political conditions
+* These community-level factors influence the social actions and health behaviors of individuals.
+* Medical sociology has two major contributions to public health:
+
+  * Systematic examination of the relationship between individuals, communities, and the social organizational factors that shape group behavior.
+  * Understanding that healthcare systems are organizations embedded within larger institutions, influenced by historical developments and operating within specific cultural contexts. 
+
+## Important Social Aspects Linking Individuals and Groups
+
+* Cultural influences on health-related behavior.
+* Social class influences on health-related behavior.
+* Lifestyle.
+* Creation and transformation of healthcare systems.
+* Cultural values based on ethnicity and religion shape:
+
+  * People's beliefs about health.
+  * People's attitudes toward illness.
+  * People's lifestyles. 
+
+## Role of Culture in Public Health
+
+* Healthcare systems develop and change because of interactions among:
+
+  * Socioeconomic factors.
+  * Cultural factors.
+  * Political factors.
+* Culture refers to:
+
+  * Values.
+  * Beliefs.
+  * Ethnic traditions.
+  * Religious traditions.
+* Culture is passed from one generation to another as part of a community's identity or "design for living."
+* Besides physical and socioeconomic environments, culture influences public health in three major ways:
+
+  * **Health behavior** – what people do regarding health risks.
+  * **Health attitudes and beliefs** – how people think and feel about health and illness.
+  * **Response to health authorities** – how people perceive and follow public health guidelines and recommendations. 
+
+## Lifestyle and Health
+
+* Cultural norms and traditions influence people's preferences for different healthcare services.
+* Lifestyle is another major determinant of health behavior.
+* Lifestyle affects:
+
+  * Leisure activities.
+  * Physical activity.
+  * Exercise habits.
+  * Alcohol consumption.
+  * Cigarette smoking.
+* Examples:
+
+  * Some people have no time for leisure.
+  * Some lead sedentary lifestyles.
+  * Some participate in extreme sports.
+  * Some regularly attend gyms and exercise.
+  * Others frequently consume alcohol or smoke cigarettes.
+* Lifestyle influences:
+
+  * Risk of serious injuries.
+  * Risk of infectious diseases. 
+
+## Social Class and Health
+
+* Social class is one of the most extensively studied social determinants of health.
+* Social class influences:
+
+  * Health status.
+  * Health behavior.
+  * Access to healthcare services.
+  * Utilization of healthcare services.
+* Health inequalities caused by social class can be reduced through interventions that benefit everyone regardless of:
+
+  * Personal resources.
+  * Individual behavior.
+* Medical sociology studies:
+
+  * Socioeconomic characteristics.
+  * Cultural characteristics.
+  * Demographic characteristics.
+* These characteristics influence the health of both individuals and populations. 
+
+## Psychology in Public Health
+
+* The branch of psychology most relevant to public health is **Health Psychology**.
+* Health psychology contributes to:
+
+  * Stress management.
+  * Health behavior change.
+* Health psychologists use social cognition theories during:
+
+  * Individual therapy.
+  * Group therapy.
+* Their objectives include:
+
+  * Reducing risky behaviors such as alcohol drinking and cigarette smoking.
+  * Promoting preventive behaviors such as maintaining a healthy diet. 
+
+## Introduction to Behavioral Economics
+
+* Behavioral economics combines:
+
+  * Economics.
+  * Psychology.
+* Traditional economic theory assumes that people are:
+
+  * Fully rational.
+  * Completely selfish.
+  * Forward-thinking decision-makers.
+* Behavioral economics aims to:
+
+  * Explain why people deviate from traditional economic assumptions.
+  * Improve models that explain individual behavior more accurately. 
+
+## Behavioral Economics and Health
+
+* Improved behavioral models help policymakers design more effective health interventions.
+* Behavioral economics is:
+
+  * **Descriptive** – explains how people actually behave and why.
+  * **Prescriptive** – recommends policies that can improve individual decision-making and health behavior. 
+
+## Reward Incentives
+
+* Reward incentives help explain how economics and behavioral economics influence health behavior.
+* They demonstrate how traditional economic interventions can be strengthened using behavioral economics.
+* According to standard economic theory:
+
+  * People value money and tangible rewards.
+  * People work to earn money.
+  * Greater rewards encourage greater effort.
+* Therefore, monetary incentives can motivate people to perform behaviors they might otherwise avoid.
+* Financial incentives are considered an important tool for encouraging healthy behaviors. 
+
+## Summary
+
+* Sociology focuses on an individual's social behavior.
+* It studies:
+
+  * People's actions.
+  * People's motives.
+  * Relationships with others.
+  * Small groups.
+  * Institutions.
+  * Social systems.
+  * Nations.
+  * Global organizations.
+* Behavioral economics lies at the intersection of economics and psychology. 
+
+# Key Exam Points
+
+* Sociology studies the relationship between society and health.
+* Medical sociology has two major contributions:
+
+  * Examining the relationship between individuals, communities, and social organizations.
+  * Understanding healthcare systems as organizations influenced by history and culture.
+* Culture affects:
+
+  * Health behavior.
+  * Health attitudes and beliefs.
+  * Responses to public health guidelines.
+* Lifestyle influences:
+
+  * Leisure.
+  * Physical activity.
+  * Alcohol use.
+  * Smoking.
+  * Disease risk.
+* Social class affects:
+
+  * Health status.
+  * Health behavior.
+  * Access to healthcare.
+  * Healthcare utilization.
+* Health psychology focuses on:
+
+  * Stress management.
+  * Behavior modification.
+  * Preventive health behaviors.
+* Behavioral economics combines psychology and economics.
+* Traditional economics assumes people are rational and self-interested.
+* Behavioral economics explains actual decision-making and helps design effective health policies.
+* Monetary and reward incentives can promote healthy behaviors by motivating individuals.
+---
