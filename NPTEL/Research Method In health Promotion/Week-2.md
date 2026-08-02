@@ -453,4 +453,494 @@
 * **Behavior Change Techniques** are practical methods used to change behavior and its influencing factors.
 * **Theories and models** help explain behavior and guide effective behavior change interventions. 
 ---
-## Lecture 3/3
+## Lecture 3/2
+# Intervention Mapping
+
+## Overview of Intervention Mapping
+
+* **Intervention Mapping (IM)** is a systematic process used to:
+
+  * Design behavior change interventions
+  * Develop interventions
+  * Evaluate interventions 
+
+* Provides **step-by-step guidance** for developing effective health promotion interventions.
+
+* Maps the complete pathway from:
+
+  * Recognizing a health need or problem
+  * Identifying possible solutions
+  * Testing potential solutions
+
+* Helps health promotion program planners make **effective decisions** during:
+
+  * Planning
+  * Implementation
+  * Evaluation 
+
+* Provides a structured framework for:
+
+  * Influencing behaviour change
+  * Improving environmental conditions
+  * Promoting health
+  * Preventing or improving health problems
+
+* Helps health promoters develop the **best possible intervention**.
+
+* The detailed nature of Intervention Mapping increases the likelihood that a program will successfully achieve its goals and objectives. 
+
+* Makes the pathways of change explicit by:
+
+  * Explaining how change is expected to occur
+  * Examining assumptions made during planning
+  * Reviewing decisions made at every step
+
+* Enables:
+
+  * Program planners
+  * Program users
+  * Participants
+
+  to better understand why a program succeeds or fails.
+
+* Thorough planning at the beginning of a project:
+
+  * Encourages creative development
+  * Improves production processes
+  * Enhances intervention deliverability
+  * Increases the chance of achieving desired outcomes 
+
+## Intervention Mapping Steps
+
+* Every Intervention Mapping step contains several tasks.
+
+* Completion of each step produces a product that guides the next step.
+
+* Completion of all steps provides a complete blueprint for:
+
+  * Designing interventions
+  * Implementing interventions
+  * Evaluating interventions
+
+* The blueprint is based on:
+
+  * Theoretical information
+  * Empirical evidence
+  * Practical information 
+
+## Six Fundamental Steps of Intervention Mapping
+
+* Conduct a **needs assessment or problem analysis**
+
+* Create **matrices of change objectives** based on:
+
+  * Behaviour determinants
+  * Environmental determinants
+
+* Select:
+
+  * Theory-based intervention methods
+  * Practical strategies
+
+* Translate methods and strategies into an organized program
+
+* Plan for:
+
+  * Adoption
+  * Implementation
+  * Sustainability
+
+* Generate an evaluation plan 
+
+## Step 1: Needs Assessment
+
+### Establish a planning group
+
+* Include:
+
+  * Potential program participants
+  * Stakeholders involved in planning
+
+* Plan how the needs assessment will be conducted.
+
+### Conduct needs assessment
+
+* Analyze:
+
+  * Health problems
+  * Quality of life problems
+  * Causes of those problems
+
+* Decide program priorities.
+
+### Assess community capacity
+
+* Balance the needs assessment with an assessment of:
+
+  * Community strengths
+  * Community resources
+  * Community capacity
+
+### Link needs assessment with evaluation
+
+* Establish desired program outcomes early.
+* Connect assessment findings with future evaluation planning. 
+
+## Step 2: Matrices of Change Objectives
+
+### Define expected outcomes
+
+* Specify expected changes in:
+
+  * Health-related behaviour
+  * Environmental conditions
+
+### Develop performance objectives
+
+* Break behaviours and environmental conditions into specific **performance objectives**.
+
+### Select determinants
+
+Choose determinants that are:
+
+* Important
+* Changeable
+
+Types include:
+
+* Personal determinants
+* External determinants
+
+### Create matrices
+
+Develop matrices for different intervention levels:
+
+* Individual
+* Interpersonal
+* Organizational
+* Community
+* Societal
+
+Create the matrix by combining:
+
+* Performance objectives
+* Determinants
+
+Then write **change objectives**.
+
+### Change objectives
+
+* Represent the **most immediate target** of an intervention. 
+
+## Step 3: Theory-Based Methods and Practical Strategies
+
+### Involve participants
+
+* Review intervention ideas with intended participants.
+* Consider participant perspectives when selecting methods and strategies.
+
+### Select theoretical methods
+
+Choose methods that can influence determinants.
+
+Identify conditions under which each method is most effective.
+
+### Develop practical strategies
+
+* Select or design strategies for delivering intervention methods to target groups.
+
+### Ensure alignment
+
+* Confirm that strategies match the previously developed change objectives. 
+
+## Step 4: Program Development
+
+### Consult intended participants
+
+* Seek participant preferences.
+* Use their opinions while designing health education and promotion programs.
+
+### Describe the program
+
+Specify:
+
+* Scope
+* Sequence
+* Themes
+* Required program materials
+
+### Prepare design documents
+
+Develop documents that help professionals create materials that:
+
+* Meet program objectives
+* Follow specified methods
+* Follow strategy guidelines
+
+### Review existing materials
+
+Check whether available materials already match:
+
+* Change objectives
+* Methods
+* Strategies
+
+### Develop program materials
+
+* Create new materials if required.
+
+### Pretest materials
+
+* Test materials before final production.
+* Supervise the final production process. 
+
+## Step 5: Adoption and Implementation
+
+### Identify users
+
+Determine potential users of the health promotion program.
+
+### Specify performance objectives
+
+Develop objectives related to:
+
+* Adoption
+* Implementation
+* Sustainability
+
+### Specify determinants
+
+Identify determinants affecting:
+
+* Adoption
+* Implementation
+* Sustainability
+
+### Design implementation interventions
+
+Organize interventions to achieve change objectives related to program use. 
+
+## Step 6: Evaluation Planning
+
+### Develop evaluation questions
+
+Prepare questions based on program outcomes related to:
+
+* Quality of life
+* Health
+* Behaviour
+* Environment
+
+### Evaluate change objectives
+
+Develop questions based on:
+
+* Performance objectives
+* Determinants
+* Change objectives
+
+### Process evaluation
+
+Prepare questions regarding:
+
+* Methods
+* Conditions
+* Strategies
+* Program implementation
+
+### Develop indicators
+
+* Select appropriate indicators.
+* Develop measurement tools.
+
+### Specify evaluation design
+
+* Decide how evaluation will be conducted. 
+
+## Key Points for Examination
+
+* Intervention Mapping is a process used to:
+
+  * Design
+  * Develop
+  * Evaluate behaviour change interventions.
+
+* Its primary purpose is to provide health promotion planners with a structured framework for decision-making during planning, implementation, and evaluation.
+
+* **Performance objectives + Personal determinants + External determinants = Change objectives**
+
+* **Change objectives are the most immediate target of an intervention.** 
+---
+## Lecture 4/2
+# Ecological Models of Health Behavior
+
+* **Lecture:** Ecological Models of Health Behavior
+* **Course:** Research Methods in Health Promotion
+* **Faculty:** Dr. Sweety Suman Jha, MBBS, MD, Senior Resident (Community Medicine), Dr. B.C. Roy Multi-Speciality Medical Research Centre, IIT Kharagpur. 
+
+## Background of Ecological Models
+
+* The term **ecology** is derived from **biological science**.
+* Ecology refers to the **interrelationships between organisms and their environments**.
+* Ecological models in behavioral sciences and public health focus on the interaction between:
+
+  * People
+  * Their physical environment
+  * Their sociocultural environment
+* Ecological models differ from traditional behavioral theories because they consider:
+
+  * Environmental influences
+  * Organizational influences
+  * Community influences
+  * Public policy influences
+* Traditional behavioral theories mainly focus on:
+
+  * Individual characteristics
+  * Individual skills
+  * Family influence
+  * Friends and other immediate social influences
+* Ecological models recognize that health behavior is influenced not only by individuals but also by the broader environment and policies. 
+
+## Importance of Ecological Models
+
+* Ecological models provide a framework for integrating multiple theories.
+* They act as a **meta-model**, combining different theories into one comprehensive framework.
+* They ensure that:
+
+  * Environmental factors
+  * Policy factors
+  * Individual factors
+    are all considered while studying health behavior and designing interventions.
+* Healthy behaviors are most likely when:
+
+  * The environment supports healthy choices.
+  * Policies encourage healthy choices.
+  * Individuals are educated and motivated to make healthy choices.
+* Health education alone has limited effectiveness if supportive environments and policies are absent.
+* Education without environmental support usually produces:
+
+  * Weak effects
+  * Short-term behavior change 
+
+## Central Proposition of Ecological Models
+
+* Significant and long-lasting behavior change usually requires a combination of:
+
+  * Individual-level interventions
+  * Environmental-level interventions
+  * Policy-level interventions
+* All levels of influence are considered equally important.
+* Multilevel studies explain health behavior better than studies focusing on only one level.
+* Multilevel interventions are generally more effective than single-level interventions. 
+
+## Strength of Ecological Models
+
+* One of the greatest strengths is the ability to integrate different theories and models.
+* Researchers do not need to depend on only one behavioral theory.
+* A multilevel ecological framework allows researchers to combine:
+
+  * Individual-level models
+  * Social-level models
+  * Organizational-level models
+* This results in more comprehensive:
+
+  * Research studies
+  * Health promotion interventions 
+
+# Five Principles of Ecological Models
+
+## Multiple Levels of Influence on Health Behaviors
+
+* Health behaviors are influenced by multiple levels simultaneously.
+* These levels include:
+
+  * Intrapersonal (individual)
+  * Interpersonal
+  * Organizational
+  * Community
+  * Public policy
+* The contribution of each level depends on:
+
+  * The specific behavior
+  * The context
+* Sociocultural factors and physical environments may influence more than one level.
+* Ecological models are unique because they include all these levels instead of focusing on only one or two. 
+
+## Environmental Contexts Are Significant Determinants of Health Behaviors
+
+* People's behavior is often predicted better by their environment than by their personal characteristics.
+* Social and physical environments are defining features of ecological models.
+* Environmental contexts can:
+
+  * Shape individual behavior
+  * Support healthy behavior
+  * Restrict healthy behavior
+  * Influence interpersonal relationships and interactions. 
+
+## Influences on Behaviors Interact Across Levels
+
+* Factors from different levels interact with one another.
+* Variables work together rather than independently.
+* Example:
+
+  * Health education encouraging physical activity becomes more effective when supported by:
+
+    * Physician counseling
+    * Insurance discounts for regular physical activity
+    * Sidewalks and supportive infrastructure
+* Since multiple variables exist at multiple levels, identifying the most important interactions can be challenging. 
+
+## Ecological Models Should Be Behavior-Specific
+
+* Ecological models are most useful when designed for a specific health behavior.
+* Environmental and policy variables often differ according to the behavior being studied.
+* A strategy effective for one behavior may not work for another.
+* Example:
+
+  * Promoting jogging may require different environmental supports than promoting walking to work.
+* Identifying behavior-specific environmental and policy factors is one of the major challenges while developing ecological models. 
+
+## Multilevel Interventions Are Most Effective
+
+* Interventions targeting multiple levels are more effective than those targeting only individuals.
+* Single-level interventions often produce:
+
+  * Small effects
+  * Short-term behavior change
+* Educational interventions are more successful when:
+
+  * Policies support the behavior.
+  * The environment encourages the behavior.
+* Individual-focused interventions can produce large improvements among participants.
+* However, these improvements are usually temporary unless:
+
+  * The environment is supportive.
+  * Health-promoting policies are present. 
+
+# Ecological Model Summary
+
+* Ecological models focus on the interaction between people and their physical and sociocultural environments.
+* Sustainable health behavior change requires a combination of:
+
+  * Individual-level interventions
+  * Environmental-level interventions
+  * Policy-level interventions
+* Long-term maintenance of healthy behaviors depends on supportive environments and policies in addition to individual motivation. 
+
+# Key Exam Points
+
+* Ecology refers to the relationship between organisms and their environment.
+* Ecological models emphasize environmental and policy influences in addition to individual factors.
+* They serve as a **meta-model** by integrating multiple behavioral theories.
+* Health education alone is usually insufficient without supportive environments.
+* Sustainable health behavior change requires interventions at multiple levels.
+* The five principles of ecological models are:
+
+  * Multiple levels of influence
+  * Environmental contexts are significant determinants
+  * Interactions across levels
+  * Behavior-specific ecological models
+  * Multilevel interventions are most effective
+* Multilevel interventions generally outperform single-level interventions in producing long-term behavior change.
+---
+## lecture 5/2
