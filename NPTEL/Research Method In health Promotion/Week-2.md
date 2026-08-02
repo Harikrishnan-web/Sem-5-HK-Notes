@@ -128,3 +128,329 @@
 * Dobe M. *Health promotion and Education: Foundations for Changing Health Behavior*.
 * Prestwich A, Kenworthy J, Conner M. *Health behavior change: Theories, methods and interventions*.
 ---
+## Lecture 2/2
+# Theory, Research and Behavior Change Techniques
+
+* **Lecturer:** Dr. Sweety Suman Jha, MBBS, MD
+* **Designation:** Senior Resident, Community Medicine
+* **Institution:** Dr. B.C. Roy Multi-Speciality Medical Research Centre, Indian Institute of Technology (IIT) Kharagpur
+* **Course:** Research Methods in Health Promotion 
+
+## Theory
+
+* **Theory** is a set of **interrelated concepts, definitions, and propositions**.
+* It presents a **systematic view** of events or situations.
+* It explains the **relationship among variables**.
+* The purpose of a theory is to:
+
+  * Explain events or situations.
+  * Predict events or situations.
+* A theory is made up of many related ideas and concepts organized into a logical framework. 
+
+### Importance of Theory
+
+* Theory is useful during every stage of an intervention:
+
+  * Planning
+  * Implementation
+  * Evaluation
+* Once a theory is selected, it should guide the entire intervention process. 
+
+### Theory Helps Answer Three Important Questions
+
+* **Why?**
+
+  * Why people do not follow public health advice.
+  * Why people ignore healthy behaviors.
+  * Why health problems exist in a community.
+
+* **What?**
+
+  * What information is needed before developing an intervention.
+  * What should be known about the target population.
+  * What factors should be considered while planning a program.
+
+* **How?**
+
+  * How to design effective intervention strategies.
+  * How to reach individuals, communities, and organizations.
+  * How to achieve a positive impact on the target population. 
+
+### Theory Helps in Program Evaluation
+
+* Identifies:
+
+  * What should be monitored.
+  * What should be measured.
+  * What should be compared during evaluation.
+* Provides a structured basis for assessing whether a program has achieved its objectives. 
+
+## Types of Theories
+
+### Explanatory Theories (Theory of the Problem)
+
+* Explain **why a problem exists**.
+* Describe health or social problems.
+* Predict behavior under specific conditions.
+* Help identify **modifiable factors**, including:
+
+  * Knowledge
+  * Awareness
+  * Attitudes
+  * Self-efficacy
+  * Social support
+  * Lack of resources
+  * Other changeable determinants 
+
+### Change Theories (Theory of Action)
+
+* Guide the **development of interventions**.
+* Help design programs that can change behavior.
+* Form the basis of program evaluation.
+* Help evaluators clearly state assumptions about how the program is expected to work. 
+
+### Implementation Theories
+
+* A type of change theory.
+* Link theory to:
+
+  * A specific problem.
+  * A specific audience.
+  * A particular context or setting.
+* Help apply theory in real-world situations. 
+
+## Concepts
+
+* Concepts are the **major components** of a theory.
+* They are the **building blocks** or **primary elements** of a theory.
+* Concepts may or may not have meaning outside a specific theory.
+* Different theories may use similar concepts in different ways. 
+
+## Constructs
+
+* When concepts are developed or adapted for use in a particular theory, they become **constructs**.
+* Constructs are theory-specific concepts.
+* Examples:
+
+  * **Perceived susceptibility** (Health Belief Model)
+  * **Subjective norms** (Theory of Planned Behavior)
+* Constructs represent ideas that can later be measured. 
+
+## Variables
+
+* Variables are the **empirical counterparts** or **operational forms** of constructs.
+* They specify **how a construct will be measured**.
+* Variables should match the construct they represent.
+* A single construct may be measured using more than one variable.
+* Variables are essential for evaluating theory-driven programs. 
+
+## Models
+
+* Human health behavior is too complex to be explained by a single theory.
+* Models combine concepts from **multiple theories**.
+* Models help explain:
+
+  * A specific health problem.
+  * A specific setting.
+  * A particular context.
+* Models are informed by:
+
+  * More than one theory.
+  * Empirical research findings. 
+
+## Behavior Change Techniques (BCTs)
+
+* Behavior Change Techniques are methods used by:
+
+  * Behavioral scientists
+  * Psychologists
+  * Medical professionals
+  * Public health experts
+  * Other professionals
+* Their purpose is to:
+
+  * Change individual behavior.
+  * Change group behavior.
+  * Increase motivation.
+  * Modify factors influencing behavior.
+* According to **Abraham and Michie (2008)**, there are **26 common behavior change techniques**. 
+
+## Behavior Change Techniques
+
+### Provide information on behavior–health link
+
+* Explain how a behavior affects health.
+* Help people understand health risks and health benefits.
+
+### Provide information on consequences
+
+* Explain positive consequences of performing the behavior.
+* Explain negative consequences of not performing the behavior.
+
+### Provide information about others' approval
+
+* Inform people whether important individuals or society approve or disapprove of a behavior.
+* Highlights social influence. 
+
+### Prompt intention formation
+
+* Encourage people to develop a clear intention to perform the desired behavior.
+
+### Prompt barrier identification
+
+* Identify obstacles preventing behavior change.
+* Develop strategies to overcome these barriers.
+
+### Provide general encouragement
+
+* Motivate individuals continuously.
+* Use positive reinforcement and supportive words. 
+
+### Set graded tasks
+
+* Divide behavior change into smaller, achievable steps.
+* Progress gradually toward the final goal.
+
+### Provide instruction
+
+* Clearly explain:
+
+  * What should be done.
+  * Why it should be done.
+  * How it should be done.
+
+### Model or demonstrate behavior
+
+* Show the desired behavior through demonstration.
+* Example: Demonstrating proper handwashing technique.
+
+### Specific goal setting
+
+* Set clear, measurable, and realistic goals.
+* Avoid vague objectives.
+
+### Review behavioral goals
+
+* Regularly evaluate progress toward goals.
+* Modify goals if necessary.
+
+### Self-monitoring
+
+* Encourage individuals to monitor their own behavior.
+* Examples:
+
+  * Food diary.
+  * Physical activity log.
+  * Daily exercise record. 
+
+### Feedback
+
+* Provide information about performance.
+* Help individuals identify strengths and areas for improvement.
+
+### Contingent rewards
+
+* Offer rewards when desired behavior is performed.
+* Rewards may be:
+
+  * Monetary.
+  * Non-monetary.
+
+### Teach the use of prompts or cues
+
+* Use reminders such as:
+
+  * Posters.
+  * Charts.
+  * Notes.
+  * Visual cues.
+* Helps prevent forgetting desired behaviors.
+
+### Agree on a behavioral contract
+
+* Obtain commitment to perform the behavior.
+* May be:
+
+  * Written.
+  * Verbal.
+
+### Prompt practice
+
+* Encourage repeated practice until the behavior becomes routine.
+
+### Use follow-up prompts
+
+* Maintain contact through:
+
+  * Phone calls.
+  * Emails.
+  * Personal visits.
+* Reinforce continued behavior change. 
+
+### Provide opportunity for social comparison
+
+* Allow individuals to compare their progress with others.
+* Encourages motivation through peer comparison.
+
+### Plan social support or social change
+
+* Encourage support from:
+
+  * Family.
+  * Friends.
+  * Community.
+  * Organizations.
+
+### Prompt identification as a role model
+
+* Encourage individuals to become role models.
+* They motivate others through:
+
+  * Demonstration.
+  * Persuasion.
+  * Positive example.
+
+### Prompt self-talk
+
+* Encourage positive internal dialogue.
+* Build confidence and motivation.
+
+### Relapse prevention
+
+* Identify reasons for relapse.
+* Develop strategies to prevent returning to previous unhealthy behaviors.
+* Support long-term maintenance of behavior change.
+
+### Stress management
+
+* Reduce stress and anxiety that interfere with behavior change.
+* Teach stress-relief techniques.
+
+### Motivational interviewing
+
+* A counseling approach used to motivate behavior change.
+* Based on:
+
+  * Empathy.
+  * Respect.
+  * Support.
+  * Understanding the individual's perspective.
+* Helps reduce ambivalence and strengthen commitment to change.
+
+### Time management
+
+* Help individuals incorporate new healthy behaviors into their daily routine.
+* Reduce stress caused by poor scheduling.
+* Improve consistency in maintaining healthy behaviors. 
+
+## Important Points to Remember
+
+* **Concepts** are the building blocks of theories.
+* **Constructs** are concepts adapted for use in a specific theory.
+* **Variables** are measurable forms of constructs.
+* **Theories** explain and predict behavior by describing relationships among variables.
+* **Models** combine multiple theories to explain complex health behaviors.
+* **Behavior Change Techniques** are practical methods used to change behavior and its influencing factors.
+* **Theories and models** help explain behavior and guide effective behavior change interventions. 
+---
+## Lecture 3/3
