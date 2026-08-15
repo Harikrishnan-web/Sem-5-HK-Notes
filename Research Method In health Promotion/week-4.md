@@ -939,3 +939,5 @@ Lecturer Details
 * Email: [alahiri@bcrmrc.iitkgp.ac.in](mailto:alahiri@bcrmrc.iitkgp.ac.in)
 * Course: **Research Methods in Health Promotion**
 * NPTEL 
+---
+## Lecture-4
