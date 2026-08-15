@@ -706,3 +706,210 @@
 * Glanz K, Viswanath K, Rimer B. *Health Behavior: Theory, Research, and Practice*. 4th ed. San Francisco, Calif.: Jossey-Bass; 2008.
 * Dobe M. *Health Promotion and Education: Foundations for Changing Health Behavior*. 1st Edition. 2022. Academic Publishers. 
 ---
+## Lecture-3
+## Health Belief Model
+
+* The **Health Belief Model (HBM)** was initially developed in the **1950s** by a group of social psychologists working in the **U.S. Public Health Service**.
+* Its development was related to research into the failure of many eligible adults to participate in **tuberculosis screening programs**.
+* These tuberculosis screening services were:
+
+  * Provided free of charge.
+  * Conducted using mobile X-ray units.
+  * Conveniently located in different neighborhoods.
+* Researchers were concerned with identifying the factors that:
+
+  * Facilitated participation.
+  * Inhibited participation.
+* The HBM contains several primary concepts that help predict **why people take action to:**
+
+  * Prevent illness.
+  * Screen for illness.
+  * Control an illness condition. 
+
+### Perceived Susceptibility
+
+* **Perceived susceptibility** refers to a person's **subjective perception of the risk of contracting an illness**.
+* It is concerned with how susceptible or vulnerable an individual believes they are to a particular illness. 
+
+### Perceived Severity
+
+* **Perceived severity** refers to beliefs concerning the **seriousness of the consequences of contracting an illness**.
+* Possible consequences mentioned include:
+
+  * Death
+  * Disability
+  * Pain 
+
+### Perceived Benefits
+
+* **Perceived benefits** refer to beliefs regarding the **effectiveness of available actions in reducing a disease threat**.
+* Benefits are not limited to health-related benefits.
+* They can also include **non-health-related benefits**, such as:
+
+  * Saving money. 
+
+### Perceived Barriers
+
+* **Perceived barriers** involve a spontaneous **cost analysis** performed by an individual when evaluating preventive actions.
+* Preventive actions may be perceived as:
+
+  * Expensive
+  * Dangerous
+  * Unpleasant
+  * Inconvenient
+  * Time-consuming
+  * Or associated with other difficulties.
+* These perceived costs can influence whether an individual takes the recommended preventive action. 
+
+### Cues to Action
+
+* **Cues to action** are the **stimuli needed to trigger the decision-making process** to accept a recommended health action.
+* They act as triggers that encourage an individual to move toward taking the recommended health action. 
+
+### Self-Efficacy
+
+* **Self-efficacy** was introduced as a concept by **Bandura in 1977**.
+* It refers to the conviction that a person **can successfully execute the behavior required to produce the desired outcomes**.
+* It represents the level of a person's **confidence in their ability to successfully perform a behavior**. 
+
+## Protection Motivation Theory
+
+* **Protection Motivation Theory (PMT)** was first introduced by **Rogers**.
+* It was developed to understand the mechanisms through which people adopt **protective behaviors to reduce perceived threat**.
+* The model has been **revised several times**.
+* These revisions have improved its capacity to predict **health-related behaviors**. 
+
+### Two Pathways in Protection Motivation Theory
+
+* PMT consists of constructs organized into **two pathways** that link perceptions to behavior.
+
+### Threat Appraisal Pathway
+
+* The **threat appraisal pathway** involves evaluating a person's perception of the **threat associated with certain behaviors or diseases**.
+* It focuses on how an individual evaluates the seriousness and vulnerability associated with a threat. 
+
+### Coping Appraisal Pathway
+
+* The **coping appraisal pathway** involves evaluating a person's **ability to cope with the threat**.
+* It focuses on whether the person believes that they can respond effectively to the threat. 
+
+### Conditions Required for Protection Motivation and Coping Behavior
+
+* There are **six sufficient conditions** that are prerequisite to eliciting protection motivation and coping behavior.
+* An individual must believe that:
+
+  * **The threat is severe**
+
+    * The person must believe that the threat has serious consequences.
+
+  * **He or she is vulnerable**
+
+    * The person must believe that they are susceptible to the threat.
+
+  * **He or she can perform the coping response**
+
+    * The individual must believe that they are capable of carrying out the recommended coping response.
+
+  * **The coping response is effective**
+
+    * The individual must believe that the recommended response can effectively deal with or reduce the threat.
+
+  * **Rewards associated with the maladaptive response are outweighed by factors decreasing the probability of making the maladaptive response**
+
+    * The perceived rewards or benefits of continuing the maladaptive behavior should not outweigh the reasons for avoiding it.
+
+  * **Costs of the adaptive response are outweighed by factors increasing the probability of making the adaptive response**
+
+    * The perceived costs of adopting the protective/adaptive behavior should be outweighed by factors encouraging the person to adopt it. 
+
+## Transtheoretical Model of Change
+
+* The **Transtheoretical Model (TTM)** uses **stages of change** to integrate:
+
+  * Processes of change.
+  * Principles of change.
+  * Concepts from major theories of intervention.
+* It is called **transtheoretical** because its concepts come from different theories of:
+
+  * Human behavior.
+  * How people can be changed.
+* The model views behavioral change as a **progression through a series of stages**. 
+
+### Stages of Change
+
+### Precontemplation
+
+* In the **precontemplation** stage:
+
+  * The person has **no intention to take action within the next 6 months**.
+* The individual is therefore not currently intending to change the behavior within this time period. 
+
+### Contemplation
+
+* In the **contemplation** stage:
+
+  * The person **intends to take action within the next 6 months**.
+* The person has moved from having no intention of action toward considering future behavioral change. 
+
+### Preparation
+
+* In the **preparation** stage:
+
+  * The person intends to take action **within the next 30 days**.
+  * The person has already taken **some behavioral steps** toward the intended change. 
+
+### Action
+
+* In the **action** stage:
+
+  * The person has changed their **overt behavior**.
+  * The behavioral change has been maintained for **less than 6 months**. 
+
+### Maintenance
+
+* In the **maintenance** stage:
+
+  * The person has changed their **overt behavior**.
+  * The behavioral change has been maintained for **more than 6 months**. 
+
+### Termination
+
+* In the **termination** stage:
+
+  * There is **no temptation to relapse**.
+  * The individual has **100% confidence** in maintaining the changed behavior. 
+
+## Key Points
+
+* **Health Belief Model**
+
+  * Contains several primary concepts that predict why people take action to prevent, screen for, or control illness.
+  * Important concepts include:
+
+    * Perceived susceptibility
+    * Perceived severity
+    * Perceived benefits
+    * Perceived barriers
+    * Cues to action
+    * Self-efficacy. 
+
+* **Protection Motivation Theory**
+
+  * Was introduced by Rogers.
+  * Explains mechanisms through which people adopt protective behaviors to reduce perceived threats.
+  * Uses threat appraisal and coping appraisal pathways. 
+
+* **Transtheoretical Model**
+
+  * Uses stages of change.
+  * Integrates processes and principles of change from different major theories of intervention.
+  * Views behavioral change as progression through different stages. 
+
+## Resources
+
+* Rogers, R., Cacioppo, J., & Petty, R. (1983). *Cognitive and physiological processes in fear appeals and attitude change: A revised theory of protection motivation.*
+* Glanz, K., Viswanath, K., & Rimer, B. *Health Behavior: Theory, Research, and Practice*. 5th ed. San Francisco, Calif.: Jossey-Bass; 2015.
+* Glanz, K., Viswanath, K., & Rimer, B. *Health Behavior: Theory, Research, and Practice*. 4th ed. San Francisco, Calif.: Jossey-Bass; 2008.
+* Dobe, M. *Health Promotion and Education: Foundations for Changing Health Behavior*. 1st Edition. 2022. Academic Publishers.
+* Xiao, H., Li, S., Chen, X., Yu, B., Gao, M., et al. (2014). *Protection Motivation Theory in Predicting Intention to Engage in Protective Behaviors against Schistosomiasis among Middle School Students in Rural China*. PLOS Neglected Tropical Diseases, 8(10), e3246. 
+---
