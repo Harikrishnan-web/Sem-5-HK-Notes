@@ -913,3 +913,682 @@
 * Dobe, M. *Health Promotion and Education: Foundations for Changing Health Behavior*. 1st Edition. 2022. Academic Publishers.
 * Xiao, H., Li, S., Chen, X., Yu, B., Gao, M., et al. (2014). *Protection Motivation Theory in Predicting Intention to Engage in Protective Behaviors against Schistosomiasis among Middle School Students in Rural China*. PLOS Neglected Tropical Diseases, 8(10), e3246. 
 ---
+## Lecture-4
+# Models of Interpersonal Health Behavior
+
+## Social Cognitive Theory
+
+* **Social Cognitive Theory (SCT)** started as **Social Learning Theory (SLT)** in the 1960s by **Albert Bandura**.
+* It developed into **Social Cognitive Theory in 1986**.
+* SCT provides a **comprehensive and well-supported conceptual framework** for:
+
+  * Understanding the factors that influence human behavior.
+  * Understanding the processes through which learning occurs.
+  * Providing insight into a wide variety of health-related issues.
+* SCT states that **human behavior is the product of the dynamic interplay of**:
+
+  * Personal influences.
+  * Behavioral influences.
+  * Environmental influences.
+* Learning occurs in a **social context** through a dynamic and reciprocal interaction between:
+
+  * Person.
+  * Environment.
+  * Behavior. 
+
+### Reciprocal Determinism
+
+* **Reciprocal Determinism** is the **central concept of Social Cognitive Theory**.
+* It refers to the **dynamic and reciprocal interaction** among:
+
+  * **Person** – the individual with a set of learned experiences.
+  * **Environment** – the external social context.
+  * **Behavior** – responses to stimuli to achieve goals.
+* These three factors continuously influence one another. 
+
+### Behavioral Capability
+
+* **Behavioral Capability** means a person's actual ability to perform a particular behavior.
+* It depends on having the essential:
+
+  * Knowledge.
+  * Skills.
+* For a person to successfully perform a behavior:
+
+  * The person must **know what to do**.
+  * The person must **know how to do it**. 
+
+### Observational Learning
+
+* **Observational Learning** means that people can:
+
+  * Witness a behavior performed by others.
+  * Observe how the behavior is performed.
+  * Subsequently reproduce or imitate those actions.
+* Thus, learning does not always require direct personal experience; a person can learn by observing others. 
+
+### Reinforcements
+
+* **Reinforcements** are the internal or external responses to a person's behavior that affect the likelihood of:
+
+  * Continuing the behavior.
+  * Discontinuing the behavior.
+* Reinforcements can be:
+
+  * **Self-initiated**.
+  * Present in the **environment**.
+* Reinforcements can also be:
+
+  * **Positive**.
+  * **Negative**. 
+
+### Expectations
+
+* **Expectations** refer to the anticipated consequences of a person's behavior.
+* People often anticipate the consequences of their actions **before engaging in the behavior**.
+* These anticipated consequences can influence the successful completion of the behavior. 
+
+### Self-Efficacy
+
+* **Self-efficacy** is the level of a person's confidence in their ability to successfully perform a particular behavior.
+* Self-efficacy is a distinctive construct of **Social Cognitive Theory**, although other theories later incorporated this construct.
+* Self-efficacy is influenced by:
+
+  * A person's specific capabilities.
+  * Other individual factors.
+  * Environmental factors.
+* Environmental factors include:
+
+  * **Barriers**.
+  * **Facilitators**. 
+
+## Transactional Model of Stress and Coping
+
+* The **Transactional Model of Stress and Coping** is a framework for evaluating the processes involved in **coping with stressful events**. 
+
+### Stressors
+
+* **Stressors** are demands made by either:
+
+  * The internal environment.
+  * The external environment.
+* These demands can:
+
+  * Upset balance or **homeostasis**.
+  * Affect physical well-being.
+  * Affect psychological well-being.
+  * Require action to restore balance or equilibrium. 
+
+### Person–Environment Transaction
+
+* Stressful experiences are understood as **person–environment transactions**.
+* The effect of an external stressor or demand is mediated by:
+
+  * The person's **appraisal of the stressor**.
+  * Psychological resources available to the person.
+  * Social resources available to the person.
+  * Cultural resources available to the person.
+* Therefore, the same external stressor may affect different people differently depending on how they appraise it and what resources they have available. 
+
+### Primary and Secondary Appraisal
+
+* When a person faces a stressor, two important evaluations occur:
+
+**Primary Appraisal**
+
+* The person evaluates the potential:
+
+  * Threat.
+  * Harm.
+* It determines the **significance of the stressor or threatening event**.
+* In simple terms, the person evaluates: **“How serious or threatening is this situation?”** 
+
+**Secondary Appraisal**
+
+* The person evaluates:
+
+  * Their ability to alter or control the situation.
+  * Their ability to manage negative emotional reactions.
+  * Their available coping resources.
+* It focuses on the **controllability of the stressor and the resources available for coping**.
+* In simple terms, the person evaluates: **“What can I do about this situation, and do I have the resources to manage it?”**  
+
+### Coping Efforts
+
+* **Coping efforts** are the actual strategies used to mediate:
+
+  * Primary appraisal.
+  * Secondary appraisal.
+* Coping efforts are aimed at:
+
+  * Problem management.
+  * Emotional regulation.
+* The outcomes of coping can include:
+
+  * Psychological well-being.
+  * Functional status.
+  * Adherence. 
+
+### Dispositional Coping Styles
+
+* **Dispositional coping styles** are generalized ways of behaving.
+* These generalized ways of behaving can influence a person's:
+
+  * Emotional reaction to a stressor.
+  * Functional reaction to a stressor. 
+
+### Meaning-Based Coping
+
+* **Meaning-based coping** refers to coping processes that induce **positive emotion**.
+* Positive emotion helps sustain the coping process.
+* It does this by allowing the person to re-enact or continue:
+
+  * Problem-focused coping.
+  * Emotion-focused coping. 
+
+### Outcomes
+
+* Outcomes of the stress and coping process include:
+
+  * **Emotional well-being**.
+  * **Functional status**.
+  * **Health behaviors**. 
+
+## Key Interpersonal Functions and Health Outcomes
+
+* **Interpersonal communication** is one of the key sources of **social influence**.
+* Social influence is a process that is critical to **change in health behavior**.
+* Interpersonal communication can occur in:
+
+  * **Informal relationships**, such as:
+
+    * Families.
+    * Friends.
+  * **Formal relationships**, such as:
+
+    * Physicians.
+    * Patients. 
+
+### Physician–Patient Relationship
+
+* A **strong physician–patient relationship** is particularly important for patients.
+* This is especially important because patients may experience:
+
+  * Fear.
+  * Worry.
+* These emotions are associated with threats to:
+
+  * Health.
+  * Well-being.
+* Good communication is associated with:
+
+  * Improved physical health.
+  * More effective chronic disease management.
+  * Better health-related quality of life. 
+
+### Communication Functions Important for Health Outcomes
+
+Six communication functions are important for promoting improved health outcomes:
+
+* **Establishing and maintaining the physician–patient relationship**
+
+  * Builds and maintains an effective relationship between the physician and patient.
+
+* **Exchanging and managing information**
+
+  * Involves communicating and managing relevant health information.
+
+* **Validating and responding to emotions**
+
+  * Recognizes the patient's emotions and responds appropriately to them.
+
+* **Managing uncertainty**
+
+  * Helps patients deal with uncertainty associated with health and illness.
+
+* **Making decisions**
+
+  * Supports the process of making appropriate health-related decisions.
+
+* **Enabling patient self-management**
+
+  * Helps patients develop the ability to manage their own health and health-related conditions. 
+
+## Key Points to Remember
+
+* **Social Cognitive Theory** states that human behavior results from the dynamic interplay of **personal, behavioral, and environmental influences**. 
+* **Reciprocal determinism** is the central concept of SCT and describes the interaction between **person, environment, and behavior**.
+* **Behavioral capability** requires the knowledge and skills needed to perform a behavior.
+* **Observational learning** occurs when people observe others and reproduce their actions.
+* **Reinforcements** influence whether a behavior is continued or discontinued.
+* **Expectations** involve anticipated consequences of behavior.
+* **Self-efficacy** is confidence in one's ability to successfully perform a behavior.
+* The **Transactional Model of Stress and Coping** provides a framework for evaluating how people cope with stressful events. 
+* Stress is understood through **person–environment transactions**, with the impact of stressors influenced by appraisal and available psychological, social, and cultural resources.
+* **Primary appraisal** evaluates the significance or threat of a stressor.
+* **Secondary appraisal** evaluates controllability and coping resources.
+* **Coping efforts** are the strategies used to manage the problem and emotional response.
+* Important coping outcomes include **emotional well-being, functional status, and health behaviors**.
+* **Interpersonal communication** is a major source of social influence and is important for health behavior change.
+* Good communication contributes to **better physical health, chronic disease management, and health-related quality of life**.
+* The six important communication functions are:
+
+  * Establishing and maintaining the physician–patient relationship.
+  * Exchanging and managing information.
+  * Validating and responding to emotions.
+  * Managing uncertainty.
+  * Making decisions.
+  * Enabling patient self-management. 
+
+## Resources Mentioned
+
+* Glanz K, Viswanath K, Rimer B. *Health Behavior: Theory, Research, and Practice*, 5th ed., San Francisco, Calif.: Jossey-Bass, 2015.
+* Glanz K, Viswanath K, Rimer B. *Health Behavior: Theory, Research, and Practice*, 4th ed., San Francisco, Calif.: Jossey-Bass, 2008.
+* Dobe M. *Health Promotion and Education: Foundations for Changing Health Behavior*, 1st Edition, 2022, Academic Publishers. 
+---
+## lecture-5
+# Community and Group Models of Health Behavior Change
+
+## Concept of Community
+
+* **Community organizing** is the process through which community groups are helped to:
+
+  * Identify common problems or goals.
+  * Mobilize resources.
+  * Develop strategies to reach collectively established goals.
+  * Implement those strategies to achieve the goals they have set collectively. 
+* The concept of community is **integral to community organization and community building**.
+* Community is commonly understood in **geographical terms**, but it can also be based on:
+
+  * Shared interests.
+  * Shared characteristics.
+  * Ethnicity.
+  * Sexual orientation.
+  * Occupation. 
+* Communities have been defined as:
+
+  * **Functional spatial units** meeting basic needs for sustenance.
+  * **Units of patterned social interaction**.
+  * **Symbolic units of collective identity**. 
+* **Community-level models** are frameworks for understanding:
+
+  * How social systems function.
+  * How social systems change.
+  * How communities can be activated.
+  * How organizations can be activated. 
+
+### Theories Relevant to Understanding the Concept of Community
+
+There are **two sets of theories** relevant to understanding the concept of community:
+
+### Ecological System Perspective
+
+* The **ecological system perspective** is particularly useful for studying **autonomous geographical communities**.
+* It focuses on:
+
+  * Population characteristics such as **size**.
+  * Population **density**.
+  * Population **heterogeneity**.
+  * The **physical environment**.
+  * The **social organization or structure** of the community.
+  * The **technological forces** affecting the community. 
+
+### Social System Perspective
+
+* The **social system perspective** primarily focuses on **formal organizations operating within a given community**.
+* It examines interactions between different community subsystems, such as:
+
+  * Economic systems.
+  * Political systems.
+  * Other community subsystems.
+* These interactions are examined:
+
+  * **Horizontally**, within the community.
+  * **Vertically**, in relation to other systems outside the community. 
+
+## Diffusion of Innovations Model
+
+* The **Diffusion of Innovations Model** has been used for several decades to understand:
+
+  * The steps required for widespread dissemination of public health innovations.
+  * The processes required for widespread diffusion of public health innovations.
+* In public health, **Diffusion of Innovation Theory** is used to accelerate the adoption of important public health programs.
+* These public health programs typically aim to **change the behavior of a social system**.
+* The diffusion of effective programs and ideas is a **significant challenge for public health and health promotion**. 
+
+### Concepts and Stages of Diffusion
+
+### Diffusion
+
+* **Diffusion** refers to the overall spread of an innovation.
+* It is the process through which an innovation is:
+
+  * Communicated.
+  * Through certain communication channels.
+  * Over time.
+  * Among members of a social system. 
+
+### Dissemination
+
+* **Dissemination** refers to the **planned and systematic efforts** designed to make a program or innovation more widely available.
+* Diffusion can be the:
+
+  * Direct outcome of dissemination efforts.
+  * Indirect outcome of dissemination efforts. 
+
+### Innovation
+
+* An **innovation** is:
+
+  * An idea.
+  * A practice.
+  * An object.
+* It is considered an innovation when it is **perceived as new by an individual or another unit of adoption**. 
+
+### Communication Channels
+
+* **Communication channels** are the means through which messages are spread.
+* They include:
+
+  * **Mass media**.
+  * **Interpersonal channels**.
+  * **Electronic communications**. 
+
+### Social System
+
+* A **social system** is a set of interrelated units that:
+
+  * Engage in joint problem solving.
+  * Work toward accomplishing a common goal.
+* Social systems have a structure that includes:
+
+  * **Norms**.
+  * **Leadership**. 
+
+### Innovation Development
+
+* **Innovation development** includes all:
+
+  * Decisions.
+  * Activities.
+  * Impacts of those decisions and activities.
+* These occur from:
+
+  * The early stage of an idea.
+  * Through its development.
+  * To its production. 
+
+### Adoption
+
+* **Adoption** means the uptake of a program or innovation by the **target audience**. 
+
+### Implementation
+
+* **Implementation** refers to the active and planned efforts to implement an innovation within a **defined setting**. 
+
+### Maintenance
+
+* **Maintenance** means the ongoing use of an innovation over time. 
+
+### Sustainability
+
+* **Sustainability** refers to the degree to which an innovation or program of change continues **after the initial resources have been expended**. 
+
+### Institutionalization
+
+* **Institutionalization** means incorporating a program into:
+
+  * The routine practices of an organization.
+  * Broader policy.
+  * Legislation. 
+
+### Characteristics of Innovations That Affect Diffusion
+
+### Relative Advantage
+
+* Asks whether the innovation is **better than what was there before**.
+* The greater the perceived advantage over an existing approach, the more favorable the characteristic is for diffusion. 
+
+### Compatibility
+
+* Refers to whether the innovation **fits with the intended audience**.
+* An innovation is more likely to diffuse when it is compatible with its intended users or setting. 
+
+### Complexity
+
+* Refers to whether the innovation is **easy to use**.
+* Innovations that are difficult to understand or use may have greater difficulty diffusing. 
+
+### Trialability
+
+* Refers to whether the innovation can be **tried before making a decision to adopt it**.
+* The ability to test an innovation before adoption can affect its diffusion. 
+
+### Observability
+
+* Refers to whether the **results or benefits of the innovation are visible and easily measurable**.
+* Greater visibility of results or benefits can affect diffusion. 
+
+## Social Ecological Model
+
+* The **Social Ecological Model (SEM)** is described as a **more robust community-level model**.
+* It considers the complex interplay between:
+
+  * Individual factors.
+  * Relationship factors.
+  * Community factors.
+  * Societal factors. 
+* SEM is a framework designed to understand:
+
+  * The multifaceted levels within a society.
+  * How individuals interact with their environment.
+  * How these interactions occur within a social system. 
+* Different factors and determinants exist at **all levels of health**.
+* Therefore, prevention, control, and intervention are most effective when the model is addressed at **all levels**.
+* When approaching a potential problem, sustaining prevention efforts is best achieved by taking action at **multiple levels of the model at the same time**. 
+* Ecological models in behavioral sciences and public health focus on the nature of people's **transactions with their physical and sociocultural surroundings**, or environments. 
+
+### Levels of the Social Ecological Model
+
+### Individual Level
+
+Factors involving characteristics of an individual that can influence behavior change include:
+
+* Knowledge.
+* Attitudes.
+* Behavior.
+* Self-efficacy.
+* Developmental history.
+* Gender.
+* Age.
+* Religious identity.
+* Racial/ethnic identity.
+* Sexual orientation.
+* Economic status.
+* Financial resources.
+* Values.
+* Goals.
+* Expectations.
+* Literacy.
+* Stigma.
+* Other individual characteristics. 
+
+### Interpersonal Level
+
+* Includes **formal and informal social networks**.
+* Includes **social support systems** that can influence individual behaviors.
+* Examples include:
+
+  * Family.
+  * Friends.
+  * Peers.
+  * Co-workers.
+  * Religious networks.
+  * Customs.
+  * Traditions. 
+
+### Community Level
+
+* Includes relationships among:
+
+  * Organizations.
+  * Institutions.
+  * Information networks.
+* These operate within defined boundaries.
+* Examples include:
+
+  * Built environment.
+  * Village associations.
+  * Community leaders.
+  * Businesses.
+  * Transportation. 
+
+### Organizational Level
+
+* Includes organizations or social institutions with:
+
+  * Rules.
+  * Regulations.
+  * Operational structures.
+* These rules and regulations affect:
+
+  * How services are provided.
+  * How well services are provided.
+* They can affect services provided to:
+
+  * Individuals.
+  * Groups. 
+
+### Policy / Enabling Environment Level
+
+* Includes laws and policies at:
+
+  * Local level.
+  * State level.
+  * National level.
+  * Global level.
+* It also includes policies concerning the **allocation of resources**. 
+
+## Behavior Change Communication
+
+* **Behavior Change Communication (BCC)** is an approach used:
+
+  * Alone at the **individual level**.
+  * Along with **social change communication** at the interpersonal level.
+* BCC works through **interpersonal communication**.
+* It can operate through:
+
+  * Direct communication with another individual.
+  * Mass campaigns, including social media, that target many individuals at once.
+* Participant groups involved in BCC include:
+
+  * Individuals.
+  * Families.
+  * Small groups.
+* Interventions are **tailored to the exact population they are intended to target**. 
+
+## Social Change Communication
+
+* **Social Change Communication** is used:
+
+  * In combination with BCC at the **interpersonal level**.
+  * Alone at the **community level**.
+* This approach:
+
+  * Encourages participation.
+  * Uses participation to target large-scale behavior changes.
+* Behaviors targeted can include:
+
+  * Social norms.
+  * Culture-specific practices.
+* Social norms and cultural practices are also used strategically to develop health interventions.
+* The aim is to ensure that the targeted population is **more receptive to the health interventions**. 
+
+## Social Mobilization
+
+* **Social Mobilization** is used at the **organizational level**.
+* Individuals and entire communities use this approach to:
+
+  * Raise awareness about a health problem.
+  * Engage national leaders.
+  * Engage community leaders.
+  * Engage public partners.
+  * Engage private partners.
+  * Engage community organizations.
+  * Motivate them to make health changes.
+* The **community acts as the catalyst** for these health changes.
+* Through social mobilization, communities are **empowered to make their own health changes**.
+* Social mobilization also allows the community to participate in:
+
+  * Development of appropriate health interventions.
+  * Implementation of health changes.
+  * Monitoring of the changes. 
+
+## Advocacy
+
+* **Advocacy** is used at the **policy/enabling environment level**.
+* It consists of **well-thought-out and organized efforts**.
+* These efforts are designed to convince people in leadership positions to make health changes at the policy level.
+* Leadership groups that may be targeted include:
+
+  * Policymakers.
+  * Program planners.
+  * Community leaders. 
+
+## Key Points to Remember
+
+* **Community organizing** helps community groups identify common problems or goals, mobilize resources, and collectively develop and implement strategies. 
+* A community can be based on:
+
+  * Geography.
+  * Shared interests.
+  * Shared characteristics.
+* The two perspectives useful for understanding community are:
+
+  * **Ecological system perspective**.
+  * **Social system perspective**.
+* **Diffusion of Innovation Theory** is used in public health to accelerate adoption of programs intended to change the behavior of a social system. 
+* Important diffusion concepts include:
+
+  * Diffusion.
+  * Dissemination.
+  * Innovation.
+  * Communication channels.
+  * Social system.
+  * Innovation development.
+  * Adoption.
+  * Implementation.
+  * Maintenance.
+  * Sustainability.
+  * Institutionalization.
+* The characteristics of innovations affecting diffusion are:
+
+  * Relative advantage.
+  * Compatibility.
+  * Complexity.
+  * Trialability.
+  * Observability.
+* **Social Ecological Model** explains the multifaceted levels within society and the interaction between individuals and their environments within a social system. 
+* SEM considers multiple levels:
+
+  * Individual.
+  * Interpersonal.
+  * Community.
+  * Organizational.
+  * Policy/enabling environment.
+* Effective prevention and intervention should address **multiple levels simultaneously** rather than focusing on only one level.
+* The communication and action approaches associated with different SEM levels are:
+
+  * **Behavior Change Communication** → individual and interpersonal levels.
+  * **Social Change Communication** → interpersonal and community levels.
+  * **Social Mobilization** → organizational level.
+  * **Advocacy** → policy/enabling environment level. 
+
+## Resources Mentioned
+
+* Glanz K, Viswanath K, Rimer B. *Health Behavior: Theory, Research, and Practice*, 5th ed., San Francisco, Calif.: Jossey-Bass; 2015.
+* Glanz K, Viswanath K, Rimer B. *Health Behavior: Theory, Research, and Practice*, 4th ed., San Francisco, Calif.: Jossey-Bass; 2008.
+* Dobe M. *Health Promotion and Education: Foundations for Changing Health Behavior*, 1st Edition, 2022, Academic Publishers.
+* UNICEF. 2020. *Module 1: Social Ecological Model – C4D*.
+* *Core Principles of the Ecological Model | Models and Mechanisms of Public Health*. Courses.LumenLearning.com. 
+---
