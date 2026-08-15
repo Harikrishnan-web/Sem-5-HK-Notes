@@ -941,3 +941,480 @@ Lecturer Details
 * NPTEL 
 ---
 ## Lecture-4
+Common Challenges in Experimental Designs in Health Promotion Research
+
+* Experimental research designs can face several challenges that may affect the **internal validity** of the study.
+* Internal validity refers to whether the observed changes in the outcome can genuinely be attributed to the intervention rather than to other factors.
+* The common challenges in experimental designs include:
+
+  * Hawthorne effect
+  * Diffusion effect
+  * History
+  * Maturation
+  * Testing
+  * Instrumentation
+  * Statistical regression
+  * Differential selection
+  * Differential attrition
+* Another important area of concern is the presence of **carryover effects in repeated-measures designs**. 
+
+Hawthorne Effect
+
+* The **Hawthorne effect** occurs when the results of a study might be due to the **time and attention paid to participants**, rather than the actual intervention.
+* Participants may change their behavior simply because they know they are being observed or receiving attention.
+* This can make it difficult to determine whether the intervention itself produced the observed change.
+* Research designs affected:
+
+  * One-group design
+  * Two-group design without a placebo-attention group
+* In a two-group design, the problem can occur when the intervention group receives additional attention while the control group does not.
+* Therefore, differences between groups may partly result from the amount of attention received rather than from the intervention itself. 
+
+Diffusion Effect
+
+* The **diffusion effect** occurs when the control group becomes exposed to or influenced by the intervention intended for the treatment group.
+* This can result in **contamination of the control group**.
+* For example:
+
+  * Participants in the intervention group may communicate what they learned to participants in the control group.
+  * The control group may consequently change its behavior even though it did not officially receive the intervention.
+* If the control group is contaminated, the difference between the intervention and control groups may become smaller.
+* Research designs affected:
+
+  * Two-group designs
+  * Multigroup designs
+* The observed results may therefore be influenced by contamination of the control condition. 
+
+History
+
+* **History** refers to an event occurring between observations that may influence the study outcome.
+* The observed change may therefore be due to an outside event rather than the intervention.
+* Such an event could occur between:
+
+  * The pre-intervention observation, and
+  * The post-intervention observation.
+* Example:
+
+  * A health campaign, policy change, disease outbreak, or other major event occurs while the study is underway.
+  * Participants' behavior changes because of that event rather than because of the research intervention.
+* Research design affected:
+
+  * One-group design
+* Therefore, researchers must consider whether an external event could explain the observed change. 
+
+Maturation
+
+* **Maturation** occurs when participants naturally change between observations.
+* The change may be due to participants:
+
+  * Growing older
+  * Becoming wiser
+  * Becoming stronger
+  * Becoming more experienced
+* These natural changes may influence the outcome independently of the intervention.
+* Example:
+
+  * If participants naturally become more experienced over the duration of a study, their improved performance may not necessarily be caused by the intervention.
+* Research design affected:
+
+  * One-group design
+* Therefore, changes caused by normal development or experience must be distinguished from changes caused by the intervention. 
+
+Testing
+
+* **Testing** refers to changes in responses that may occur because participants are measured repeatedly.
+* The number of times participants are tested can itself influence their subsequent responses.
+* Participants may:
+
+  * Remember previous questions.
+  * Become familiar with the measurement process.
+  * Change their responses because they have previously encountered the test.
+* Therefore, the observed change may be partly due to repeated measurement rather than the intervention.
+* Research design affected:
+
+  * One-group design. 
+
+Instrumentation
+
+* **Instrumentation** occurs when the measuring instrument changes between observations.
+* The change in the outcome may therefore be caused by a change in how the variable was measured rather than by an actual change in the participants.
+* Changes in instrumentation may include:
+
+  * A different measurement instrument.
+  * A different measurement procedure.
+  * A change in the way measurements are recorded or assessed.
+* If the measurement method changes between observations, it becomes difficult to determine whether the observed difference represents a genuine change.
+* Research design affected:
+
+  * One-group design. 
+
+Statistical Regression
+
+* **Statistical regression** can occur when participants are selected because they have **extreme scores**.
+* When these participants are measured again, their scores may naturally move toward a more average level.
+* This movement toward the average may occur even without any intervention.
+* Therefore, researchers may incorrectly attribute the change in scores to the intervention.
+* Example:
+
+  * Participants selected because they have exceptionally high or low measurements may show less extreme measurements when tested again.
+  * The apparent improvement may simply represent regression toward the average.
+* Research design affected:
+
+  * One-group design. 
+
+Differential Selection
+
+* **Differential selection** occurs when differences already exist between participants in different groups before the treatment occurs.
+* The groups may therefore not be equivalent at baseline.
+* Any differences observed after treatment may partly be due to the pre-existing differences between the groups.
+* Example:
+
+  * One group may already have higher knowledge, motivation, health status, or experience before receiving the intervention.
+  * If that group performs better afterward, the difference cannot automatically be attributed to the intervention.
+* Research designs affected:
+
+  * Two-group designs
+  * Multigroup designs
+* Differential selection is therefore an important threat when participants in different groups differ before treatment. 
+
+Differential Attrition
+
+* **Differential attrition** occurs when participants are lost from different groups at different rates.
+* Participant dropout can change the composition of the groups.
+* If more participants leave one group than another, the participants remaining in the groups may no longer be comparable.
+* The final results may therefore be influenced by who remained in the study rather than only by the intervention.
+* Example:
+
+  * If many participants with poor outcomes leave the intervention group, the remaining participants may make the intervention appear more effective than it actually is.
+* Research designs affected:
+
+  * Two-group designs
+  * Multigroup designs. 
+
+Issues with Repeated-Measures Designs
+
+* Repeated-measures designs involve measuring the same subjects repeatedly under different treatments or conditions.
+* An important challenge in such studies is the **carryover effect**.
+* A carryover effect occurs when exposure to the first treatment affects the subjects' performance during a subsequent treatment.
+* The effect of an earlier treatment can therefore influence the response to a later treatment.
+* This makes it difficult to determine the independent effect of the subsequent treatment. 
+
+Carryover Effects
+
+* **Carryover effects** occur when the effect of an earlier treatment continues and influences performance during a subsequent treatment.
+* This is particularly important in intervention studies involving repeated measures.
+* Several forms of carryover effects can occur:
+
+  * Learning
+  * Fatigue
+  * Habituation
+  * Sensitization
+  * Adaptation
+
+Learning
+
+* **Learning** is a type of carryover effect.
+* What participants learn during the first treatment can enhance their observed outcomes after subsequent treatments.
+* The improved outcome may therefore be partly due to experience gained during the earlier treatment rather than the later treatment itself.
+* Example:
+
+  * A participant becomes familiar with a task during the first treatment.
+  * When the participant performs the same or a similar task later, performance improves because of the previous learning. 
+
+Fatigue
+
+* **Fatigue** is another type of carryover effect.
+* It occurs when deterioration in a participant's performance results from being tired because of the first treatment.
+* The participant's response during the subsequent treatment may therefore be poorer because of fatigue.
+* The reduced performance should not automatically be interpreted as an effect of the subsequent treatment. 
+
+Habituation
+
+* **Habituation** is a type of carryover effect.
+* It occurs when repeated exposure to a stimulus leads to **reduced responsiveness**.
+* As participants repeatedly experience the same or similar stimulus, their response may become weaker.
+* The reduced response during a later treatment may therefore be caused by previous exposure. 
+
+Sensitization
+
+* **Sensitization** is a type of carryover effect.
+* It occurs when subjects respond **more strongly to stimuli** as a result of initial exposure to a different stimulus.
+* Previous exposure can therefore increase the participant's responsiveness during a subsequent condition.
+* The increased response may consequently not be solely attributable to the subsequent treatment. 
+
+Adaptation
+
+* **Adaptation** is a type of carryover effect.
+* It occurs when a subject's adaptive changes to a stimulus lead to a change in the outcome.
+* Participants may gradually adapt to a particular condition or stimulus.
+* This adaptation can influence their response during subsequent measurements or treatments. 
+
+Managing Challenges in Experimental Research
+
+* Experimental research contains several challenges that can affect **internal validity**.
+* Researchers need to recognize these threats while designing and conducting the study.
+* The study design should consider ways to **minimize these effects**.
+* If a particular effect cannot be avoided:
+
+  * It should be clearly identified.
+  * It should be clearly stated when interpreting and reporting the study.
+* This is especially important for repeated-measures intervention studies because of the possibility of carryover effects. 
+
+Quick Revision: Common Challenges and Affected Designs
+
+| Challenge                  | Main issue                                                     | Research designs affected                            |
+| -------------------------- | -------------------------------------------------------------- | ---------------------------------------------------- |
+| **Hawthorne effect**       | Results may be due to time and attention given to participants | One-group; two-group without placebo-attention group |
+| **Diffusion effect**       | Contamination of the control group                             | Two-group or multigroup                              |
+| **History**                | Outside event occurs between observations                      | One-group                                            |
+| **Maturation**             | Participants naturally change between observations             | One-group                                            |
+| **Testing**                | Responses affected by repeated measurement                     | One-group                                            |
+| **Instrumentation**        | Measuring instrument changes between observations              | One-group                                            |
+| **Statistical regression** | Extreme scores move toward average when measured again         | One-group                                            |
+| **Differential selection** | Groups differ before treatment                                 | Two-group or multigroup                              |
+| **Differential attrition** | Participants are lost differently from each group              | Two-group or multigroup                              |
+
+Important Overall Points
+
+* There are several common challenges that can affect the **internal validity of experimental research**.
+* These challenges must be considered when planning and interpreting experimental studies.
+* **Carryover effect** is an especially important challenge in intervention studies involving repeated measures.
+* Researchers should design studies in a way that minimizes these effects wherever possible.
+* If the effects cannot be avoided, they must be **clearly stated**.
+* Understanding these issues is essential for correctly interpreting whether an observed outcome is actually caused by the intervention. 
+
+References Mentioned
+
+* Salazar, L. F., Crosby, R. A., & DiClemente, R. J. — *Research Methods in Health Promotion*. San Francisco, CA: Jossey-Bass, 2015.
+* Dobe, M. — *Health Promotion and Education: Foundations for Changing Health Behavior*, 1st Edition, 2022. 
+---
+## Lecture-5
+# Measurements in Health Promotion
+
+* **Instructor**
+
+  * Dr. Arista Lahiri, MD, MBA
+  * Assistant Professor (Community Medicine)
+  * Dr. B. C. Roy Multi-Speciality Medical Research Centre
+  * Indian Institute of Technology Kharagpur
+  * Email: [alahiri@bcrmrc.iitkgp.ac.in](mailto:alahiri@bcrmrc.iitkgp.ac.in)
+* The lecture focuses on:
+
+  * Metrics of measurement
+  * Scale and index
+  * Variable measurement techniques 
+
+## Metrics of Measurement
+
+### Nominal
+
+* Nominal data are based on categories.
+* These categories **cannot be placed into an order** based on preference or any other criterion.
+* The categories are simply different groups or labels.
+* There is no meaningful ranking among the categories.
+
+### Ordinal
+
+* Ordinal data are based on categories that **can be placed into an order of preference**.
+* The categories have a meaningful ranking.
+* However, the difference between one category and another does not necessarily have equal meaning.
+* Ordinal measurement involves the phenomenon of **transitivity**.
+
+  * If one category is ranked above another, and the second is ranked above a third, the first is consequently ranked above the third.
+
+### Interval
+
+* Interval data are **continuous**.
+* They are not based on categories.
+* The separation between points on the continuum is **always equal**.
+* Therefore, the difference between two values has a consistent meaning throughout the scale.
+* Interval data do not have a true zero point.
+
+### Ratio
+
+* Ratio data are one step better than interval data.
+* Like interval data, ratio data have equal intervals between points.
+* The major additional feature is the presence of a **true zero point**.
+* A true zero is a feature that is not present in interval data. 
+
+## Measurement of Constructs
+
+* Health promotion research is closely connected with:
+
+  * Health behaviors
+  * Psychological influences
+  * Psychosocial influences
+* Therefore, research questions in health promotion frequently focus on **intangibles**, such as:
+
+  * Self-esteem
+  * Depression
+  * Self-efficacy
+  * Attitudes
+  * Perceptions
+  * Beliefs
+* Some of these characteristics can be tangible or directly understood.
+* Others are intangible and may exist primarily as concepts.
+* Intangible characteristics such as self-efficacy, perceptions and attitudes can therefore be viewed as **concepts**.
+* To study these concepts scientifically, they need to be defined in a measurable way.
+* **Operational definitions** can be used to formalize or operationalize these concepts.
+* Operational definitions may not be universal in every situation, but they allow concepts to be specified in a way that permits measurement.
+* Once a concept has been operationalized, it can be measured.
+* The operationalized and measurable form of a concept is referred to as a **construct**.
+* Therefore:
+
+  * **Concept → operational definition → measurable construct**
+* Constructs are typically the **measurable form of the concepts** being studied. 
+
+### Questions or Items Used to Measure Constructs
+
+* Questions or items should be designed to act as **distinct effect indicators** of the construct.
+* Effect indicators mean that each question or item:
+
+  * Indicates some effect or influence on an observable behavior.
+  * Taps into the underlying construct.
+* It is common to use **multiple indicators to assess a single construct**.
+* Rather than depending on one question alone, several related questions/items can provide a better assessment of the construct. 
+
+## Scale
+
+* **Self-efficacy** represents a single, distinct construct.
+* It can be measured using multiple effect indicators.
+* The measurement of self-efficacy is called a **scale**.
+* A scale is a measure composed of **theoretically correlated items**.
+* These items are designed to measure the same underlying construct.
+* The questions/items within a scale are therefore expected to have a theoretical relationship because they are measuring the same construct.
+* **Example:**
+
+  * Geriatric Depression Scale
+* General process:
+
+  * Operationally define the concept/construct.
+  * Create questions or items that measure the newly defined construct.
+  * Test the items as an entire scale. 
+
+## Index
+
+* An **index** is a measure in which the items are considered **causal indicators**.
+* The items themselves help define the construct.
+* The individual items also influence the value of the construct.
+* Items in an index are typically **heterogeneous**.
+* Because they can represent different components of the construct, the items in an index do not necessarily have to be correlated with one another.
+* This is an important difference between a scale and an index.
+* **Example:**
+
+  * Quality of life
+* In an index, different items can contribute different aspects to the overall construct, even when those items are not strongly related to each other. 
+
+## Self-Report
+
+* **Self-report** means a person's own accounting of their:
+
+  * Beliefs
+  * Practices
+  * Intentions
+* In health promotion research and practice, self-report is an **essential and primary means of measurement**.
+* However, variables measured through self-report are considered to be at the **bottom of the hierarchy of measurement** in terms of validity.
+* Major problems associated with self-report include:
+
+### Social Desirability Bias
+
+* People may report what they believe is socially acceptable or desirable rather than what they actually believe or do.
+* The reported answer may therefore differ from the person's actual behavior.
+
+### Inaccurate Recall Bias
+
+* A person may not remember past events or behaviors accurately.
+* This can result in incorrect information being reported.
+
+### Selective Recall Bias
+
+* A person may remember some experiences or events while forgetting others.
+* The information provided may therefore be selective rather than a complete representation of actual behavior. 
+
+## Direct Observation
+
+* Direct observation involves observing the health promotion variable or behavior directly rather than relying solely on what a person reports.
+* Direct observation of a health promotion variable may **not always be plausible or possible**.
+* However, when direct observation is possible, it can greatly enhance the **validity of the measurement**.
+* Direct observation can be particularly useful for **practice-related variables**.
+* Because the behavior is observed directly, the researcher does not have to depend entirely on the participant's memory or willingness to report accurately. 
+
+## Record Reviews
+
+* Some variables can be obtained through **public records**.
+* Examples include:
+
+  * Income inequality
+  * Social capital
+  * Unemployment rates
+  * Community rates of teenagers giving birth
+  * State tax rates on tobacco and alcohol
+  * Traffic fatalities
+* These variables may already be available through official or public records.
+* Therefore, researchers can use existing records rather than collecting all information directly from participants.
+* It is important to understand the **contextual nature of the enquiry** when using record-based information.
+* The meaning and interpretation of a variable can depend on the broader social, geographical, economic or community context in which it exists. 
+
+## Biological Assessment
+
+* Biological assessment involves the **measurement of actual biomarkers**.
+* Biological measurements are usually considered as **outcome variables** in health promotion research.
+* Biological assessment is considered to be at the **highest level in the hierarchy of measurement**.
+* Biological measurements can provide a more direct assessment of physiological processes than self-reported information or some indirect measures.
+* **Example:**
+
+  * Stress can be measured using a scale.
+  * However, measuring the level of **cortisol** as an indicator of stress can provide a more accurate understanding of the physiological aspect of stress.
+* Thus, when appropriate biological markers are available, they can provide stronger objective evidence about the condition being studied. 
+
+## Concept of Mediating and Moderating Variables
+
+### Moderating Variables
+
+* Moderating variables are variables that **change the nature of the relationship between two variables**.
+* A moderator can make the relationship:
+
+  * Stronger
+  * Weaker
+  * Null
+* Therefore, a moderating variable affects **how or under what conditions** two variables are related.
+
+### Mediating Variables
+
+* Mediating variables come **in between the relationship of two variables**.
+* A mediator helps explain the mechanism through which one variable is related to another.
+* In simple terms:
+
+  * A **moderator** changes the nature or strength of a relationship.
+  * A **mediator** lies in between the variables in the relationship. 
+
+## Key Points
+
+* The major **metrics of measurement** are:
+
+  * Nominal
+  * Ordinal
+  * Interval
+  * Ratio
+* There are usually **more than one question or item** used to measure a construct.
+* **Scale and index are different**:
+
+  * A scale uses theoretically correlated items to measure the same construct.
+  * An index uses causal indicators that define and influence the construct, and its items may be heterogeneous and not necessarily correlated.
+* **Self-report measurement** is used frequently in health promotion research, but it is at the **bottom of the hierarchy** for valid measurements because of problems such as:
+
+  * Social desirability bias
+  * Inaccurate recall
+  * Selective recall
+* **Biological measurement** is at the **top of the hierarchy** because it can provide objective measurement of actual biomarkers.
+* Direct observation can improve measurement validity when it is feasible.
+* Existing records can provide measurements for several population- and community-level variables.
+* Concepts must be operationalized to become measurable constructs.
+* Multiple questions/items can be used to measure a single construct.
+* Mediating and moderating variables have different roles in relationships between variables. 
+
+## Resources
+
+* Salazar LF, Crosby RA, DiClemente RJ. *Research Methods in Health Promotion*. San Francisco, CA: Jossey-Bass; 2015.
+* Saha I, Paul B. *Essentials of Biostatistics & Research Methodology*. 3rd Edition, 2021, Academic Publishers. 
+---
