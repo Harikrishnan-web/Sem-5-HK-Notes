@@ -680,3 +680,262 @@ Sampling techniques can broadly be divided into **probability** and **non-probab
 * Saha, I., & Paul, B. — *Essentials of Biostatistics & Research Methodology*, 3rd Edition, 2021, Academic Publishers.
 * Dobe, M. — *Health Promotion and Education: Foundations for Changing Health Behavior*, 1st Edition, 2022. 
 ---
+## Lecture-3
+Experimental Research Designs
+
+* **Importance of experimental designs in health promotion**
+
+  * Experimental designs are important for studying whether a health promotion intervention actually produces the intended effect.
+  * They help researchers understand the causal effect of an intervention.
+  * Experimental designs used in health promotion include:
+
+    * Truly experimental designs
+    * Quasi-experimental designs
+
+Experiments in Health Promotion Research
+
+* The crux of health promotion is:
+
+  * Improving public health.
+  * Changing health-related behavior.
+  * Positively affecting health-related outcomes.
+* Health promotion and disease prevention interventions should:
+
+  * Be culturally appropriate.
+  * Promote the adoption of healthy lifestyles.
+  * Improve health-related behaviors.
+  * Improve social conditions.
+  * Improve environmental conditions related to disease.
+* **Causal research** is essential for determining whether a particular program or intervention is useful for addressing the issue at hand.
+* If an intervention is **efficacious**, meaning it can produce the desired effect:
+
+  * It can be considered for implementation on a wider scale.
+
+Some Important Terminologies
+
+* **Independent Variable**
+
+  * The variable chosen by the investigator to modify or administer.
+  * Its effect on the dependent variable is determined.
+  * It is the factor that the researcher deliberately changes or manipulates.
+
+* **Dependent Variable**
+
+  * The primary outcome or main variable of interest in an experiment.
+  * It is hypothesized to be affected by the independent variable.
+  * The researcher observes or measures changes in the dependent variable.
+
+* **Extraneous Variable**
+
+  * A variable outside the investigator's control or purview.
+  * It may influence the outcome of the study.
+  * Such variables can make it more difficult to determine whether the observed outcome was actually caused by the independent variable.
+
+* **Factor and Level**
+
+  * A **factor** is what the investigator is manipulating.
+  * A **level** refers to the different variations within that factor.
+  * Example:
+
+    * If an investigator is studying the effect of exercise, exercise may be the factor.
+    * Different durations or intensities of exercise can represent different levels of the factor.
+
+* **Factorial Design**
+
+  * A research design in which the investigator manipulates more than one factor.
+  * It allows researchers to study the effects of multiple factors within the same research design.
+
+Experimental Designs and Ecological Levels in Health Promotion
+
+* The level at which the researcher intervenes ultimately determines the experimental design that should be selected.
+* The design should therefore be appropriate to the level at which the health promotion intervention is being implemented.
+
+Experimental Study Designs in Health Promotion
+
+* Experimental study designs can broadly be divided into:
+
+  * **True Experimental Designs**
+  * **Quasi-Experimental Designs**
+
+* **True Experimental Designs**
+
+  * Include randomization.
+  * Common designs include:
+
+    * Post-test control group design
+    * Pre-test post-test control group design
+    * Matched pairs group design
+    * Within-subjects / repeated measures design
+    * Cross-over trial
+
+* **Quasi-Experimental Designs**
+
+  * Do not employ randomization.
+  * They may be ethically appropriate in certain situations.
+  * Common designs include:
+
+    * Non-equivalent control group
+    * Non-equivalent group, post-test only
+    * Non-equivalent group, pre-test post-test
+    * Interrupted time series design
+
+Post-test Control Group Design
+
+* It is a **between-subjects design**.
+* Two or more groups or arms are formed through **random assignment**.
+* The groups are then presented with:
+
+  * The treatment/intervention, or
+  * Any type of control condition.
+* **No pre-test** is administered.
+* **Post-tests** are administered.
+* The post-test is used to identify differences:
+
+  * Between the groups, or
+  * Among multiple groups/arms.
+* Important considerations:
+
+  * Are the respondents really homogeneous at the beginning of the study?
+  * Could administering a test before the intervention itself change participant behavior?
+* Because there is no pre-test, researchers cannot directly assess the baseline equivalence of participants through pre-intervention measurements.
+
+Pre-test Post-test Controlled Design
+
+* It is a **between-subjects design**.
+* Both:
+
+  * Pre-test, and
+  * Post-test
+    are administered.
+* Randomized controlled trials are considered the **“Gold Standard.”**
+* Randomization helps strengthen the ability to make causal conclusions.
+* A possible concern is **low external validity**.
+
+  * Findings from a highly controlled experimental setting may not always generalize well to real-world populations or settings.
+
+Matched Pairs Group Design
+
+* It is a **between-subjects design**.
+* Subjects are first matched on a key characteristic.
+* After matching, subjects are randomly assigned to different conditions or arms.
+* The researcher must be aware of a particular subject characteristic or attribute that is strongly associated with the dependent variable.
+* Example:
+
+  * Adolescents enrolled in a two-arm sexual-risk-reduction intervention can be matched according to alcohol and drug use before they are randomized into groups.
+* Advantages:
+
+  * Significant reduction in the effect of confounding.
+  * Controls for differential selection.
+* Matching is particularly useful when a specific participant characteristic is known to have a strong relationship with the outcome being studied.
+
+Repeated Measures Design
+
+* Also called a **within-subjects design**.
+* The same human subjects are measured repeatedly under different conditions or at different points.
+* It can reduce **error variance** caused by differences between human subjects.
+* Usually, random assignment is not performed.
+* Therefore, it cannot generally be considered a true experimental design when randomization is absent.
+* There may be different challenges in measurement because of the **within-subjects component**.
+* Since the same participants are measured repeatedly, researchers need to consider issues associated with repeated measurements.
+
+Cross-over Trial
+
+* An experimental design in which subjects act as **their own controls**.
+* Subjects are randomized to receive different levels of the independent variable in a particular order.
+* Participants therefore receive **all possible levels** of the independent variable.
+* Useful when:
+
+  * The effect of the intervention is short-lived.
+  * The intervention effect can disappear sufficiently before the next intervention is given.
+* A **washout period** may be used between intervention conditions.
+
+  * The purpose of the washout is to allow the previous intervention's effect to wear off before the next condition is introduced.
+
+Non-equivalent Control Group
+
+* A research design in which the comparison group is matched as closely as possible to the experimental group.
+* **There is no randomization.**
+* The groups may be **non-equivalent at the beginning** of the study.
+* Because participants are not randomly assigned, there may be differences between the groups that existed before the intervention.
+* These pre-existing differences can affect the outcome and therefore need to be considered when interpreting the results.
+
+Non-equivalent Group Post-test Design
+
+* This is a **Non-equivalent Control Group Design (NCGD)** with only a **post-intervention assessment**.
+* **No pre-tests are conducted.**
+* Example:
+
+  * One group of students at a high school receives an abstinence-only program.
+  * Students at another high school receive a comprehensive sexual-risk-reduction program.
+  * The headmaster later decides that an evaluation is necessary.
+  * However, no pre-test had been administered before the programs.
+* A major concern is the **chance of differential selection**.
+
+  * Since there was no randomization and no baseline assessment, the groups may have differed before the intervention.
+  * Therefore, differences observed after the intervention may not necessarily be caused by the intervention itself.
+
+Non-equivalent Pre-test Post-test Design
+
+* Both:
+
+  * Pre-test, and
+  * Post-test
+    are conducted.
+* The groups are still **non-equivalent** because there is no randomization.
+* The non-equivalence of the groups can be tested during analysis.
+* It provides **more robust results** compared with a post-test-only non-equivalent control group design.
+* Having pre-test information allows researchers to examine the groups' baseline status and changes occurring after the intervention.
+
+Interrupted Time Series
+
+* It is considered the **strongest quasi-experimental design for evaluating the longitudinal effects of interventions**.
+* Data are collected at **multiple instances over time**:
+
+  * Before implementation of the treatment/intervention.
+  * After implementation of the treatment/intervention.
+* The repeated observations allow researchers to examine trends before and after the intervention.
+* There may also be **interrupted time series with non-equivalent groups**.
+* Important trends that can influence observations include:
+
+  * **Maturational trends**
+
+    * Observations involving human subjects who are changing their behavior as they age.
+    * Changes may occur naturally because participants are growing older or developing over time.
+  * **Seasonal trends**
+
+    * A phenomenon in which observations are influenced by the season during which data are collected.
+    * Changes in outcomes may therefore be related to seasonal variation rather than the intervention.
+
+Key Points About Experimental Designs
+
+* Experimental designs help researchers understand the **causal effect** of a health promotion intervention.
+* **Randomization** is a major feature distinguishing true experimental designs from quasi-experimental designs.
+* If randomization is possible:
+
+  * The study is considered a **truly experimental design**.
+* If randomization is not possible:
+
+  * The study is considered a **quasi-experimental design**.
+* Different experimental designs have different:
+
+  * Advantages
+  * Limitations
+  * Issues
+  * Challenges
+* The choice of design should depend on the research question, intervention, setting, participants, ethical considerations, and feasibility.
+
+References Mentioned
+
+* Salazar, L. F., Crosby, R. A., & DiClemente, R. J. — *Research Methods in Health Promotion*. San Francisco, CA: Jossey-Bass, 2015.
+* Saha, I., & Paul, B. — *Essentials of Biostatistics & Research Methodology*, 3rd Edition, 2021, Academic Publishers.
+* Dobe, M. — *Health Promotion and Education: Foundations for Changing Health Behavior*, 1st Edition, 2022.
+
+Lecturer Details
+
+* **Dr. Arista Lahiri, MD, MBA**
+* Assistant Professor, Community Medicine
+* Dr. B. C. Roy Multi-Speciality Medical Research Centre
+* Indian Institute of Technology Kharagpur
+* Email: [alahiri@bcrmrc.iitkgp.ac.in](mailto:alahiri@bcrmrc.iitkgp.ac.in)
+* Course: **Research Methods in Health Promotion**
+* NPTEL 
