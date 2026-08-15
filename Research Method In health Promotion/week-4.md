@@ -342,3 +342,341 @@ Sampling techniques can broadly be divided into **probability** and **non-probab
 * Dobe M. *Health Promotion and Education: Foundations for Changing Health Behavior*. 1st Edition, 2022. 
 ---
 ## Lecture-2
+# Observational Research Designs
+
+* **Lecturer:** Dr. Arista Lahiri, MD, MBA
+* **Designation:** Assistant Professor, Community Medicine
+* **Institution:** Dr. B. C. Roy Multi-Speciality Medical Research Centre, Indian Institute of Technology Kharagpur
+* **Email:** [alahiri@bcrmrc.iitkgp.ac.in](mailto:alahiri@bcrmrc.iitkgp.ac.in)
+* **Course:** Research Methods in Health Promotion
+* **Platform:** NPTEL 
+
+## Different Observational Quantitative Designs
+
+* Observational quantitative research designs commonly used in health promotion include:
+
+  * Cross-sectional designs
+  * Successive independent samples designs
+  * Longitudinal and cohort designs
+  * Cohort-sequential designs
+  * Case-control designs
+  * Case-crossover designs 
+
+## Cross-Sectional Research
+
+* Cross-sectional research is **one of the most commonly used research designs**.
+* It provides a **snapshot of health conditions or variables of interest at a particular point in time**.
+* Data collection occurs **only once**.
+* Because information is collected at only one point in time:
+
+  * It can measure **differences between or among different people, subjects, or phenomena**.
+  * It cannot measure **change over time**.
+* For valid inferences from a cross-sectional design:
+
+  * The findings should be capable of being **generalized to the larger population**.
+  * The selected sample should preferably be a **random sample**.
+  * The sample should be of **sufficient size**.
+* Cross-sectional research is therefore useful for understanding the distribution or characteristics of a health condition at a particular time, but it does not directly show how those characteristics change over time. 
+
+## Survey Research
+
+* The choice of data collection method for a survey depends on:
+
+  * The population being surveyed.
+  * Available resources for conducting the survey.
+  * Availability of staff.
+  * The context in which the research will be conducted.
+* Important domains that are specific to survey research include:
+
+### Sampling Frame
+
+* It is vital to determine the **sampling frame**.
+* The sampling frame identifies the population or source from which the sample will be selected.
+
+### Survey Administration Modality
+
+* Researchers must decide the **modality through which the survey will be administered**.
+* Different modalities can include:
+
+  * Computer-administered surveys
+  * Interviewer-administered surveys
+  * Self-administered surveys
+
+### Sample Size
+
+* The sample size must be determined carefully.
+* The sample-size estimate is important for:
+
+  * Budgeting
+  * Time allocation
+  * Determining staff requirements
+  * Making accurate statistical inferences
+
+### Manual of Operating Procedures
+
+* A **Manual of Operating Procedures (MOP)** should be created.
+* It should describe all the protocols involved in the survey.
+* This includes procedures for:
+
+  * Data collection
+  * Data cleaning
+  * Data analysis
+
+### Questionnaire Development
+
+* The questionnaire should be created carefully.
+* It should be **pilot tested** before the actual survey.
+* Results from the pilot test should be used to make the necessary refinements to the questionnaire. 
+
+## Survey Modalities
+
+### Computer-Administered Surveys
+
+**Associated sampling options:**
+
+* Random sampling through the Internet
+* Random sampling through telephone
+
+**Advantages:**
+
+* Interactive voice recognition can be used.
+* Data can be automatically uploaded to a spreadsheet.
+* Skip patterns can be automatically navigated.
+* Logic checks can be programmed into the survey.
+* Logic checks can help detect false or inconsistent answers.
+
+**Disadvantages:**
+
+* Definitions provided in the survey may not be detailed enough for every respondent.
+* Connectivity problems may cause respondents to discontinue the survey prematurely.
+* Some respondents may not trust the confidentiality of responses submitted through the Internet.
+* The identity of the respondent cannot always be definitively established. 
+
+### Interviewer-Administered Surveys
+
+**Associated sampling options:**
+
+* Random sampling through telephone
+* VDT sampling
+
+**Advantages:**
+
+* The interviewer can probe respondents.
+* The interviewer can assist respondents in accurately recalling their behavior.
+* Respondents may be less likely to repeatedly use responses such as **“don't know.”**
+* Skip patterns can be automatically navigated.
+* The interviewer can provide definitions of terms.
+* Clarification of entire questions can be provided when required.
+
+**Disadvantages:**
+
+* Respondents may not fully disclose sensitive or personal behaviors.
+* **Interviewer bias** may influence responses.
+* Conducting surveys with very large samples may not be possible. 
+
+### Self-Administered Surveys
+
+**Associated sampling options:**
+
+* Surveys mailed to randomly selected households
+* Questionnaires completed by students in randomly selected schools
+
+**Advantages:**
+
+* Disclosure of sensitive or personal behaviors may be better.
+* Technology is not required.
+* The modality can be used with large samples.
+* It is suitable for populations with low computer literacy.
+
+**Disadvantages:**
+
+* Respondents may easily skip a large number of questions.
+* Handwriting may be unclear or completely illegible.
+* Respondents may have difficulty navigating skip patterns.
+* Definitions may not be adequate.
+* Entire questions may be unclear to respondents. 
+
+## Successive Independent Samples
+
+* Successive independent samples design consists of a **series of cross-sectional studies conducted over a period of time**.
+* Each cross-sectional survey uses an **independent sample**.
+* This means:
+
+  * A new sample is selected for every successive cross-sectional survey.
+  * The same questions are asked to each successive sample.
+* It is also called a **trend study**.
+* It is used to assess changes in a population characteristic over time.
+* Examples of characteristics that can be studied include:
+
+  * Tobacco use
+  * Condom use
+  * Fertility
+* The major difference from a longitudinal study is that the **same individuals are not followed over time**. Instead, new samples are selected at each time point. 
+
+## Longitudinal and Cohort Design
+
+### Longitudinal Design
+
+* A longitudinal design is one in which:
+
+  * The **same participants** are followed over a period of time.
+  * Participants are interviewed or assessed **more than once** during the study period.
+* It allows researchers to study changes occurring within the same participants over time.
+
+### Cohort Study Design
+
+* A cohort study is a **special form of longitudinal study**.
+* It involves the presence of a **control group**.
+* Longitudinal and cohort designs can be used to determine changes over time in:
+
+  * Health-related outcomes
+  * Behaviors
+  * Attitudes
+  * Opinions
+* Longitudinal designs can also capture **new cases of disease**, allowing researchers to study **incidence in a population**. 
+
+## Cohort-Sequential Design
+
+* A cohort-sequential design begins with an **initial cohort**.
+* This cohort is followed over a period of time.
+* During the same period, another cohort or additional cohorts are added at different intervals.
+* This allows researchers to:
+
+  * Assess changes over time within the first cohort.
+  * Make cross-sectional comparisons between different cohorts at specific points in time.
+* Because additional cohorts are added at later time points, researchers can compare all cohorts:
+
+  * With one another
+  * On relevant study outcomes
+  * At a single point in time
+* The design helps improve understanding of possible **cohort effects**.
+* Cohort effects may influence or explain results observed in the longitudinal component of the study.
+* Thus, the cohort-sequential design combines aspects of:
+
+  * Longitudinal comparison
+  * Cross-sectional comparison 
+
+## Case-Control Design
+
+### Cases
+
+* Cases are participants selected because they **have the disease or health-related outcome** being studied.
+
+### Controls
+
+* Controls are participants who:
+
+  * Are matched with cases on important characteristics.
+  * **Do not have the disease or health-related outcome**.
+
+### Main Characteristics
+
+* Assessment occurs **only once**.
+* Risk factors are assessed **retrospectively** for both cases and controls.
+* The central feature of a case-control study is the comparison of the:
+
+  * **Exposure histories of cases**
+  * **Exposure histories of controls**
+* The researcher essentially examines whether previous exposure or risk factors differ between those who developed the outcome and those who did not. 
+
+## Case-Crossover Design
+
+* A case-crossover design is **NOT a cross-over trial**.
+* It is a **hybrid design**.
+* Only cases are sampled.
+* **No separate control group is sampled.**
+* The cases serve as **their own controls**.
+* The design was conceptualized to examine the influence of:
+
+  * Risk factors
+  * Exposures
+* It is particularly useful when the exposures are:
+
+  * **Transient**
+  * Difficult to measure
+* It is used for outcomes that have an **acute onset**.
+
+### Hazard Period / Case-Exposure Window
+
+* The period of exposure immediately preceding the onset of the outcome is called the:
+
+  * **Hazard period**
+  * **Case-exposure window**
+* During this period, the person is considered to be a case.
+* The exposure during the hazard period is compared with the exposure during another normal or control period for the **same person**.
+* Because the same individual serves as their own control, characteristics that remain relatively constant within that person are inherently controlled for. 
+
+## Case-Crossover Design: Example
+
+### Texting and Riding a Cycle
+
+* A case-crossover design can be used to investigate whether there is a possible **causal relationship between texting while riding a cycle and an accident**.
+* The amount of texting on the **day immediately before the accident** can be considered.
+* This period represents the **case-exposure window**.
+* The amount of texting during this period is compared with the amount of texting on another **normal day**.
+* The purpose is to determine whether exposure was unusually high during the period immediately preceding the acute event. 
+
+## Important Comparison of Observational Designs
+
+* **Cross-sectional study**
+
+  * Gives a snapshot at one point in time.
+  * Different individuals or subjects can be compared.
+  * Cannot directly measure change over time.
+  * Commonly used in health promotion.
+
+* **Successive independent samples**
+
+  * Uses repeated cross-sectional surveys.
+  * A new independent sample is selected at each time point.
+  * The same questions are asked repeatedly.
+  * Useful for studying population trends over time.
+
+* **Longitudinal study**
+
+  * Follows the same participants over time.
+  * Participants are assessed more than once.
+  * Useful for studying changes within individuals.
+
+* **Cohort study**
+
+  * A special form of longitudinal study.
+  * Includes a control group.
+  * Can study changes in health outcomes, behavior, attitudes and opinions over time.
+
+* **Cohort-sequential study**
+
+  * Starts with one cohort.
+  * Additional cohorts are added at later time points.
+  * Allows both longitudinal and cross-sectional comparisons.
+  * Helps identify possible cohort effects.
+
+* **Case-control study**
+
+  * Begins with participants who have the outcome and participants who do not.
+  * Cases have the disease/outcome.
+  * Controls do not have the disease/outcome.
+  * Previous exposures are assessed retrospectively.
+  * Exposure histories of cases and controls are compared.
+
+* **Case-crossover study**
+
+  * Uses only cases.
+  * Cases act as their own controls.
+  * Designed for transient exposures and acute-onset outcomes.
+  * Compares exposure during the hazard period with exposure during another normal/control period.   
+
+## Key Points
+
+* There are different study designs that can be used in **health promotion research**.
+* **Cross-sectional studies and surveys** are among the common research designs used in health promotion.
+* Cross-sectional studies and surveys **cannot provide information on causality**.
+* Other observational designs can provide stronger information for drawing inferences regarding **cause-effect relationships**.
+* Selection of an appropriate study design depends on the research question, population, variables/exposures being studied, timing of measurement, and the type of inference required. 
+
+## Resources Mentioned
+
+* Salazar, L. F., Crosby, R. A., & DiClemente, R. J. — *Research Methods in Health Promotion*. San Francisco, CA: Jossey-Bass, 2015.
+* Saha, I., & Paul, B. — *Essentials of Biostatistics & Research Methodology*, 3rd Edition, 2021, Academic Publishers.
+* Dobe, M. — *Health Promotion and Education: Foundations for Changing Health Behavior*, 1st Edition, 2022. 
+---
