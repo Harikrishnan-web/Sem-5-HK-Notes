@@ -608,3 +608,191 @@ Choose Minimum-Hop Route
 * It has **RIP-1 and RIP-2**.
 * It uses **Request and Response/Update messages**.
 ---
+## LINK-STATE ROUTING
+
+### ⭐ Basic idea
+
+**Link-State Routing** is a routing method in which each router builds a **complete map of the network** by learning the state and cost of links.
+
+* Lower-cost links are preferred.
+* Cost **∞** means the link is broken or does not exist.
+* Each router creates its own **least-cost tree**. 
+
+```text
+Network information
+       ↓
+   LS Database
+       ↓
+  Dijkstra Algorithm
+       ↓
+ Least-cost tree
+       ↓
+ Routing table
+```
+
+---
+
+## LINK-STATE DATABASE (LSDB)
+
+**LSDB** = collection of information about the **state/cost of all links** in the network.
+
+Each router sends greeting messages to its immediate neighbours to learn:
+
+* Neighbour's identity
+* Cost of the link
+
+This information forms the **Link-State Packet (LSP)**. 
+
+---
+
+## FLOODING
+
+After a router obtains link-state information, it sends that information through its links.
+
+```text
+        B
+       ↗ ↘
+      /   \
+     A ─── C
+```
+
+The next router forwards the information through its other links, **except the link from which it received the information**. 
+
+### Simple flow
+
+```text
+Router creates LSP
+       ↓
+Sends to neighbours
+       ↓
+Neighbour receives LSP
+       ↓
+Forwards to other links
+       ↓
+All routers receive information
+       ↓
+LSDB is formed
+```
+
+---
+
+# DIJKSTRA ALGORITHM
+
+Once the LSDB is available, each router uses **Dijkstra's algorithm** to create its **least-cost tree**. 
+
+### ⭐ Main steps
+
+**Step 1 — Select root**
+
+The router itself becomes the **root** of the tree.
+
+Set its cost as:
+
+$$
+\boxed{0}
+$$
+
+Set the initial costs of other nodes according to the LSDB.
+
+---
+
+**Step 2 — Select lowest-cost node**
+
+Among nodes not yet in the tree, select the node having the **smallest cost**.
+
+Add it to the tree.
+
+---
+
+**Step 3 — Update costs**
+
+After adding the node, check whether the paths to other nodes can be improved through this newly added node.
+
+If a smaller cost is found, update it.
+
+---
+
+**Step 4 — Repeat**
+
+Continue selecting the lowest-cost node and updating costs until **all nodes are added**. 
+
+---
+
+## ⭐ Dijkstra Algorithm — Exam Flowchart
+
+```text
+          START
+            ↓
+   Select yourself as root
+            ↓
+     Set initial costs
+            ↓
+ Select lowest-cost node
+            ↓
+      Add to tree
+            ↓
+    Update other costs
+            ↓
+  All nodes added?
+       ↙       ↘
+     NO         YES
+     ↓           ↓
+   Repeat    Least-cost tree
+                 ↓
+                END
+```
+
+---
+
+# FORWARD SEARCH ALGORITHM
+
+The notes give a more detailed version of Dijkstra using **Confirmed** and **Tentative** lists. 
+
+### Steps
+
+1. Put yourself in the **Confirmed list** with cost **0**.
+2. Select the LSP of the newly confirmed node (**Next**).
+3. For every neighbour of Next:
+
+   * Calculate its cost.
+   * If it is not in either list → add it to **Tentative**.
+   * If it is already Tentative and the new cost is smaller → **update it**.
+4. Select the **lowest-cost entry** from Tentative.
+5. Move it to Confirmed.
+6. Repeat until the Tentative list is empty. 
+
+### Cost calculation
+
+$$
+\boxed{\text{New Cost}=\text{Cost to Next}+\text{Cost from Next to Neighbour}}
+$$
+
+---
+
+## 🧠 Ultra-short revision
+
+```text
+LINK STATE
+     ↓
+Learn link information
+     ↓
+Create LSP
+     ↓
+Flood LSP
+     ↓
+Build LSDB
+     ↓
+Run Dijkstra
+     ↓
+Create least-cost tree
+```
+
+### ⭐ Must remember
+
+* **LSDB** → complete link-state information
+* **LSP** → information about neighbour + link cost
+* **Flooding** → distributes link-state information
+* **Dijkstra** → creates least-cost tree
+* **Lower cost = preferred route**
+* **∞ = broken/non-existent link** 
+---
