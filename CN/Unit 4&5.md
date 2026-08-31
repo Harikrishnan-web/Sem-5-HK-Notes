@@ -796,3 +796,219 @@ Create least-cost tree
 * **Lower cost = preferred route**
 * **∞ = broken/non-existent link** 
 ---
+## OPEN SHORTEST PATH FIRST (OSPF)
+
+### Definition
+
+**OSPF (Open Shortest Path First)** is an **intradomain routing protocol** based on **Link-State Routing**.
+
+### Working
+
+```text
+Discover neighbours
+       ↓
+Exchange link-state information
+       ↓
+Build LSDB
+       ↓
+Run Dijkstra algorithm
+       ↓
+Find least-cost paths
+       ↓
+Update routing table
+```
+
+### Metric
+
+OSPF assigns a **cost/weight** to each link.
+
+The cost can be based on:
+
+* Throughput
+* Round-trip time
+* Reliability
+* Hop count, if the administrator chooses it
+
+Different service types can also have different costs. 
+
+### Link-State Advertisement
+
+OSPF requires routers to **advertise the state of their links** to neighbours so that the LSDB can be formed. 
+
+### ⭐ OSPF Messages
+
+| Type | Message                        | Purpose                                  |
+| ---- | ------------------------------ | ---------------------------------------- |
+| 1    | **Hello**                      | Introduces router to neighbours          |
+| 2    | **Database Description**       | Normally sent in response to Hello       |
+| 3    | **Link-State Request**         | Requests specific link-state information |
+| 4    | **Link-State Update**          | Main message used to build LSDB          |
+| 5    | **Link-State Acknowledgement** | Provides reliability                     |
+
+
+
+### 🧠 Remember
+
+**H-D-R-U-A**
+
+> **H**ello → **D**atabase Description → **R**equest → **U**pdate → **A**cknowledgement
+
+### Other features
+
+* Authentication of routing messages
+* Routing areas for hierarchy
+* Load balancing using multiple equal-cost routes 
+
+### Important fact
+
+OSPF operates at the **network layer** and uses IP for propagation. Its IP protocol field value is **89**. 
+
+---
+
+# PATH-VECTOR ROUTING
+
+### Definition
+
+**Path-Vector Routing** is a routing algorithm used for **interdomain routing**.
+
+Its principle is similar to Distance Vector, but instead of advertising only the metric, it advertises the **complete path**. 
+
+### Example
+
+```text
+AS1 → AS2 → AS3 → AS4
+```
+
+The routing information can contain:
+
+```text
+Destination: AS4
+Path: AS1 → AS2 → AS3 → AS4
+```
+
+---
+
+### Speaker Node
+
+Each Autonomous System has a router that acts on behalf of the entire AS, called a **Speaker Node**.
+
+```text
+       AS1             AS2
+   ┌─────────┐     ┌─────────┐
+   │ Speaker │─────│ Speaker │
+   └─────────┘     └─────────┘
+        │               │
+       AS3 ─────────── AS4
+```
+
+The speaker node:
+
+1. Creates its routing information.
+2. Advertises the **path** to neighbouring ASs.
+3. Receives paths from neighbouring ASs.
+4. Shares the information with its neighbours. 
+
+---
+
+### ⭐ Functions
+
+**1. Loop prevention**
+
+When a router receives a path, it checks whether its own AS is already present in that path.
+
+If yes → a loop would occur → the path is ignored. 
+
+**2. Policy routing**
+
+A router can check the advertised path against its routing policy and reject paths that do not satisfy the policy. 
+
+**3. Optimum path**
+
+The selected path can be the best path according to the **organization's requirements/policy**. 
+
+### 🧠 Remember
+
+**Distance Vector → tells distance**
+**Path Vector → tells path**
+
+---
+
+# BGP – BORDER GATEWAY PROTOCOL VERSION 4 (BGP4)
+
+### ⭐ Definition
+
+**BGP4 (Border Gateway Protocol Version 4)** is the **interdomain routing protocol used on the Internet**.
+
+It is based on the **Path-Vector algorithm** and provides information about the reachability of networks. 
+
+### Why BGP is needed
+
+BGP exchanges routing information between different organizations/ISPs.
+
+Unlike protocols that simply search for the shortest path, BGP considers **routing policies** and agreements between organizations. 
+
+```text
+        Internet
+           |
+   ┌───────┴───────┐
+   ↓               ↓
+  ISP 1 ←──BGP──→ ISP 2
+   │               │
+   ↓               ↓
+ Network A       Network B
+```
+
+### ⭐ BGP Working
+
+```text
+BGP Speaker
+    ↓
+Advertises network/path
+    ↓
+Neighbouring AS
+    ↓
+Checks path + policy
+    ↓
+Accepts / rejects route
+    ↓
+Updates routing information
+```
+
+BGP routers are configured according to routing policies, and neighbouring ISPs use **peering agreements** for exchanging traffic information. 
+
+---
+
+## ⭐ BGP Messages
+
+BGP uses **4 types of messages**:
+
+| Message          | Purpose                                       |
+| ---------------- | --------------------------------------------- |
+| **OPEN**         | Establishes a relationship with a neighbour   |
+| **UPDATE**       | Announces new routes or withdraws routes      |
+| **KEEPALIVE**    | Maintains/confirms the connection             |
+| **NOTIFICATION** | Reports an error and can close the connection |
+
+
+
+### 🧠 Memory trick
+
+**O-U-K-N**
+
+> **O**pen → **U**pdate → **K**eepalive → **N**otification
+
+---
+
+## ⭐ Quick Revision
+
+| Topic                     | Remember                                                |
+| ------------------------- | ------------------------------------------------------- |
+| **OSPF**                  | Intradomain + Link State + Dijkstra                     |
+| **OSPF metric**           | Link cost/weight                                        |
+| **OSPF messages**         | Hello, DB Description, Request, Update, Acknowledgement |
+| **Path Vector**           | Interdomain + advertises path                           |
+| **Speaker Node**          | Represents an AS                                        |
+| **Path Vector functions** | Loop prevention + Policy routing                        |
+| **BGP4**                  | Interdomain + Path Vector                               |
+| **BGP messages**          | OPEN, UPDATE, KEEPALIVE, NOTIFICATION                   |
+---
