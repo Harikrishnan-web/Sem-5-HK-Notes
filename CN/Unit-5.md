@@ -846,3 +846,162 @@ $$
 \boxed{\text{PPP Payload Max}=1500\text{ bytes}}
 $$
 ---
+# 5.8 MEDIA ACCESS CONTROL
+
+### MAC
+
+**MAC (Medium Access Control)** is a **sublayer of the Data Link Layer**.
+
+Main responsibilities:
+
+* Flow control
+* Multiplexing for the transmission medium
+* Controls data transmission through shared channels
+* Sends data through the **Network Interface Card (NIC)**
+
+---
+
+## 5.8.1 MAC Layer in OSI Model
+
+The **Data Link Layer is the second-lowest layer** of the OSI model.
+
+It is divided into:
+
+```text
+Data Link Layer
+      │
+ ┌────┴────┐
+ ↓         ↓
+LLC       MAC
+```
+
+* **LLC** → Logical Link Control
+* **MAC** → Medium Access Control
+
+---
+
+# 5.8.2 MAC Addresses
+
+A **MAC address** is a **unique identifier assigned to the NIC** of a device.
+
+It is used for data transmission within a network segment such as:
+
+* Ethernet
+* Wi-Fi
+* Bluetooth
+
+The MAC address is assigned during manufacturing and is **hardwired/hard-coded in the NIC**.
+
+### Format
+
+A MAC address contains **six groups of two hexadecimal digits**.
+
+Example:
+
+```text
+00:0A:89:5B:F0:11
+```
+
+Groups can be separated by:
+
+* `:`
+* `-`
+* No separator
+
+---
+
+# 5.8.3 ALOHA
+
+**ALOHA** is a **multiple-access protocol** at the Data Link Layer.
+
+It provides a method for multiple terminals to access a **shared communication channel** while handling collisions.
+
+### Problem
+
+If two or more stations transmit at the same time:
+
+```text
+Station A ──┐
+            ├──→ Shared Channel → Collision
+Station B ──┘
+```
+
+The transmitted frames can be destroyed.
+
+There are **two versions of ALOHA**:
+
+1. **Pure ALOHA**
+2. **Slotted ALOHA**
+
+---
+
+## Pure ALOHA
+
+* Stations transmit **whenever they have data**.
+* If two stations transmit simultaneously, a **collision** occurs.
+* The frames are destroyed.
+* The sender expects an **acknowledgement (ACK)**.
+* If ACK is not received within the specified time, the sender assumes the frame/ACK was destroyed.
+* The station waits for a **random amount of time** and retransmits.
+* Random waiting helps prevent the same frames from colliding again.
+
+### Working
+
+```text
+Transmit
+   ↓
+Wait for ACK
+   ↓
+ACK received?
+ ┌─┴──┐
+Yes   No
+ ↓     ↓
+Done  Random wait
+        ↓
+    Retransmit
+```
+
+### Important point
+
+In Pure ALOHA, **frames can be transmitted at any time**, so the chance of collision is high.
+
+---
+
+## Slotted ALOHA
+
+Slotted ALOHA improves the efficiency of Pure ALOHA.
+
+### Main idea
+
+The shared-channel time is divided into **equal time slots**.
+
+```text
+| Slot 1 | Slot 2 | Slot 3 | Slot 4 |
+```
+
+Rules:
+
+* A station can transmit **only at the beginning of a slot**.
+* Only **one frame is sent in each slot**.
+* If a station misses the beginning of a slot, it waits for the **next slot**.
+* Collision can still occur if two stations transmit at the beginning of the **same slot**.
+
+```text
+Slot 1       Slot 2       Slot 3
+|------------|------------|------------|
+     A             B
+     ↓
+  Collision
+```
+
+### Pure vs Slotted ALOHA
+
+| Pure ALOHA              | Slotted ALOHA                   |
+| ----------------------- | ------------------------------- |
+| Transmit anytime        | Transmit only at slot beginning |
+| Higher collision chance | Lower collision chance          |
+| No time slots           | Uses time slots                 |
+| Less efficient          | More efficient                  |
+
+**Key point:** Slotted ALOHA reduces the chance of collision to **one-half compared with Pure ALOHA**.
+---
