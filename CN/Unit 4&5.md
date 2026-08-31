@@ -411,3 +411,200 @@ In simple words:
 
 **Cost to destination = Cost to neighbour + Neighbour's cost to destination → choose the minimum.**
 ---
+# ROUTING INFORMATION PROTOCOL (RIP)
+
+## ⭐ Definition
+
+**RIP (Routing Information Protocol)** is an **intradomain routing protocol** based on the **Distance-Vector routing algorithm**.
+
+It is used by routers to determine the best route to a destination network.
+
+---
+
+## ⭐ Main idea
+
+RIP uses **hop count** as its routing metric.
+
+> **Hop = one router crossed by the packet.**
+
+The route with the **smallest number of hops** is selected.
+
+### Example
+
+```text
+A → R1 → R2 → R3 → Destination
+```
+
+Number of router hops = **3**
+
+If another route is:
+
+```text
+A → R4 → R5 → Destination
+```
+
+Number of hops = **2**
+
+RIP chooses the **second route** because it has fewer hops.
+
+---
+
+## ⭐ RIP Routing Table
+
+A RIP forwarding table contains **3 main columns**:
+
+| Destination Network | Next Router | Cost |
+| ------------------- | ----------- | ---: |
+| Network A           | R2          |    2 |
+| Network B           | R3          |    3 |
+| Network C           | R4          |    1 |
+
+### Meaning
+
+**1. Destination Network**
+The network where the destination host is located.
+
+**2. Next Router**
+The next router to which the packet should be forwarded.
+
+**3. Cost**
+The number of **hops** required to reach the destination.
+
+---
+
+## RIP Working
+
+```text
+Router starts
+     ↓
+Creates routing information
+     ↓
+Exchanges information with neighbours
+     ↓
+Receives routing updates
+     ↓
+Counts hops to destinations
+     ↓
+Chooses route with minimum hops
+     ↓
+Updates routing table
+```
+
+### Simple example
+
+```text
+       1          1
+A ───────── R1 ───────── R2
+                         |
+                         | 1
+                         |
+                         D
+```
+
+From A to D:
+
+$$
+A \rightarrow R1 \rightarrow R2 \rightarrow D
+$$
+
+RIP determines the route based on the **number of hops**.
+
+---
+
+## ⭐ RIP Versions
+
+RIP has two versions:
+
+* **RIP-1**
+* **RIP-2**
+
+**RIP-2** is backward compatible with RIP-1 and allows additional information to be carried in RIP messages.
+
+---
+
+## ⭐ RIP Messages
+
+RIP has **two main types of messages**:
+
+### 1. Request Message
+
+A router sends a **request** when:
+
+* The router has just started.
+* It has routing entries that have timed out.
+
+A request can ask for:
+
+* Specific routing entries
+* All routing entries
+
+---
+
+### 2. Response / Update Message
+
+A response contains routing information.
+
+It can be:
+
+**Solicited response**
+
+* Sent in response to a request.
+
+**Unsolicited response**
+
+* Sent without receiving a specific request.
+* Used for routing updates.
+
+### Flow
+
+```text
+Router A                         Router B
+   |                                |
+   |-------- Request -------------->|
+   |                                |
+   |<------- Response --------------|
+   |                                |
+   |------ Routing Update --------->|
+```
+
+---
+
+## ⭐ Important Points to Remember
+
+| Feature       | RIP                            |
+| ------------- | ------------------------------ |
+| Full form     | Routing Information Protocol   |
+| Type          | Intradomain                    |
+| Algorithm     | Distance Vector                |
+| Metric        | **Hop count**                  |
+| Routing table | Destination, Next Router, Cost |
+| Versions      | RIP-1, RIP-2                   |
+| Messages      | Request, Response/Update       |
+
+---
+
+## 🧠 30-Second Revision
+
+**RIP = Distance Vector + Hop Count**
+
+Remember:
+
+```text
+RIP
+ ↓
+Distance Vector
+ ↓
+Count Hops
+ ↓
+Choose Minimum-Hop Route
+```
+
+**Most important exam points:**
+
+* RIP is an **intradomain** routing protocol.
+* It uses **Distance-Vector routing**.
+* Its metric is **hop count**.
+* Its forwarding table has **destination network, next router and cost**.
+* It has **RIP-1 and RIP-2**.
+* It uses **Request and Response/Update messages**.
+---
