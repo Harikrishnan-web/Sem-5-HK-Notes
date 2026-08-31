@@ -1012,3 +1012,253 @@ BGP uses **4 types of messages**:
 | **BGP4**                  | Interdomain + Path Vector                               |
 | **BGP messages**          | OPEN, UPDATE, KEEPALIVE, NOTIFICATION                   |
 ---
+# MULTICAST ROUTING
+
+### Definition
+
+**Multicast routing** is **one-to-many communication**.
+
+* One **source**
+* Multiple destinations belonging to a **multicast group**
+* Source uses a unicast address.
+* Destination uses a **group address** representing the interested receivers. 
+
+```text
+             Receiver
+                ↑
+                |
+Source ──── Router
+             ↙   ↘
+        Receiver  Receiver
+```
+
+### Two approaches
+
+| Approach              | Main idea                                 | Number of trees |
+| --------------------- | ----------------------------------------- | --------------: |
+| **Source-Based Tree** | Separate tree for every source-group pair |           m × n |
+| **Group-Shared Tree** | One tree for each multicast group         |               m |
+
+### Source-Based Tree
+
+The **source is the root** and group members are the leaves.
+
+```text
+          Source
+         /      \
+        R1       R2
+       /          \
+ Receiver       Receiver
+```
+
+If there are **m groups** and **n sources**:
+
+$$
+\boxed{m\times n\text{ trees}}
+$$
+
+### Group-Shared Tree
+
+A **core/rendezvous point (RP)** acts as a representative source for the group.
+
+```text
+             Receiver
+                ↑
+                |
+Source → Core/RP
+                |
+          ┌─────┴─────┐
+          ↓           ↓
+      Receiver    Receiver
+```
+
+Only **m trees** are needed for m groups. 
+
+---
+
+# DVMRP
+
+### Definition
+
+**DVMRP (Distance Vector Multicast Routing Protocol)** is an extension of **RIP** used for multicast routing.
+
+It uses the **source-based tree approach**. 
+
+### ⭐ Three main steps
+
+```text
+Multicast packet
+       ↓
+     RPF
+       ↓
+     RPB
+       ↓
+     RPM
+       ↓
+Multicast tree
+```
+
+### 1. Reverse Path Forwarding — RPF
+
+RPF ensures that a multicast packet is accepted only if it arrives through the interface that lies on the **shortest path back to the source**.
+
+The router checks its **unicast forwarding table** to determine this interface. 
+
+```text
+        Source
+        ↓
+       R1
+        ↓
+       R2
+      /  \
+     ↓    ↓
+   R3    R4
+```
+
+R2 accepts the packet only from the interface corresponding to its reverse shortest path toward the source.
+
+---
+
+### 2. Reverse Path Broadcasting — RPB
+
+RPF may cause duplicate copies on a network.
+
+**RPB creates a broadcast/spanning tree** and removes branches that cause cycles, so each network receives only one copy. 
+
+---
+
+### 3. Reverse Path Multicasting — RPM
+
+RPB still broadcasts to networks that may have **no interested multicast members**.
+
+RPM removes/prunes branches that do not lead to active group members.
+
+```text
+Broadcast Tree
+      ↓
+Remove unnecessary branches
+      ↓
+Multicast Tree
+```
+
+Pruning can be performed **bottom-up**, from leaves toward the root. 
+
+### ⭐ DVMRP memory
+
+**RPF → RPB → RPM**
+
+> **Forward correctly → Build tree → Prune unnecessary branches**
+
+---
+
+# PIM
+
+### Definition
+
+**PIM (Protocol Independent Multicast)** is a multicast routing protocol that uses the **forwarding table created by a unicast routing protocol**.
+
+The unicast protocol can be either:
+
+* Distance Vector
+* Link State
+
+PIM does not care how that forwarding table was created. 
+
+### Two modes
+
+```text
+              PIM
+             /   \
+            ↓     ↓
+         PIM-DM  PIM-SM
+          Dense   Sparse
+```
+
+---
+
+## PIM-DM — Dense Mode
+
+Used when **many routers have attached multicast members**.
+
+* Uses **source-based tree**
+* Similar to DVMRP but simpler
+* Uses **RPF + RPM**
+* First packet is broadcast to all networks.
+* Routers without members send **prune** messages.
+* Later packets are sent only to required networks. 
+
+```text
+First packet
+     ↓
+Broadcast everywhere
+     ↓
+No-member routers
+     ↓
+PRUNE
+     ↓
+Future packets → only required branches
+```
+
+---
+
+## PIM-SM — Sparse Mode
+
+Used when **only a small number of routers have multicast members**.
+
+It uses a **group-shared tree**.
+
+The central router is called the:
+
+$$
+\boxed{\text{Rendezvous Point (RP)}}
+$$
+
+
+
+### Working
+
+```text
+           RP
+          /  \
+         /    \
+    Receiver  Receiver
+```
+
+* Receivers **join** the multicast group.
+* **Join** messages add branches.
+* **Prune** messages remove unnecessary branches. 
+
+---
+
+## ⭐ DVMRP vs PIM
+
+| Feature                          | DVMRP                                      | PIM                                       |
+| -------------------------------- | ------------------------------------------ | ----------------------------------------- |
+| Full form                        | Distance Vector Multicast Routing Protocol | Protocol Independent Multicast            |
+| Approach                         | Source-based                               | Dense: source-based; Sparse: group-shared |
+| Depends on unicast routing table | DVMRP itself extends RIP                   | **Yes**                                   |
+| Main techniques                  | RPF, RPB, RPM                              | RPF, RPM / Join, Prune                    |
+| Modes                            | —                                          | **PIM-DM, PIM-SM**                        |
+| Sparse multicast                 | —                                          | **PIM-SM uses RP**                        |
+
+## 🧠 1-Minute Revision
+
+**Multicast:**
+**1 source → many receivers**
+
+**Two trees:**
+
+* Source-based → **m × n**
+* Group-shared → **m**
+
+**DVMRP:**
+
+$$
+\boxed{RPF\rightarrow RPB\rightarrow RPM}
+$$
+
+**PIM:**
+
+* **PIM-DM** → many members → broadcast first → prune
+* **PIM-SM** → few members → **RP** → Join/Prune
+---
