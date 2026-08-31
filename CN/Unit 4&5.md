@@ -293,122 +293,121 @@ Consider the following network:
 
 ```text
        2
-   A ───── B
-   │       │
-  1│       │3
-   │       │
-   C ───── D
+   A ------- B
+   |         |
+ 1 |         | 3
+   |         |
+   C ------- D
        2
 ```
 
-Find the **least-cost path from A to D** using the Distance-Vector/Bellman-Ford approach.
+**Find the least-cost path from A to D using Distance Vector Routing.**
 
-### Step 1: Initial information at A
+### Step 1: Initial Distance Vector of A
 
-A directly knows:
+A knows the cost to its direct neighbours:
 
-| Destination | Cost from A |
-|---|---:|
-| A | 0 |
-| B | 2 |
-| C | 1 |
-| D | ∞ |
+| Destination | Cost |
+| ----------- | ---: |
+| A           |    0 |
+| B           |    2 |
+| C           |    1 |
+| D           |    ∞ |
 
-D is initially **∞** because A has no direct link to D.
+A does not have a direct connection to D, so the cost is initially **∞**.
 
 ---
 
-### Step 2: Check through neighbour B
+### Step 2: Find path through B
 
-A can reach D through B.
+Using B:
 
-\[
-\text{Cost}(A\rightarrow B\rightarrow D)
-\]
+$$
+A \rightarrow B \rightarrow D
+$$
 
-\[
-= C(A,B)+D_B(D)
-\]
+$$
+= Cost(A,B) + Cost(B,D)
+$$
 
-\[
-=2+3
-\]
+$$
+= 2 + 3 = 5
+$$
 
-\[
-=\boxed{5}
-\]
+So:
 
-So A updates:
-
-\[
+$$
 D_A(D)=5
-\]
+$$
 
 ---
 
-### Step 3: Check through neighbour C
+### Step 3: Find path through C
 
-A can also reach D through C.
+Using C:
 
-\[
-\text{Cost}(A\rightarrow C\rightarrow D)
-\]
+$$
+A \rightarrow C \rightarrow D
+$$
 
-\[
-= C(A,C)+D_C(D)
-\]
+$$
+= Cost(A,C) + Cost(C,D)
+$$
 
-\[
-=1+2
-\]
+$$
+= 1 + 2 = 3
+$$
 
-\[
-=\boxed{3}
-\]
+So:
 
-Now compare:
+$$
+D_A(D)=3
+$$
 
-\[
-\min(5,3)=\boxed{3}
-\]
+---
 
-Therefore, A chooses the route:
+### Step 4: Choose the minimum
+
+Compare both possible paths:
+
+$$
+\min(5,3)=3
+$$
+
+Therefore:
 
 ```text
 A → C → D
 ```
 
-### Final routing information at A
+is the shortest path.
+
+### Final Distance Vector of A
 
 | Destination | Minimum Cost | Next Hop |
-|---|---:|---|
-| A | 0 | — |
-| B | 2 | B |
-| C | 1 | C |
-| D | **3** | **C** |
+| ----------- | -----------: | -------- |
+| A           |            0 | —        |
+| B           |            2 | B        |
+| C           |            1 | C        |
+| D           |        **3** | **C**    |
 
 ### ⭐ Final Answer
 
-**Least-cost path from A to D = A → C → D**
+**Shortest path:** A → C → D
 
-\[
-\boxed{\text{Minimum Cost}=3}
-\]
+**Minimum cost:**
 
-### 🧠 What to remember for any DVR problem
+$$
+\boxed{3}
+$$
 
-For every destination, calculate:
+### 🧠 Formula to use in DVR problems
 
-\[
-\boxed{\text{Cost through neighbour}=
-\text{Cost to neighbour}+\text{Neighbour's cost to destination}}
-\]
+$$
+\boxed{D_x(y)=\min_v\{c(x,v)+D_v(y)\}}
+$$
 
-Then:
+In simple words:
 
-\[
-\boxed{\text{Choose the minimum}}
-\]
-
-This is exactly the idea behind the Bellman-Ford update used in your notes. fileciteturn4file2L166-L192
+**Cost to destination = Cost to neighbour + Neighbour's cost to destination → choose the minimum.**
 ---
