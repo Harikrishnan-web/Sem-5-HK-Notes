@@ -674,3 +674,175 @@ Examples include:
 > **PAP/CHAP = Authentication**
 > **NCP = Network layer parameters**
 ---
+# 5.6 HDLC
+
+### High-Level Data Link Control
+
+**HDLC** is a **bit-oriented Data Link Layer protocol** used to transmit data between network nodes.
+
+* Data is organized into **frames**
+* Supports **point-to-point** communication
+* Supports **multipoint** communication 
+
+## Transfer Modes
+
+### 1. Normal Response Mode (NRM)
+
+* **Primary station** sends commands.
+* **Secondary station** responds to commands.
+* Used for **point-to-point and multipoint** communication. 
+
+```text
+Primary
+  │
+  ├── Secondary 1
+  └── Secondary 2
+```
+
+### 2. Asynchronous Balanced Mode (ABM)
+
+* Configuration is **balanced**.
+* Each station can **send commands and respond to commands**.
+* Used only for **point-to-point** communication. 
+
+```text
+Station A  ⇄  Station B
+```
+
+## HDLC Frame
+
+HDLC frames contain up to **six fields**; the structure varies according to the frame type. 
+
+```text
+┌──────┬─────────┬─────────┬─────────┬─────┐
+│ Flag │ Address │ Control │ Payload │ FCS │
+└──────┴─────────┴─────────┴─────────┴─────┘
+```
+
+### Fields
+
+| Field       | Purpose                            |
+| ----------- | ---------------------------------- |
+| **Flag**    | Marks beginning and end of frame   |
+| **Address** | Address of receiver                |
+| **Control** | Flow and error control information |
+| **Payload** | Data from Network Layer            |
+| **FCS**     | Error detection                    |
+
+**Flag:**
+
+$$
+\boxed{01111110}
+$$
+
+* Flag = **8 bits**
+* Address = **1 byte to several bytes**
+* Control = **1 or 2 bytes**
+* FCS = **2 or 4 bytes**
+* FCS uses **CRC (Cyclic Redundancy Code)**. 
+
+---
+
+# 5.7 PPP
+
+### Point-to-Point Protocol
+
+**PPP** is a **byte-oriented Data Link Layer protocol** used to transmit **multiprotocol data between two directly connected computers**.
+
+It is widely used in **high-speed, heavily loaded broadband communication**. 
+
+```text
+Computer A  ─────────  Computer B
+                 PPP
+```
+
+## Components of PPP
+
+```text
+                    PPP
+                     │
+       ┌─────────────┼─────────────┐
+       ↓             ↓             ↓
+Encapsulation       LCP       Authentication
+                                    │
+                               PAP / CHAP
+                     ↓
+                    NCP
+```
+
+### 1. Encapsulation Component
+
+Encapsulates the **datagram** so it can be transmitted over the specified physical layer.
+
+### 2. LCP — Link Control Protocol
+
+Responsible for:
+
+* Establishing links
+* Configuring links
+* Testing links
+* Maintaining links
+* Terminating links
+* Negotiating options between endpoints
+
+### 3. Authentication Protocols
+
+Used to authenticate endpoints.
+
+* **PAP** — Password Authentication Protocol
+* **CHAP** — Challenge Handshake Authentication Protocol
+
+### 4. NCP — Network Control Protocols
+
+Used to negotiate **Network Layer parameters and facilities**.
+
+Examples:
+
+* **IPCP**
+* **OSINLCP**
+* **IPXCP**
+* **DNCP**
+* **NBFCP**
+* **IPV6CP** 
+
+---
+
+## PPP Frame
+
+PPP is **byte-oriented**, so each field consists of one or more bytes. 
+
+```text
+┌──────┬─────────┬─────────┬────────┬─────────┬─────┐
+│ Flag │ Address │ Control │Protocol│ Payload │ FCS │
+└──────┴─────────┴─────────┴────────┴─────────┴─────┘
+```
+
+| Field        | Details                                |
+| ------------ | -------------------------------------- |
+| **Flag**     | 1 byte, `01111110`                     |
+| **Address**  | 1 byte, `11111111` for broadcast       |
+| **Control**  | 1 byte, `11000000`                     |
+| **Protocol** | 1 or 2 bytes; identifies payload type  |
+| **Payload**  | Network Layer data; maximum 1500 bytes |
+| **FCS**      | 2 or 4 bytes; uses CRC                 |
+
+
+
+## ⭐ Quick Revision
+
+**HDLC:**
+**Bit-oriented → NRM / ABM → Flag → Address → Control → Payload → FCS**
+
+**PPP:**
+**Byte-oriented → Encapsulation → LCP → Authentication → NCP → Frame**
+
+**Important values:**
+
+$$
+\boxed{\text{Flag}=01111110}
+$$
+
+$$
+\boxed{\text{PPP Payload Max}=1500\text{ bytes}}
+$$
+---
