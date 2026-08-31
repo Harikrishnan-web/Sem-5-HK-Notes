@@ -1,67 +1,132 @@
 # Unit-4 Routing
-## Routing and Protocols
+## ROUTING AND PROTOCOLS
 
-**Routing** is the network-layer process of selecting paths across a network to forward traffic from a source to a destination node. Network routers rely on dynamic algorithms to discover paths, exchange topology state with neighbors, and build local forwarding tables.
+### Routing
 
-```
-                     Routing Protocols                       
-                               |
-               +---------------+---------------+
-               |                               |
-       Intra-Domain Routing           Inter-Domain Routing
-     (Within an Autonomous System)    (Between Autonomous Systems)
-               |                               |
-    +----------+----------+                    |
-    |                     |                    |
-Distance Vector       Link State          Path Vector
-  (e.g., RIP)        (e.g., OSPF)         (e.g., BGP)
+**Routing** is the process of moving information from a **source to a destination** across an internetwork. Usually, at least one intermediary node/router is involved. 
 
+```text
+Source → Router → Router → Destination
 ```
 
-### Domain Architecture
+A router checks its **routing table** when a packet needs to be forwarded. The table specifies the optimum path, which may be **static or dynamic**. Dynamic routing is important because routes need to be updated when network conditions change. 
 
-* **Autonomous System (AS):** A collection of routers under a single administrative authority.
-* **Intra-Domain Routing:** Routing algorithms used strictly within a single Autonomous System (Interior Gateway Protocols - IGP).
-* **Inter-Domain Routing:** Routing algorithms used between separate Autonomous Systems (Exterior Gateway Protocols - EGP).
+### Routing Protocol
+
+A **routing protocol** is a set of rules and procedures used by routers to:
+
+* Exchange routing information
+* Make routing decisions
+* Update dynamic routing tables
+* Combine information received from other routers 
+
+### Routing Table
+
+A routing table tells the router **where to forward a packet** to reach its destination.
+
+```text
+Packet arrives
+      ↓
+Check routing table
+      ↓
+Find best/optimum path
+      ↓
+Forward packet
+```
 
 ---
 
-## Unicast Routing
+## UNICAST ROUTING
 
-**Unicast Routing** delivers a network datagram from one specific source host to one specific destination host. The primary objective is **least-cost routing**—finding the optimal path according to a chosen metric like hop count, bandwidth, delay, or administrative cost.
+In **unicast routing**, a router forwards a received packet through **only one of its ports/interfaces**. 
 
-### Core Unicast Routing Approaches
+```text
+             Router B
+            /
+Source → Router A ───→ Router C → Destination
+            \
+             Router D
+```
 
-#### Distance Vector Routing
+Only **one path** is selected for forwarding the particular packet.
 
-* Routers periodically share their entire routing table only with direct neighbors.
-* Uses the **Bellman-Ford Algorithm** to compute shortest paths.
-* Uses **Hop Count** as its primary metric.
-* Example: **RIP (Routing Information Protocol)**, which has a maximum hop limit of 15 and sends periodic updates every 30 seconds.
-* Vulnerable to slow convergence and the **Count-to-Infinity problem** (mitigated using Split Horizon or Poison Reverse).
-
-#### Link State Routing
-
-* Every router floods state information about its direct links (Link State Advertisements) to all routers in the domain.
-* Every router constructs a complete topology map of the network.
-* Uses **Dijkstra’s Algorithm** to compute the shortest-path tree with itself as the root.
-* Example: **OSPF (Open Shortest Path First)**, which features fast convergence and uses event-triggered updates instead of periodic table dumps.
-
-#### Path Vector Routing
-
-* Designed for inter-domain routing where policy overrides pure distance metrics.
-* Advertises the complete list of Autonomous Systems along a path to prevent loops.
-* Example: **BGP (Border Gateway Protocol)**.
+**Remember:**
+**Unicast = One source → One destination**
 
 ---
 
-### Key Comparison
+### Metric
 
-| Feature | Distance Vector | Link State | Path Vector |
-| --- | --- | --- | --- |
-| **Domain Scope** | Intra-Domain | Intra-Domain | Inter-Domain |
-| **Algorithm** | Bellman-Ford | Dijkstra's | Path Policy |
-| **Knowledge** | Neighbor-only updates | Full topology map | Inter-AS Path attributes |
-| **Updates** | Periodic | Event-triggered | Policy / Event-triggered |
-| **Convergence** | Slow | Fast | Policy-dependent |
+A **metric** is the cost assigned for passing through a network.
+
+The total metric is the sum of the metrics of all networks/links in the route. The router chooses the route with the **smallest metric**. 
+
+### Formula
+
+$$
+\boxed{\text{Total Metric}=\sum \text{Individual Link Metrics}}
+$$
+
+Example:
+
+```text
+A ──2── B ──3── C
+```
+
+$$
+\text{Cost A→C}=2+3=5
+$$
+
+If another route has cost 8, the router chooses the route with cost **5**.
+
+### Metrics used
+
+| Routing Protocol | Metric / Criterion        |
+| ---------------- | ------------------------- |
+| **RIP**          | Hop count                 |
+| **OSPF**         | Cost assigned to the link |
+| **BGP**          | Policy                    |
+
+
+
+---
+
+### Autonomous System (AS)
+
+An **Autonomous System** is a group of networks and routers under the control of a **single administration**. 
+
+```text
+       Autonomous System
+   ┌─────────────────────┐
+   │ R1 ── R2 ── R3      │
+   │       │              │
+   │       R4             │
+   └─────────────────────┘
+```
+
+### Interior and Exterior Routing
+
+**Interior routing**
+
+* Routing **inside an AS**
+
+**Exterior routing**
+
+* Routing **between ASs** 
+
+```text
+      AS 1                    AS 2
+  ┌──────────┐             ┌──────────┐
+  │ R1─R2─R3 │ ←────────→  │ R4─R5─R6 │
+  └──────────┘
+       ↑                       ↑
+   Interior                Interior
+       
+        ←── Exterior routing ──→
+```
+
+### Quick memory
+
+**Interior = Inside one AS**
+**Exterior = Between ASs**
 ---
