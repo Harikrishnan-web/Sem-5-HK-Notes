@@ -1236,3 +1236,672 @@ Each time transmission fails, the adaptor **doubles its waiting time** before tr
 
 This doubling strategy is called **exponential back-off**.
 ---
+# 5.11 Virtual LAN
+
+### VLAN
+
+A **Virtual Local Area Network (VLAN)** is a logical group of computers that appear to be on the **same LAN**, regardless of the underlying physical network configuration.
+
+* Network administrators divide networks according to the **functional requirements** of VLANs.
+* A VLAN can contain a subset of ports on **one or multiple switches/bridges**.
+* Devices in a VLAN communicate as if they are on a **separate LAN**.
+
+### Types of VLAN
+
+**1. Protocol VLAN**
+
+* Traffic is handled according to the **protocol used**.
+* A switch/bridge **segregates, forwards, or discards frames** based on the traffic protocol.
+
+**2. Port-based VLAN**
+
+* Also called **Static VLAN**.
+* Administrator assigns **switch/bridge ports** to form a virtual network.
+
+**3. Dynamic VLAN**
+
+* Network membership is defined according to **device characteristics**.
+
+---
+
+# 5.12 Wireless LAN (802.11)
+
+**Wireless LAN (WLAN)** provides connectivity between devices **without cables**.
+
+WLANs are commonly found in:
+
+* College campuses
+* Office buildings
+* Public areas
+
+## Advantages of WLAN / 802.11
+
+1. **Flexibility** – Within radio coverage, nodes can access each other; radio waves can penetrate partition walls.
+2. **Planning** – No prior planning is required for connectivity if devices follow standard conventions.
+3. **Design** – Allows development of **mobile devices**.
+4. **Robustness** – Communication can still be established if devices survive a disaster.
+
+## Disadvantages of WLAN / 802.11
+
+1. **Quality of Service** – Low bandwidth (**1–10 Mbps**), higher error rates due to interference, and delay due to error detection/correction.
+2. **Cost** – Wireless LAN adapters are costly compared with wired adapters.
+3. **Proprietary Solution** – Slow standardization can result in proprietary solutions, limiting homogeneous operation.
+4. **Restriction** – Individual countries have different **radio spectrum policies**, restricting development.
+5. **Safety and Security** – Radio waves may interfere with other devices, e.g. high-tech equipment in hospitals.
+
+---
+
+# Technology Used in WLAN / 802.11
+
+WLAN uses **Spread Spectrum (SS)** technology.
+
+### Spread Spectrum
+
+The signal is spread over a **wider frequency band than normal** to minimize interference from other devices.
+
+Two types:
+
+```text
+        Spread Spectrum
+             │
+       ┌─────┴─────┐
+       ↓           ↓
+     FHSS         DSSS
+```
+
+## FHSS — Frequency Hopping Spread Spectrum
+
+* Signal is transmitted over a **random sequence of frequencies**.
+* It transmits at one frequency, then another, then another, and so on.
+* The random sequence is generated using a **pseudorandom number generator**.
+* Receiver uses the **same algorithm and same seed**.
+* Therefore, sender and receiver can **hop frequencies in sync** and correctly receive the frame.
+
+```text
+Frequency
+   ↑
+ F3 │        ●
+ F2 │ ●
+ F1 │              ●
+   └────────────────→ Time
+```
+
+## DSSS — Direct Sequence Spread Spectrum
+
+* Each data bit is represented by **multiple bits** in the transmitted signal.
+* User data stream is combined using an **XOR operation** with a pseudorandom number.
+* This pseudorandom number is called the **chipping sequence**.
+
+---
+
+# Topology in WLAN / 802.11
+
+Two topologies/architectures:
+
+1. **Infrastructure Network Topology**
+2. **Ad-Hoc Network Topology**
+
+## Infrastructure Topology — AP-based Topology
+
+* Provides communication between **wireless clients and wired network resources**.
+* Data moves from wireless to wired medium through a **Base Station called AP (Access Point)**.
+* An AP and its associated wireless clients define the **coverage area**.
+
+```text
+Wireless Clients
+   PC1 ──┐
+   PC2 ──┼── AP ─── Wired Network
+   PC3 ──┘
+```
+
+## Ad-Hoc Topology — Peer-to-Peer Topology
+
+* Supports **mutual communication between wireless clients**.
+* Usually created **spontaneously**.
+* Does not support access to wired networks.
+* **Does not require an AP**.
+
+```text
+       PC1
+      /   \
+    PC2 ── PC3
+```
+
+### Quick Revision
+
+**VLAN:** Protocol VLAN | Port-based VLAN (Static) | Dynamic VLAN
+
+**WLAN:** Advantages | Disadvantages | Spread Spectrum | Topologies
+
+**FHSS:** Random frequencies → pseudorandom generator → same algorithm + seed
+
+**DSSS:** Multiple bits → XOR → **chipping sequence**
+
+**Infrastructure:** **AP required**
+
+**Ad-Hoc:** **AP not required**
+---
+# 5.13 Physical Layer
+
+### Definition
+
+The **Physical Layer** is the lowest layer of the OSI model that deals with **physical connectivity and signaling**.
+
+* Receives **frames** from the Data Link Layer.
+* Converts them into **electrical pulses** representing binary data.
+* Transmits binary data through **wired or wireless media**. 
+
+## 5.13.1 Data and Signals
+
+Both **data and signals** can be:
+
+### Analog
+
+* Continuous format
+* Takes **continuous values**
+
+### Digital
+
+* Has discrete states
+* Takes **discrete values**
+
+Data can be converted between analog/digital forms to achieve efficient transmission. 
+
+### Analog Signal
+
+* Has many levels of intensity.
+* Changes through an infinite number of values.
+
+### Digital Signal
+
+* Has a **definite set of values**.
+* Vertical axis → **signal strength**
+* Horizontal axis → **time** 
+
+---
+
+# 5.13.2 Transmission Media
+
+A **transmission medium** is the physical path between the **transmitter and receiver** through which data travels.
+
+```text
+Transmission Media
+       │
+ ┌─────┴─────┐
+ ↓           ↓
+Guided     Unguided
+(Wired)   (Wireless)
+```
+
+## 1. Guided Media
+
+Also called **Wired / Bounded media**.
+
+Signals are directed through a physical path.
+
+**Features:**
+
+* High speed
+* Secure
+* Comparatively shorter distances
+
+### Types
+
+#### (i) Twisted Pair Cable
+
+Two separately insulated conductor wires are **twisted around each other**.
+
+Two types:
+
+**UTP — Unshielded Twisted Pair**
+
+* Two insulated copper wires twisted together.
+* No physical shield.
+* Used in telephone applications.
+
+**Advantages:** Least expensive, easy installation, high-speed capacity.
+
+**Disadvantages:** Susceptible to external interference, lower performance than STP, short-distance transmission due to attenuation.
+
+**Applications:** Telephone connections and LANs. 
+
+**STP — Shielded Twisted Pair**
+
+* Has a **copper braid or foil shield** to block external interference.
+* Used in fast-data-rate Ethernet and telephone voice/data channels.
+
+**Advantages:** Better performance at higher data rates, eliminates crosstalk, comparatively faster.
+
+**Disadvantages:** Difficult to install/manufacture, expensive, bulky. 
+
+#### (ii) Coaxial Cable
+
+Contains:
+
+* Outer plastic covering
+* Insulation layer
+* Two parallel conductors
+
+Two transmission modes:
+
+* **Baseband** → dedicated cable bandwidth
+* **Broadband** → bandwidth divided into separate ranges
+
+Used in **Cable TV and analog television networks**.
+
+**Advantages:** High bandwidth, better noise immunity, easy installation/expansion, inexpensive.
+
+**Disadvantage:** Single cable failure can disrupt the entire network. 
+
+#### (iii) Optical Fiber Cable
+
+Uses **refraction of light** through a glass/plastic **core**, surrounded by **cladding**.
+
+Used for transmitting **large volumes of data**.
+
+```text
+┌───────────────────┐
+│     Cladding      │
+│   ┌───────────┐   │
+│   │   Core    │   │
+│   └───────────┘   │
+└───────────────────┘
+```
+
+Can be:
+
+* Unidirectional
+* Bidirectional
+
+**WDM (Wavelength Division Multiplexer)** supports both modes.
+
+**Advantages:** High capacity/bandwidth, lightweight, low attenuation, immune to electromagnetic interference, resistant to corrosive materials.
+
+**Disadvantages:** Difficult installation/maintenance, high cost, fragile. 
+
+#### (iv) Stripline
+
+* **TEM transmission line**.
+* Uses conducting material between two **ground-plane layers**.
+* Provides **EMI immunity**.
+* Also called a **waveguide**.
+
+#### (v) Microstripline
+
+* Conducting material is separated from the **ground plane by a dielectric layer**. 
+
+---
+
+## 2. Unguided Media
+
+Also called **Wireless / Unbounded media**.
+
+* No physical medium is required.
+* Electromagnetic signals are transmitted through air.
+
+**Features:**
+
+* Signal is broadcast through air
+* Less secure
+* Used for larger distances
+
+### Types
+
+| Type            | Key points                                            | Frequency           |
+| --------------- | ----------------------------------------------------- | ------------------- |
+| **Radio waves** | Can penetrate buildings; antennas need not be aligned | **3 KHz–1 GHz**     |
+| **Microwaves**  | Line-of-sight; antennas must be aligned               | **1–300 GHz**       |
+| **Infrared**    | Very short distance; cannot penetrate obstacles       | **300 GHz–400 THz** |
+
+**Radio:** AM/FM radio, cordless phones
+**Microwave:** Mobile communication, TV distribution
+**Infrared:** TV remote, wireless mouse/keyboard, printer 
+
+---
+
+# 5.13.3 Switching
+
+Switching decides the **best route for data transmission** when multiple paths exist.
+
+Main techniques:
+
+```text
+Switching
+   │
+   ├── Circuit Switching
+   ├── Message Switching
+   └── Packet Switching
+```
+
+## Circuit Switching
+
+* Establishes a **dedicated path** between sender and receiver.
+* Path remains until connection is terminated.
+* Similar to a telephone network.
+* Used mainly for **voice transmission**.
+* Fixed data can be transferred at a time.
+
+### Three phases
+
+```text
+Circuit Establishment
+        ↓
+    Data Transfer
+        ↓
+   Circuit Disconnect
+```
+
+### Types
+
+**Space Division Switching**
+
+* Physically separate **crosspoints** create the transmission path.
+
+**Time Division Switching**
+
+* Incoming and outgoing signals are transmitted in **different time slots**. 
+
+## Message Switching
+
+* Entire message is transferred as a **complete unit**.
+* No dedicated path is established.
+* Message is **stored and forwarded** through intermediate nodes.
+* Destination address is attached to the message.
+* Each node stores the **entire message** before forwarding it.
+* Provides dynamic routing.
+
+**Key term:** **Store-and-forward network**. 
+
+## Packet Switching
+
+* Message is divided into smaller units called **packets**.
+* Each packet gets a unique number.
+* Header contains:
+
+  * Source address
+  * Destination address
+  * Sequence number
+* Packets may travel through the shortest available path.
+* Receiver reassembles packets in the correct order.
+* Missing/corrupted packets require retransmission.
+* Correct reception results in an **acknowledgement**. 
+
+### Types of Packet Switching
+
+**1. Datagram Packet Switching**
+
+* Each packet is an independent entity.
+* Each packet contains destination information.
+* Path is **not fixed**.
+* Intermediate nodes make routing decisions.
+* Also called **connectionless switching**.
+
+**2. Virtual Circuit Switching**
+
+* Also called **connection-oriented switching**.
+* A preplanned route is established before data transmission.
+* **Call request** and **call accept** packets establish the connection.
+* Path remains fixed for the logical connection. 
+---
+# 5.13 Physical Layer
+
+### Definition
+
+The **Physical Layer** is the lowest layer of the OSI model that deals with **physical connectivity and signaling**.
+
+* Receives **frames** from the Data Link Layer.
+* Converts them into **electrical pulses** representing binary data.
+* Transmits binary data through **wired or wireless media**. 
+
+## 5.13.1 Data and Signals
+
+Both **data and signals** can be:
+
+### Analog
+
+* Continuous format
+* Takes **continuous values**
+
+### Digital
+
+* Has discrete states
+* Takes **discrete values**
+
+Data can be converted between analog/digital forms to achieve efficient transmission. 
+
+### Analog Signal
+
+* Has many levels of intensity.
+* Changes through an infinite number of values.
+
+### Digital Signal
+
+* Has a **definite set of values**.
+* Vertical axis → **signal strength**
+* Horizontal axis → **time** 
+
+---
+
+# 5.13.2 Transmission Media
+
+A **transmission medium** is the physical path between the **transmitter and receiver** through which data travels.
+
+```text
+Transmission Media
+       │
+ ┌─────┴─────┐
+ ↓           ↓
+Guided     Unguided
+(Wired)   (Wireless)
+```
+
+## 1. Guided Media
+
+Also called **Wired / Bounded media**.
+
+Signals are directed through a physical path.
+
+**Features:**
+
+* High speed
+* Secure
+* Comparatively shorter distances
+
+### Types
+
+#### (i) Twisted Pair Cable
+
+Two separately insulated conductor wires are **twisted around each other**.
+
+Two types:
+
+**UTP — Unshielded Twisted Pair**
+
+* Two insulated copper wires twisted together.
+* No physical shield.
+* Used in telephone applications.
+
+**Advantages:** Least expensive, easy installation, high-speed capacity.
+
+**Disadvantages:** Susceptible to external interference, lower performance than STP, short-distance transmission due to attenuation.
+
+**Applications:** Telephone connections and LANs. 
+
+**STP — Shielded Twisted Pair**
+
+* Has a **copper braid or foil shield** to block external interference.
+* Used in fast-data-rate Ethernet and telephone voice/data channels.
+
+**Advantages:** Better performance at higher data rates, eliminates crosstalk, comparatively faster.
+
+**Disadvantages:** Difficult to install/manufacture, expensive, bulky. 
+
+#### (ii) Coaxial Cable
+
+Contains:
+
+* Outer plastic covering
+* Insulation layer
+* Two parallel conductors
+
+Two transmission modes:
+
+* **Baseband** → dedicated cable bandwidth
+* **Broadband** → bandwidth divided into separate ranges
+
+Used in **Cable TV and analog television networks**.
+
+**Advantages:** High bandwidth, better noise immunity, easy installation/expansion, inexpensive.
+
+**Disadvantage:** Single cable failure can disrupt the entire network. 
+
+#### (iii) Optical Fiber Cable
+
+Uses **refraction of light** through a glass/plastic **core**, surrounded by **cladding**.
+
+Used for transmitting **large volumes of data**.
+
+```text
+┌───────────────────┐
+│     Cladding      │
+│   ┌───────────┐   │
+│   │   Core    │   │
+│   └───────────┘   │
+└───────────────────┘
+```
+
+Can be:
+
+* Unidirectional
+* Bidirectional
+
+**WDM (Wavelength Division Multiplexer)** supports both modes.
+
+**Advantages:** High capacity/bandwidth, lightweight, low attenuation, immune to electromagnetic interference, resistant to corrosive materials.
+
+**Disadvantages:** Difficult installation/maintenance, high cost, fragile. 
+
+#### (iv) Stripline
+
+* **TEM transmission line**.
+* Uses conducting material between two **ground-plane layers**.
+* Provides **EMI immunity**.
+* Also called a **waveguide**.
+
+#### (v) Microstripline
+
+* Conducting material is separated from the **ground plane by a dielectric layer**. 
+
+---
+
+## 2. Unguided Media
+
+Also called **Wireless / Unbounded media**.
+
+* No physical medium is required.
+* Electromagnetic signals are transmitted through air.
+
+**Features:**
+
+* Signal is broadcast through air
+* Less secure
+* Used for larger distances
+
+### Types
+
+| Type            | Key points                                            | Frequency           |
+| --------------- | ----------------------------------------------------- | ------------------- |
+| **Radio waves** | Can penetrate buildings; antennas need not be aligned | **3 KHz–1 GHz**     |
+| **Microwaves**  | Line-of-sight; antennas must be aligned               | **1–300 GHz**       |
+| **Infrared**    | Very short distance; cannot penetrate obstacles       | **300 GHz–400 THz** |
+
+**Radio:** AM/FM radio, cordless phones
+**Microwave:** Mobile communication, TV distribution
+**Infrared:** TV remote, wireless mouse/keyboard, printer 
+
+---
+
+# 5.13.3 Switching
+
+Switching decides the **best route for data transmission** when multiple paths exist.
+
+Main techniques:
+
+```text
+Switching
+   │
+   ├── Circuit Switching
+   ├── Message Switching
+   └── Packet Switching
+```
+
+## Circuit Switching
+
+* Establishes a **dedicated path** between sender and receiver.
+* Path remains until connection is terminated.
+* Similar to a telephone network.
+* Used mainly for **voice transmission**.
+* Fixed data can be transferred at a time.
+
+### Three phases
+
+```text
+Circuit Establishment
+        ↓
+    Data Transfer
+        ↓
+   Circuit Disconnect
+```
+
+### Types
+
+**Space Division Switching**
+
+* Physically separate **crosspoints** create the transmission path.
+
+**Time Division Switching**
+
+* Incoming and outgoing signals are transmitted in **different time slots**. 
+
+## Message Switching
+
+* Entire message is transferred as a **complete unit**.
+* No dedicated path is established.
+* Message is **stored and forwarded** through intermediate nodes.
+* Destination address is attached to the message.
+* Each node stores the **entire message** before forwarding it.
+* Provides dynamic routing.
+
+**Key term:** **Store-and-forward network**. 
+
+## Packet Switching
+
+* Message is divided into smaller units called **packets**.
+* Each packet gets a unique number.
+* Header contains:
+
+  * Source address
+  * Destination address
+  * Sequence number
+* Packets may travel through the shortest available path.
+* Receiver reassembles packets in the correct order.
+* Missing/corrupted packets require retransmission.
+* Correct reception results in an **acknowledgement**. 
+
+### Types of Packet Switching
+
+**1. Datagram Packet Switching**
+
+* Each packet is an independent entity.
+* Each packet contains destination information.
+* Path is **not fixed**.
+* Intermediate nodes make routing decisions.
+* Also called **connectionless switching**.
+
+**2. Virtual Circuit Switching**
+
+* Also called **connection-oriented switching**.
+* A preplanned route is established before data transmission.
+* **Call request** and **call accept** packets establish the connection.
+* Path remains fixed for the logical connection. 
+---
