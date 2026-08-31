@@ -1005,3 +1005,234 @@ Slot 1       Slot 2       Slot 3
 
 **Key point:** Slotted ALOHA reduces the chance of collision to **one-half compared with Pure ALOHA**.
 ---
+# 5.9 ETHERNET BASICS
+
+### Ethernet
+
+**Ethernet** is a set of technologies and protocols mainly used in **LANs**. It can also be used in MANs and WANs.
+
+* Standardized as **IEEE 802.3** in the 1980s.
+* It has gone through **four generations**.
+
+## Standard Ethernet — 10 Mbps
+
+Four main physical-layer implementations:
+
+| Type         | Name                       | Topology | Cable         |
+| ------------ | -------------------------- | -------- | ------------- |
+| **10Base5**  | Thick Ethernet / Thicknet  | Bus      | Thick coaxial |
+| **10Base2**  | Thin Ethernet / Cheapernet | Bus      | Thin coaxial  |
+| **10Base-T** | Twisted-pair Ethernet      | Star     | Twisted pair  |
+| **10Base-F** | Fiber Ethernet             | Star     | Fiber optic   |
+
+### 10Base5
+
+* First Ethernet implementation.
+* Uses **bus topology**.
+* Thick coaxial cable.
+* External transceiver connected through a tap.
+
+```text
+A ─── B ─── C ─── D
+     Bus cable
+```
+
+### 10Base2
+
+* Uses **bus topology**.
+* Cable is thinner and more flexible.
+* Transceiver is normally part of the **NIC**.
+
+### 10Base-T
+
+* Uses **star topology**.
+* Stations connect to a **hub**.
+* Uses two pairs of twisted cable.
+
+```text
+       A
+       |
+B ─── Hub ─── C
+       |
+       D
+```
+
+### 10Base-F
+
+* Uses **star topology**.
+* Stations connect to a hub.
+* Uses **two fiber-optic cables**.
+
+---
+
+# Fast Ethernet — 100 Mbps
+
+**Fast Ethernet / 100BASE-T** provides speeds up to:
+
+$$
+\boxed{100\ Mbps}
+$$
+
+It is typically used for **LAN backbone systems**.
+
+Three specifications:
+
+1. **100BASE-TX**
+2. **100BASE-T4**
+3. **100BASE-FX**
+
+---
+
+# Gigabit Ethernet — 1 Gbps
+
+Provides:
+
+$$
+\boxed{1\ Gbps = 1000\ Mbps}
+$$
+
+Two categories:
+
+### Two-wire implementation
+
+Uses:
+
+* **1000Base-SX** → short-wave fiber
+* **1000Base-LX** → long-wave fiber
+* **1000Base-CX** → STP
+
+### Four-wire implementation
+
+* **1000Base-T**
+* Uses **Category 5 twisted-pair cable**
+
+---
+
+# 5.10 CSMA/CD
+
+### Definition
+
+**CSMA/CD = Carrier Sense Multiple Access with Collision Detection**
+
+### Carrier Sense
+
+Every node checks whether the medium is **idle or busy**.
+
+* **Idle → transmit**
+* **Busy → postpone transmission**
+
+### Collision Detection
+
+The node **listens while transmitting**.
+
+If it detects that its frame collided with another frame, it stops transmission. 
+
+```text
+Sense medium
+     ↓
+  Idle?
+  /   \
+Yes    No
+ ↓      ↓
+Send   Wait
+ ↓
+Detect collision?
+ /          \
+No          Yes
+↓            ↓
+Done      Back-off
+```
+
+---
+
+# TRANSMITTER ALGORITHMS
+
+Three strategies are given:
+
+1. **Non-Persistent**
+2. **1-Persistent**
+3. **P-Persistent**
+
+---
+
+## 1. Non-Persistent
+
+* Sense the line.
+* **Idle → transmit immediately.**
+* **Busy → wait for a random time.**
+* Sense again.
+
+```text
+Sense
+ ↓
+Idle? ── Yes → Send
+ ↓ No
+Random wait
+ ↓
+Sense again
+```
+
+**Advantage:** Reduces collision chance.
+
+**Disadvantage:** Can reduce network efficiency because the medium may remain idle while stations wait.
+
+---
+
+## 2. Persistent
+
+### 1-Persistent
+
+* Sense the line.
+* If idle → **send immediately** with probability **1**.
+* Because multiple stations may transmit immediately, collision probability is high.
+
+**Remember:**
+**1-Persistent = Idle → Send immediately**
+
+---
+
+### P-Persistent
+
+When the line is idle:
+
+$$
+\boxed{p = \text{probability of sending}}
+$$
+
+$$
+\boxed{q = 1-p}
+$$
+
+* With probability **p** → send.
+* With probability **q = 1 − p** → wait for the next time slot and check again.
+
+Used when the channel has **time slots** whose duration is at least the maximum propagation time.
+
+**Advantage:** Combines reduced collision probability with improved efficiency.
+
+---
+
+# EXPONENTIAL BACK-OFF
+
+After detecting a collision:
+
+```text
+Collision
+   ↓
+Stop transmission
+   ↓
+Wait
+   ↓
+Try again
+   ↓
+Collision again?
+   ↓
+Double waiting time
+   ↓
+Try again
+```
+
+Each time transmission fails, the adaptor **doubles its waiting time** before trying again.
+
+This doubling strategy is called **exponential back-off**.
+---
