@@ -287,3 +287,128 @@ $$
 **Distance Vector:**
 A one-dimensional array representing the least-cost paths from one router to different destinations. 
 ---
+## Example Problem – Distance Vector Routing
+
+Consider the following network:
+
+```text
+       2
+   A ───── B
+   │       │
+  1│       │3
+   │       │
+   C ───── D
+       2
+```
+
+Find the **least-cost path from A to D** using the Distance-Vector/Bellman-Ford approach.
+
+### Step 1: Initial information at A
+
+A directly knows:
+
+| Destination | Cost from A |
+|---|---:|
+| A | 0 |
+| B | 2 |
+| C | 1 |
+| D | ∞ |
+
+D is initially **∞** because A has no direct link to D.
+
+---
+
+### Step 2: Check through neighbour B
+
+A can reach D through B.
+
+\[
+\text{Cost}(A\rightarrow B\rightarrow D)
+\]
+
+\[
+= C(A,B)+D_B(D)
+\]
+
+\[
+=2+3
+\]
+
+\[
+=\boxed{5}
+\]
+
+So A updates:
+
+\[
+D_A(D)=5
+\]
+
+---
+
+### Step 3: Check through neighbour C
+
+A can also reach D through C.
+
+\[
+\text{Cost}(A\rightarrow C\rightarrow D)
+\]
+
+\[
+= C(A,C)+D_C(D)
+\]
+
+\[
+=1+2
+\]
+
+\[
+=\boxed{3}
+\]
+
+Now compare:
+
+\[
+\min(5,3)=\boxed{3}
+\]
+
+Therefore, A chooses the route:
+
+```text
+A → C → D
+```
+
+### Final routing information at A
+
+| Destination | Minimum Cost | Next Hop |
+|---|---:|---|
+| A | 0 | — |
+| B | 2 | B |
+| C | 1 | C |
+| D | **3** | **C** |
+
+### ⭐ Final Answer
+
+**Least-cost path from A to D = A → C → D**
+
+\[
+\boxed{\text{Minimum Cost}=3}
+\]
+
+### 🧠 What to remember for any DVR problem
+
+For every destination, calculate:
+
+\[
+\boxed{\text{Cost through neighbour}=
+\text{Cost to neighbour}+\text{Neighbour's cost to destination}}
+\]
+
+Then:
+
+\[
+\boxed{\text{Choose the minimum}}
+\]
+
+This is exactly the idea behind the Bellman-Ford update used in your notes. fileciteturn4file2L166-L192
+---
