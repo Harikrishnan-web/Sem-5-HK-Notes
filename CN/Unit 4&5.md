@@ -130,3 +130,160 @@ An **Autonomous System** is a group of networks and routers under the control of
 **Interior = Inside one AS**
 **Exterior = Between ASs**
 ---
+## DISTANCE-VECTOR ROUTING
+
+### ⭐ Basic idea
+
+**Distance-Vector (DV) routing** is a routing method used to find the **best/least-cost route** to a destination.
+
+Each router:
+
+* Initially knows the cost to its **immediate neighbours**.
+* Creates its own **least-cost information**.
+* Exchanges this information with its neighbouring routers.
+* Updates its routes using the information received.
+* Repeats this process until the routing information becomes complete. 
+
+### Simple flow
+
+```text
+Know immediate neighbours
+          ↓
+Create distance vector
+          ↓
+Send vector to neighbours
+          ↓
+Receive neighbours' vectors
+          ↓
+Calculate better routes
+          ↓
+Update distance vector
+          ↓
+Send updated vector
+          ↓
+Repeat
+```
+
+---
+
+## BELLMAN-FORD EQUATION
+
+### ⭐ Main idea
+
+The **Bellman-Ford equation** is the heart of Distance-Vector routing. It is used to find the **least-cost/shortest distance** from a source to a destination through an intermediate neighbour. 
+
+### ⭐ Formula
+
+$$
+\boxed{D_x(y)=\min_v\{c(x,v)+D_v(y)\}}
+$$
+
+### Meaning of symbols
+
+| Symbol     | Meaning                                           |
+| ---------- | ------------------------------------------------- |
+| \(D_x(y)\) | Least cost from router **x** to destination **y** |
+| \(v\)      | A neighbouring router                             |
+| \(c(x,v)\) | Cost from **x to neighbour v**                    |
+| \(D_v(y)\) | Cost from neighbour **v to destination y**        |
+| min        | Select the **smallest** total cost                |
+
+### 🧠 In simple words
+
+> **My cost to destination = minimum [my cost to neighbour + neighbour's cost to destination].**
+
+### Example
+
+Suppose:
+
+```text
+       Cost = 2
+   X ─────────→ V
+                │
+                │ Cost to Y = 5
+                ↓
+                Y
+```
+
+Then:
+
+$$
+D_X(Y)=2+5=7
+$$
+
+If another neighbour provides a route costing **4**, then:
+
+$$
+D_X(Y)=\min(7,4)=\boxed{4}
+$$
+
+So router X chooses the route with cost **4**.
+
+---
+
+## DISTANCE VECTORS
+
+A **distance vector** is a **one-dimensional array** that represents the least-cost information from a router to different destinations. 
+
+### Example
+
+Suppose router A has:
+
+| Destination | Least Cost |
+| ----------- | ---------: |
+| A           |          0 |
+| B           |          2 |
+| C           |          5 |
+| D           |          ∞ |
+| E           |          4 |
+
+Here:
+
+* **0** → cost to itself
+* **2, 5, 4** → known least costs
+* **∞** → destination currently unreachable/unknown
+
+### How vectors are exchanged
+
+```text
+        Distance Vector
+              ↓
+        ┌───────────┐
+        │ Router A  │
+        └───────────┘
+          ↙       ↘
+         ↓         ↓
+     Router B   Router C
+         ↘       ↙
+          Updated
+       information
+```
+
+Each router sends a copy of its distance vector to its **immediate neighbours**. When a neighbour receives it, it recalculates its own distances using the Bellman-Ford equation. 
+
+### ⭐ Update rule
+
+$$
+\boxed{D_x(y)=\min_v[c(x,v)+D_v(y)]}
+$$
+
+If the calculated distance is **better**, the router updates its vector.
+
+If the vector changes, the updated vector is sent to the neighbouring routers. 
+
+---
+
+### ⭐ Exam answer — short version
+
+**Distance-Vector Routing:**
+A routing technique in which each router maintains a distance vector containing the least-cost routes to destinations. Routers exchange their vectors with immediate neighbours and update their routing information using the Bellman-Ford equation.
+
+**Bellman-Ford:**
+
+$$
+D_x(y)=\min_v[c(x,v)+D_v(y)]
+$$
+
+**Distance Vector:**
+A one-dimensional array representing the least-cost paths from one router to different destinations. 
+---
