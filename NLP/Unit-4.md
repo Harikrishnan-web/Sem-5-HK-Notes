@@ -510,4 +510,204 @@ Important for:
 4. **Bootstrapping and semi-supervised methods**
 5. **Distributional and embedding-based methods**
 ---
+# 4.11 WSD USING SUPERVISED METHODS
 
+**Supervised WSD** treats word sense disambiguation as a **classification problem**. A model learns from **labeled examples** where each target word has the correct sense.
+
+## 4.11.1 Basic Procedure
+
+```text
+Labeled Data
+     ↓
+Extract Features
+     ↓
+Train Classifier
+     ↓
+Predict Sense
+```
+
+1. Collect labeled training data.
+2. Extract contextual features.
+3. Train a classifier.
+4. Predict the sense of new occurrences.
+
+## 4.11.2 Features Used
+
+1. **Neighboring words**
+2. **Part-of-speech tags**
+3. **Collocations**
+4. **Local syntactic patterns**
+5. **Domain/topic cues**
+
+## 4.11.3 Classifiers Used
+
+* **Naive Bayes**
+* **Decision Trees**
+* **Support Vector Machines (SVM)**
+* **Maximum Entropy**
+* **Neural classifiers**
+
+## 4.11.4 Advantages
+
+1. Usually **high accuracy** with labeled data.
+2. Directly models **contextual evidence**.
+3. Effective for **domain-specific tasks**.
+
+## 4.11.5 Limitations
+
+1. Requires **large annotated corpora**.
+2. Annotation is **expensive**.
+3. May not generalize to **new domains**.
+4. Limited coverage for **rare senses**.
+
+---
+
+# 4.12 DICTIONARY AND THESAURUS METHODS
+
+These methods use **lexical resources** to identify the correct word sense without requiring extensive labeled training data.
+
+## 4.12.1 Dictionary-Based WSD
+
+Uses **dictionary definitions/glosses**.
+
+The target word's context is compared with definitions of candidate senses, and the **best matching sense** is selected.
+
+**Gloss overlap:** choose the sense whose definition shares the **most words with the context**.
+
+## 4.12.2 Thesaurus-Based WSD
+
+Uses semantic relations such as:
+
+* **Synonymy**
+* **Hypernymy**
+* Related words
+
+Resources such as **WordNet** help determine the sense through **semantic closeness** between context words and candidate senses.
+
+## 4.12.3 Advantages
+
+1. No large **labeled corpus** required.
+2. **Interpretable**.
+3. Useful when lexical resources are **rich**.
+
+## 4.12.4 Limitations
+
+1. Depends on **lexical resource quality**.
+2. Limited coverage of **domain-specific words**.
+3. May perform worse than **supervised methods**.
+---
+# 4.13 BOOTSTRAPPING METHODS
+
+**Bootstrapping** is a **semi-supervised** method that starts with a small amount of seed information and gradually expands the training data. It is useful when **labeled data is scarce**.
+
+## 4.13.1 Basic Idea
+
+Start with a few **seed examples/contexts/rules** → find new examples → learn from them → repeat.
+
+## 4.13.2 Steps
+
+```text
+Seed examples
+     ↓
+Find associated contexts
+     ↓
+Extract candidates
+     ↓
+Select reliable examples
+     ↓
+Repeat
+```
+
+## 4.13.3 Application in WSD
+
+Starts with a few examples of each sense, then collects additional contexts representing those senses and gradually improves **disambiguation**.
+
+## 4.13.4 Advantages
+
+* Reduces **manual annotation**
+* Learns from **limited supervision**
+* Useful with **small labeled corpora**
+
+## 4.13.5 Limitations
+
+* **Errors may propagate**
+* Wrong seeds can mislead learning
+* Requires **quality control**
+
+---
+
+# 4.14 WORD SIMILARITY USING THESAURUS METHODS
+
+Thesaurus-based similarity uses **lexical resources and semantic hierarchies**, such as synonym sets and hypernym trees.
+
+## 4.14.1 Basic Principle
+
+Words close in a semantic hierarchy are considered more similar.
+
+**Example:** `dog – cat` > `dog – mountain`
+
+## 4.14.2 Path-Based Similarity
+
+Similarity is based on the **shortest path** between concepts.
+
+**Smaller path → greater similarity**
+
+## 4.14.3 Information Content Methods
+
+Give more importance to **specific shared ancestors** than highly abstract ones.
+
+Similarity depends on the **most informative common ancestor**.
+
+## 4.14.4 Advantages
+
+1. Interpretable semantic similarity
+2. Uses **curated lexical knowledge**
+3. Good for nouns with clear **taxonomic structure**
+
+## 4.14.5 Limitations
+
+1. Depends on **lexical resource availability**
+2. Poorer for missing words/phrases
+3. Weaker structure for **verbs and adjectives**
+
+---
+
+# 4.15 WORD SIMILARITY USING DISTRIBUTIONAL METHODS
+
+Distributional methods measure similarity from **contextual usage in corpora**.
+
+### 4.15.1 Distributional Hypothesis
+
+Words occurring in **similar contexts** tend to have **similar meanings**.
+
+### 4.15.2 Term-Context Representation
+
+Each word is represented as a **vector** based on:
+
+* Nearby words
+* Syntactic dependencies
+* Co-occurrence counts
+
+### 4.15.3 Similarity Computation
+
+**Cosine similarity** is commonly used.
+
+**Higher cosine similarity → more similar contexts**
+
+### 4.15.4 Weighting Schemes
+
+Instead of raw counts, **PMI** or **Positive PMI** can emphasize informative word-context associations.
+
+### 4.15.5 Advantages
+
+1. No handcrafted **thesaurus** required.
+2. Covers many **words and phrases**.
+3. Learns automatically from **large corpora**.
+4. Works well in **modern vector semantics**.
+
+### 4.15.6 Limitations
+
+1. Similar context does not always mean **identical meaning**.
+2. **Rare words** may have poor representations.
+3. Captures usage similarity more easily than **fine-grained logic**.
+---
