@@ -1,3 +1,4 @@
+# Unit-4
 # Relationship Between Two Variables in Bivariate Analysis
 
 Bivariate analysis studies the **relationship between two variables**. It helps determine whether the variables are related, how strongly they are related, and whether one variable changes with another.
@@ -507,4 +508,396 @@ A contingency-table example in the source demonstrates hypothesis testing using 
 | Pearson Chi-square | 1.667 |  1 |   0.197 |
 
 Since **0.197 > 0.05**, **fail to reject H₀**. Thus, the source concludes that there is **no significant association between Gender and Preference**. 
+---
+# Unit-5
+# Introducing a Third Variable in EDA
+
+* A third variable reveals deeper patterns, interactions, confounders, and mediators.
+* **Importance:**
+
+  * **Interactions:** Shows how one variable affects the relationship between two others.
+  * **Confounders:** Helps control factors that may distort relationships.
+  * **Mediators:** Explains how one variable may affect another.
+* **Methods:**
+
+  * **Stratification:** Divide data into groups based on the third variable.
+  * **Multivariate plots:** 3D plots, color-coded scatterplots, facet grids.
+  * **Statistical models:** Multiple regression, ANOVA, logistic regression.
+
+### Example: Study Hours, Exam Scores and Sleep Hours
+
+| Study Hours | Exam Scores | Sleep Hours |
+| ----------: | ----------: | ----------: |
+|          10 |          50 |           6 |
+|          15 |          55 |           7 |
+|          20 |          60 |           6 |
+|          25 |          65 |           8 |
+|          30 |          70 |           7 |
+|          35 |          75 |           6 |
+|          40 |          80 |           7 |
+
+**Analysis:**
+
+1. Plot Study Hours vs Exam Scores using a scatterplot.
+2. Add Sleep Hours using color-coding.
+3. Use separate plots for different Sleep Hours.
+4. Apply multiple regression with Study Hours and Sleep Hours to predict Exam Scores.
+
+**Interpretation:** Plots show the influence of Sleep Hours, while regression coefficients and p-values show the strength and significance of the relationships.
+
+---
+
+# Causal Explanations
+
+* Causal explanations identify **cause-and-effect relationships**, rather than simple associations.
+* **Importance:**
+
+  * Understand underlying mechanisms.
+  * Design effective interventions.
+  * Improve prediction.
+  * Support evidence-based policies.
+
+### Methods
+
+1. **RCTs:** Random assignment to treatment and control groups.
+2. **Natural experiments:** Use naturally occurring events.
+3. **Quasi-experiments:** Difference-in-differences, instrumental variables, regression discontinuity.
+4. **Longitudinal studies:** Follow subjects over time.
+5. **Causal inference:** Propensity scores, Granger causality, structural equation modeling.
+
+### Example: Study Hours → Exam Scores
+
+Variables: Study Hours, Exam Scores, Previous Academic Performance.
+
+1. **Correlation:** Check the relationship between Study Hours and Exam Scores.
+2. **Multiple regression:** Control for Previous Academic Performance.
+3. **Causality:** If Study Hours remains significant after control, the causal argument is strengthened.
+4. **Instrumental variable:** Use Parental Encouragement as an IV affecting Study Hours but not directly Exam Scores.
+
+**Interpretation:** Correlation gives an initial relationship; regression controls confounding; IV analysis provides stronger causal inference.
+
+---
+
+# Three-Variable Contingency Tables and Beyond
+
+* Three-way tables analyze **three categorical variables simultaneously**.
+* **Importance:**
+
+  * Explore interactions.
+  * Identify conditional dependencies.
+  * Control for confounders.
+* Each cell contains the count/frequency for a specific combination of the three variables.
+
+### Example: Gender, Smoking Status and Exercise Frequency
+
+Variables:
+
+* Gender: Male, Female
+* Smoking: Smoker, Non-Smoker
+* Exercise: Regular, Occasional, Rarely
+
+```python
+contingency_table = pd.crosstab(
+    index=[data['Gender'], data['Smoking Status']],
+    columns=data['Exercise Frequency']
+)
+```
+
+Each cell shows the number of observations for that combination.
+
+### Beyond Three Variables
+
+* **Higher-dimensional tables:** Extend to 4+ variables, but become harder to interpret.
+* **Multivariate analysis:** Logistic regression, factor analysis, cluster analysis.
+* **Visualization:** Heatmaps, mosaic plots, parallel coordinates.
+
+### Example: Adding Age Group
+
+Age Group: Youth, Adult, Senior.
+
+```python
+contingency_table_4d = pd.crosstab(
+    index=[data['Gender'], data['Smoking Status'], data['Age Group']],
+    columns=data['Exercise Frequency']
+)
+```
+
+Logistic regression can then examine Exercise Frequency against the other variables.
+
+**Interpretation:** Contingency tables show counts for combinations, while logistic regression gives the significance and strength of relationships.
+---
+# Fundamentals of Time Series Analysis
+
+### Time Series Analysis
+
+* Analyzes data points collected at **regular time intervals**.
+* **Time-series data:** Values of a variable observed at different times.
+* **Cross-sectional data:** Variables collected at the same time.
+* **Pooled data:** Combination of time-series and cross-sectional data.
+* **Model:** `Yₜ = μₜ + εₜ`
+
+  * `μₜ` = signal
+  * `εₜ` = noise
+
+### Need for Time Series Analysis
+
+* Tracks **trend, seasonality and variability**.
+* Helps in **forecasting** future values.
+* Helps draw **inferences** from data.
+* Applications: rainfall, stock trading, industry forecasts, temperature and sales.
+
+### Forecasting
+
+* Predicts future values using **historical data and trends**.
+* Provides **probabilities**, not definite future outcomes.
+
+### Time Series Example – Railway Passengers
+
+* **Trend:** Overall increase/decrease over time.
+* **Seasonality:** Repeating high and low patterns at intervals.
+
+### Types of Time Series Analysis
+
+* **Classification:** Assigns categories to data.
+* **Curve Fitting:** Fits a curve to study relationships.
+* **Descriptive Analysis:** Identifies trends, cycles and seasonal variation.
+* **Explanative Analysis:** Studies relationships and cause-effect.
+* **Segmentation:** Divides data into segments to identify properties.
+
+### ARIMA
+
+**ARIMA = Autoregressive Integrated Moving Average (Box-Jenkins method).**
+
+* **p (AR):** Uses past values; p=0 → no correlation, p=1 → correlation up to one lag.
+* **q (MA):** Represents error terms.
+* **d (Integration):** d=0 → stationary; d=1 → non-stationary and can be made stationary by differencing.
+
+### Characteristics
+
+1. **Trend:** Long-term movement.
+2. **Seasonality:** Regular repeating patterns.
+3. **Cyclic Patterns:** Long-term irregular fluctuations without fixed periods.
+4. **Noise:** Random unexplained variation.
+
+### Steps
+
+1. Data Collection
+2. Data Cleaning
+3. Data Visualization
+4. Decomposition
+5. Modeling
+6. Validation
+7. Forecasting
+
+### Decomposition
+
+* **Trend (T):** Long-term progression.
+* **Seasonal (S):** Repeating short-term cycle.
+* **Residual (R):** Remaining variation after removing trend and seasonality.
+
+### Common Models
+
+1. **AR:** Uses past values.
+2. **MA:** Uses past errors.
+3. **ARIMA:** AR + MA with differencing.
+4. **SARIMA:** ARIMA with seasonality.
+5. **Exponential Smoothing:** Gives more weight to recent observations.
+6. **Prophet:** Suitable for strong and multiple seasonal effects.
+
+### Model Evaluation
+
+* **MAE:** Average absolute error.
+* **MSE:** Average squared error.
+* **RMSE:** Square root of MSE.
+* **MAPE:** Average absolute percentage error.
+
+### Data Cleaning
+
+* **Missing values:** Handle using imputation or interpolation.
+
+  * Imputation: Fill with a value such as mean, median or mode.
+  * Interpolation: Estimate from surrounding values.
+* **Outliers:** Identify and treat unusual observations.
+* **Smoothing:** Reduce noise using methods such as moving averages.
+
+### Time-Based Indexing
+
+* Sets a DataFrame/Series index to a **datetime object**, enabling easier and efficient time-series operations.
+---
+# Visualizing in Time Series Analysis
+
+Visualization helps identify the **structure, trends, patterns and anomalies** in time-series data.
+
+### Line Plots
+
+* Plot data points sequentially over time and connect them with lines.
+* Used to show **trends and patterns**.
+
+### Seasonal Plots
+
+* Plot data for each period, such as **months or years**, on the same graph.
+* Used to identify and compare **seasonal patterns**.
+
+### Autocorrelation Plots (ACF)
+
+* Show the correlation of a time series with its **past values (lags)**.
+* Used to identify correlation between time steps and check **data randomness**.
+
+### Heatmaps
+
+* Represent data in a matrix using different colors.
+* Show patterns across two dimensions, such as **day of week and time of day**.
+* Useful for identifying **seasonal and cyclic patterns**.
+
+### Box Plots
+
+* Show data distribution using the **five-number summary**:
+
+  * Minimum
+  * Q1
+  * Median
+  * Q3
+  * Maximum
+* Useful for comparing distributions across **different time periods**.
+
+### Decomposition Plots
+
+* Break a time series into:
+
+  * **Trend:** Long-term movement
+  * **Seasonal:** Repeating pattern
+  * **Residual:** Remaining variation
+* Helps understand the **underlying structure** of the time series.
+---
+# Importance of Visualization in Time Series Analysis
+
+## Grouping in Time Series Analysis (TSA)
+
+Grouping aggregates time series data according to **time intervals or specific criteria**. It helps summarize data, identify patterns, and understand changes across periods.
+
+### Key Concepts of Grouping
+
+**1. Time-based Grouping**
+
+* Groups data by **hourly, daily, weekly, monthly, or yearly** intervals.
+* Helps identify **trends and seasonal patterns**.
+
+**2. Custom Grouping**
+
+* Groups data using criteria such as:
+
+  * Weekdays vs. weekends
+  * Business hours vs. non-business hours
+* Helps study the effect of external factors on time series data.
+
+### Grouping with Pandas
+
+Pandas uses the **`groupby()`** method for grouping.
+
+**Hourly grouping:**
+
+```python
+hourly_group = data.groupby(data.index.hour).mean()
+```
+
+Finds the average value for each hour.
+
+**Monthly grouping:**
+
+```python
+monthly_group = data.groupby(data.index.month).sum()
+```
+
+Finds the total value for each month.
+
+**Weekday vs. Weekend:**
+
+```python
+data_frame['is_weekend'] = data_frame.index.weekday >= 5
+weekend_group = data_frame.groupby('is_weekend')['value'].mean()
+```
+
+**Business Hours vs. Non-Business Hours:**
+
+```python
+data_frame['is_business_hours'] = data_frame.index.hour.isin(range(9,17))
+business_hours_group = data_frame.groupby('is_business_hours')['value'].mean()
+```
+
+Here, business hours are **9 AM–5 PM**.
+
+### Benefits of Grouping
+
+1. **Data Summarization**
+
+   * Converts large datasets into useful statistics such as **mean, sum, and count**.
+   * Makes data easier to analyze.
+
+2. **Pattern Identification**
+
+   * Helps identify **trends and seasonal patterns**.
+
+3. **Anomaly Detection**
+
+   * Helps detect **outliers and unusual behavior**.
+
+---
+
+# Resampling
+
+Resampling changes the **frequency** of time series data.
+
+* **Downsampling:** Decreases frequency, e.g., daily → monthly.
+* **Upsampling:** Increases frequency, e.g., monthly → daily.
+
+Pandas uses the **`resample()`** method.
+
+### Downsampling
+
+```python
+df_downsampled = df.resample('3D').mean()
+```
+
+* Converts daily data into **3-day intervals**.
+* Calculates the **mean** for each interval.
+
+### Upsampling
+
+```python
+df_upsampled = df.resample('H').ffill()
+```
+
+* Converts daily data into **hourly frequency**.
+* `ffill()` fills missing values using the **previous valid value**.
+
+### Example
+
+Given:
+
+| Date   | Data |
+| ------ | ---: |
+| Jan 1  |   81 |
+| Jan 2  |   43 |
+| Jan 3  |   23 |
+| Jan 4  |   76 |
+| Jan 5  |   21 |
+| Jan 6  |   34 |
+| Jan 7  |   84 |
+| Jan 8  |   45 |
+| Jan 9  |   15 |
+| Jan 10 |   57 |
+
+**3-day downsampling:**
+
+| Date   |  Mean |
+| ------ | ----: |
+| Jan 1  | 49.00 |
+| Jan 4  | 43.67 |
+| Jan 7  | 48.00 |
+| Jan 10 | 57.00 |
+
+**Hourly upsampling:**
+The first value (**81**) is carried forward to subsequent hourly records until the next available daily value. The resulting dataset contains **217 rows**.
+
+**Thus, grouping summarizes data based on time/criteria, while resampling changes its time frequency.**
 ---
