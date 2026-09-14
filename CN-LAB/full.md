@@ -196,7 +196,4 @@ A socket is an endpoint used for communication between client and server.
 
 **Why is port 5000 used?**
 Port 5000 is used as an example port for communication between the client and server.
-
-**How do you run the programs?**
-First run the **server**, then run the **client**.
 ---
