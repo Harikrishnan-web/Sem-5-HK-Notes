@@ -197,3 +197,132 @@ A socket is an endpoint used for communication between client and server.
 **Why is port 5000 used?**
 Port 5000 is used as an example port for communication between the client and server.
 ---
+## 4) Simulation of Working of DNS Using Client-Server Connection
+
+### AIM
+
+To simulate the working of DNS using a client-server connection, where the client sends a domain name and the server returns its corresponding IP address.
+
+### ALGORITHM — SERVER
+
+1. Start the server.
+2. Create a server socket.
+3. Store domain names and IP addresses.
+4. Accept the client connection.
+5. Receive the domain name.
+6. Search for the domain name.
+7. If found, send the IP address.
+8. Otherwise, send "DNS does not exist".
+9. Close the connection.
+
+### JAVA PROGRAM — SERVER
+
+```java
+import java.net.*;
+import java.io.*;
+import java.util.*;
+
+class DNSServer {
+    public static void main(String[] args) throws Exception {
+        ServerSocket ss = new ServerSocket(5000);
+
+        HashMap<String, String> dns = new HashMap<>();
+        dns.put("google.com", "142.250.195.14");
+        dns.put("yahoo.com", "98.137.11.163");
+        dns.put("facebook.com", "157.240.241.35");
+
+        Socket s = ss.accept();
+
+        BufferedReader in = new BufferedReader(
+            new InputStreamReader(s.getInputStream()));
+
+        PrintWriter out = new PrintWriter(
+            s.getOutputStream(), true);
+
+        String domain = in.readLine();
+
+        if (dns.containsKey(domain))
+            out.println(dns.get(domain));
+        else
+            out.println("DNS does not exist");
+
+        s.close();
+        ss.close();
+    }
+}
+```
+
+### ALGORITHM — CLIENT
+
+1. Start the client.
+2. Connect to the DNS server.
+3. Enter a domain name.
+4. Send the domain name to the server.
+5. Receive the IP address.
+6. Display the result.
+7. Close the connection.
+
+### JAVA PROGRAM — CLIENT
+
+```java
+import java.net.*;
+import java.io.*;
+
+class DNSClient {
+    public static void main(String[] args) throws Exception {
+        Socket s = new Socket("localhost", 5000);
+
+        BufferedReader br = new BufferedReader(
+            new InputStreamReader(System.in));
+
+        BufferedReader in = new BufferedReader(
+            new InputStreamReader(s.getInputStream()));
+
+        PrintWriter out = new PrintWriter(
+            s.getOutputStream(), true);
+
+        System.out.print("Enter domain name: ");
+        String domain = br.readLine();
+
+        out.println(domain);
+
+        System.out.println("IP Address: " + in.readLine());
+
+        s.close();
+    }
+}
+```
+
+### OUTPUT
+
+```text
+Enter domain name: google.com
+IP Address: 142.250.195.14
+```
+
+```text
+Enter domain name: abcxyz.com
+IP Address: DNS does not exist
+```
+
+### RESULT
+
+Thus, the working of DNS was successfully simulated using a client-server connection.
+
+### VIVA
+
+**What is DNS?**
+DNS stands for Domain Name System. It converts domain names into IP addresses.
+
+**What does the client send?**
+The client sends a domain name to the server.
+
+**What does the server return?**
+The server returns the corresponding IP address or `"DNS does not exist"`.
+
+**What is used to store domain names and IP addresses?**
+`HashMap` is used.
+
+Done — from now on I'll keep the programs **clean, short, and without unnecessary comments or divider lines**.
+---
+
