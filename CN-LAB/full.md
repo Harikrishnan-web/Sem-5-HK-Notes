@@ -460,3 +460,184 @@ Thus, ARP and RARP were successfully simulated using client-server communication
 
 **RARP:** MAC → IP
 ---
+## 9A) Simulation of Distance Vector Routing
+
+### AIM
+
+To simulate Distance Vector Routing using the Bellman-Ford algorithm to find the shortest path between nodes.
+
+### ALGORITHM
+
+1. Read the number of nodes and cost matrix.
+2. Initialize the distance from the source.
+3. Relax all edges repeatedly.
+4. Update the shortest distance.
+5. Repeat for `n-1` times.
+6. Display the shortest distances.
+
+### JAVA PROGRAM
+
+```java id="dvmain"
+import java.util.*;
+
+class DistanceVector {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of nodes: ");
+        int n = sc.nextInt();
+
+        int[][] cost = new int[n][n];
+
+        System.out.println("Enter cost matrix:");
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++)
+                cost[i][j] = sc.nextInt();
+
+        System.out.print("Enter source node: ");
+        int src = sc.nextInt();
+
+        int[] dist = new int[n];
+        Arrays.fill(dist, 999);
+        dist[src] = 0;
+
+        for (int k = 0; k < n - 1; k++)
+            for (int i = 0; i < n; i++)
+                for (int j = 0; j < n; j++)
+                    if (cost[i][j] != 0 && dist[i] + cost[i][j] < dist[j])
+                        dist[j] = dist[i] + cost[i][j];
+
+        System.out.println("Shortest distances:");
+        for (int i = 0; i < n; i++)
+            System.out.println(src + " -> " + i + " = " + dist[i]);
+    }
+}
+```
+
+### OUTPUT
+
+```text
+Enter number of nodes: 4
+Enter cost matrix:
+0 2 5 0
+2 0 1 4
+5 1 0 2
+0 4 2 0
+Enter source node: 0
+
+Shortest distances:
+0 -> 0 = 0
+0 -> 1 = 2
+0 -> 2 = 3
+0 -> 3 = 5
+```
+
+### RESULT
+
+Thus, Distance Vector Routing was successfully simulated using the Bellman-Ford algorithm to find the shortest paths.
+
+### VIVA
+
+**Distance Vector Routing:** Each router maintains the distance to other routers and updates it using information from neighbouring routers.
+
+**Bellman-Ford:** Finds the shortest path by repeatedly relaxing all edges.
+
+**Remember:** Distance Vector → **Bellman-Ford → Relax edges**
+
+## 9B) Simulation of Link State Routing
+
+### AIM
+
+To simulate Link State Routing and find the shortest path between nodes using Dijkstra's algorithm.
+
+### ALGORITHM
+
+1. Read the number of nodes and cost matrix.
+2. Select the source node.
+3. Set source distance to 0 and others to infinity.
+4. Select the unvisited node with the smallest distance.
+5. Update the distances of neighbouring nodes.
+6. Mark the node as visited.
+7. Repeat until all nodes are visited.
+8. Display the shortest distances.
+
+### JAVA PROGRAM
+
+```java id="lsmain"
+import java.util.*;
+
+class LinkState {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of nodes: ");
+        int n = sc.nextInt();
+
+        int[][] cost = new int[n][n];
+
+        System.out.println("Enter cost matrix:");
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++)
+                cost[i][j] = sc.nextInt();
+
+        System.out.print("Enter source node: ");
+        int src = sc.nextInt();
+
+        int[] dist = new int[n];
+        boolean[] visited = new boolean[n];
+
+        Arrays.fill(dist, 999);
+        dist[src] = 0;
+
+        for (int k = 0; k < n; k++) {
+            int u = -1;
+
+            for (int i = 0; i < n; i++)
+                if (!visited[i] && (u == -1 || dist[i] < dist[u]))
+                    u = i;
+
+            visited[u] = true;
+
+            for (int v = 0; v < n; v++)
+                if (cost[u][v] != 0 &&
+                    dist[u] + cost[u][v] < dist[v])
+                    dist[v] = dist[u] + cost[u][v];
+        }
+
+        System.out.println("Shortest distances:");
+        for (int i = 0; i < n; i++)
+            System.out.println(src + " -> " + i + " = " + dist[i]);
+    }
+}
+```
+
+### OUTPUT
+
+```text
+Enter number of nodes: 4
+Enter cost matrix:
+0 2 5 0
+2 0 1 4
+5 1 0 2
+0 4 2 0
+Enter source node: 0
+
+Shortest distances:
+0 -> 0 = 0
+0 -> 1 = 2
+0 -> 2 = 3
+0 -> 3 = 5
+```
+
+### RESULT
+
+Thus, Link State Routing was successfully simulated using Dijkstra's algorithm.
+
+### VIVA
+
+**Link State Routing:** Each router maintains information about the complete network topology.
+
+**Algorithm used:** Dijkstra's shortest path algorithm.
+
+**Remember:** Link State → **Dijkstra → Smallest unvisited node**
+---
