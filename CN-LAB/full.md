@@ -325,4 +325,138 @@ The server returns the corresponding IP address or `"DNS does not exist"`.
 
 Done — from now on I'll keep the programs **clean, short, and without unnecessary comments or divider lines**.
 ---
+## 6) Simulation of ARP and RARP
 
+### AIM
+
+To simulate the working of ARP and RARP using client-server communication.
+
+### ALGORITHM — SERVER
+
+1. Start the server.
+2. Store IP-MAC and MAC-IP address mappings.
+3. Accept the client connection.
+4. Receive the request from the client.
+5. Search the mapping.
+6. Send the corresponding address.
+7. Close the connection.
+
+### JAVA PROGRAM — SERVER
+
+```java
+import java.net.*;
+import java.io.*;
+import java.util.*;
+
+class ARPRARPServer {
+    public static void main(String[] args) throws Exception {
+        ServerSocket ss = new ServerSocket(5000);
+
+        HashMap<String, String> arp = new HashMap<>();
+        arp.put("192.168.1.1", "AA:BB:CC:DD:EE:01");
+        arp.put("192.168.1.2", "AA:BB:CC:DD:EE:02");
+        arp.put("192.168.1.3", "AA:BB:CC:DD:EE:03");
+
+        Socket s = ss.accept();
+
+        BufferedReader in = new BufferedReader(
+            new InputStreamReader(s.getInputStream()));
+
+        PrintWriter out = new PrintWriter(
+            s.getOutputStream(), true);
+
+        String type = in.readLine();
+        String value = in.readLine();
+
+        if (type.equals("ARP")) {
+            out.println(arp.getOrDefault(value, "ARP entry not found"));
+        } else {
+            String result = "RARP entry not found";
+            for (Map.Entry<String, String> e : arp.entrySet()) {
+                if (e.getValue().equals(value))
+                    result = e.getKey();
+            }
+            out.println(result);
+        }
+
+        s.close();
+        ss.close();
+    }
+}
+```
+
+### ALGORITHM — CLIENT
+
+1. Start the client.
+2. Connect to the server.
+3. Select ARP or RARP.
+4. Enter the required address.
+5. Send the request to the server.
+6. Receive and display the result.
+7. Close the connection.
+
+### JAVA PROGRAM — CLIENT
+
+```java
+import java.net.*;
+import java.io.*;
+
+class ARPRARPClient {
+    public static void main(String[] args) throws Exception {
+        Socket s = new Socket("localhost", 5000);
+
+        BufferedReader br = new BufferedReader(
+            new InputStreamReader(System.in));
+
+        BufferedReader in = new BufferedReader(
+            new InputStreamReader(s.getInputStream()));
+
+        PrintWriter out = new PrintWriter(
+            s.getOutputStream(), true);
+
+        System.out.print("Enter ARP or RARP: ");
+        String type = br.readLine();
+
+        System.out.print("Enter address: ");
+        String value = br.readLine();
+
+        out.println(type);
+        out.println(value);
+
+        System.out.println("Result: " + in.readLine());
+
+        s.close();
+    }
+}
+```
+
+### OUTPUT — ARP
+
+```text
+Enter ARP or RARP: ARP
+Enter address: 192.168.1.1
+Result: AA:BB:CC:DD:EE:01
+```
+
+### OUTPUT — RARP
+
+```text
+Enter ARP or RARP: RARP
+Enter address: AA:BB:CC:DD:EE:02
+Result: 192.168.1.2
+```
+
+### RESULT
+
+Thus, ARP and RARP were successfully simulated using client-server communication.
+
+### VIVA
+
+**ARP:** Converts an IP address into a MAC address.
+
+**RARP:** Converts a MAC address into an IP address.
+
+**ARP:** IP → MAC
+
+**RARP:** MAC → IP
+---
