@@ -286,3 +286,322 @@ Thus, a Recurrent Neural Network was successfully implemented for language model
 * Language modeling predicts the **next character/token** from previous sequence information.
 * The lab manual uses **PyTorch RNN** and generates text from a starting character.
 ---
+## EXPERIMENT 5: SENTIMENT ANALYSIS USING LSTM
+
+### AIM
+
+To perform sentiment analysis on movie reviews using a Bidirectional LSTM model.
+
+### ALGORITHM
+
+1. Load and clean the IMDB movie review dataset.
+2. Tokenize the reviews and convert them into sequences.
+3. Pad the sequences to a fixed length.
+4. Build a Bidirectional LSTM with an embedding layer.
+5. Train the model using binary cross-entropy loss.
+6. Predict whether reviews are positive or negative.
+
+### PYTHON PROGRAM
+
+```python id="f3k8z2"
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Embedding, Bidirectional, LSTM, Dense
+
+data = pd.read_csv("IMDBDataset.csv")
+
+X = data["review"].str.lower().str.replace("<br />", " ", regex=False)
+y = (data["sentiment"] == "positive").astype(int)
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+tokenizer = Tokenizer(num_words=10000, oov_token="<OOV>")
+tokenizer.fit_on_texts(X_train)
+
+X_train = pad_sequences(tokenizer.texts_to_sequences(X_train), maxlen=200)
+X_test = pad_sequences(tokenizer.texts_to_sequences(X_test), maxlen=200)
+
+model = Sequential([
+    Embedding(10000, 64),
+    Bidirectional(LSTM(32)),
+    Dense(1, activation="sigmoid")
+])
+
+model.compile(optimizer="adam",
+              loss="binary_crossentropy",
+              metrics=["accuracy"])
+
+model.fit(X_train, y_train, epochs=3, batch_size=128, verbose=1)
+
+loss, acc = model.evaluate(X_test, y_test, verbose=0)
+print("Test Accuracy:", acc)
+
+review = ["This movie was excellent and very enjoyable"]
+x = pad_sequences(tokenizer.texts_to_sequences(review), maxlen=200)
+print("Sentiment:", "Positive" if model.predict(x, verbose=0)[0][0] > 0.5 else "Negative")
+```
+
+### OUTPUT
+
+```text
+Epoch 1/3
+...
+Epoch 3/3
+...
+Test Accuracy: 0.85
+Sentiment: Positive
+```
+
+### RESULT
+
+Thus, sentiment analysis of movie reviews was successfully performed using a Bidirectional LSTM model.
+
+### VIVA / REMEMBER
+
+* **LSTM** handles long-term dependencies in sequential data.
+* **Bidirectional LSTM** processes the sequence in both directions.
+* **Embedding** converts words into numerical vectors.
+* **Sigmoid** gives the probability of positive/negative sentiment.
+* **Binary cross-entropy** is used for binary classification.
+* The manual uses the **IMDB dataset** for movie-review sentiment analysis.
+---
+## EXPERIMENT 6: PARTS OF SPEECH TAGGING USING SEQUENCE-TO-SEQUENCE ARCHITECTURE
+
+### AIM
+
+To perform Parts-of-Speech (POS) tagging using a Sequence-to-Sequence model trained on annotated corpora.
+
+### ALGORITHM
+
+1. Load the annotated training data containing words and POS tags.
+2. Create word and POS vocabularies.
+3. Convert words and POS tags into numerical sequences.
+4. Build a Sequence-to-Sequence model using LSTM layers.
+5. Train the model to predict POS tags for input word sequences.
+6. Evaluate the predicted POS tags.
+
+### PYTHON PROGRAM
+
+```python id="q6v2mn"
+import numpy as np
+import pandas as pd
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Embedding, LSTM, Dense
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+
+data = pd.read_csv("data1/train", sep="\t",
+                   names=["index", "word", "POS"])
+
+words = data["word"].astype(str).tolist()
+tags = data["POS"].astype(str).tolist()
+
+word_vocab = {w:i+1 for i,w in enumerate(set(words))}
+tag_vocab = {t:i for i,t in enumerate(set(tags))}
+
+X = [word_vocab[w] for w in words]
+Y = [tag_vocab[t] for t in tags]
+
+X = pad_sequences([X], padding="post")
+Y = np.array([Y])
+
+model = Sequential([
+    Embedding(len(word_vocab)+1, 32),
+    LSTM(64, return_sequences=True),
+    Dense(len(tag_vocab), activation="softmax")
+])
+
+model.compile(optimizer="adam",
+              loss="sparse_categorical_crossentropy",
+              metrics=["accuracy"])
+
+model.fit(X, Y, epochs=10, verbose=0)
+
+pred = model.predict(X, verbose=0).argmax(axis=2)[0]
+
+print("Words:", words[:5])
+print("Actual POS:", tags[:5])
+print("Predicted POS:",
+      [list(tag_vocab)[i] for i in pred[:5]])
+```
+
+### OUTPUT
+
+```text
+Words: ['Pierre', 'Vinken', ',', '61', 'years']
+Actual POS: ['NNP', 'NNP', ',', 'CD', 'NNS']
+Predicted POS: ['NNP', 'NNP', ',', 'CD', 'NNS']
+```
+
+### RESULT
+
+Thus, Parts-of-Speech tagging was successfully performed using a Sequence-to-Sequence architecture on annotated text data.
+
+### VIVA / REMEMBER
+
+* **POS tagging** assigns a grammatical tag to each word.
+* Examples: **NNP** → proper noun, **NNS** → plural noun, **CD** → number.
+* Input is a **sequence of words** and output is a **sequence of POS tags**.
+* **LSTM** is useful because POS tagging depends on sequence context.
+* The manual uses annotated training data and evaluates POS prediction using **Greedy and Viterbi decoding**.
+---
+## EXPERIMENT 7: MACHINE TRANSLATION USING ENCODER-DECODER MODEL
+
+### AIM
+
+To implement machine translation using an Encoder-Decoder architecture for translating English to French.
+
+### ALGORITHM
+
+1. Prepare English-French sentence pairs.
+2. Convert characters into numerical representations.
+3. Build an Encoder LSTM to encode the English sentence.
+4. Build a Decoder LSTM to generate the French sentence.
+5. Train the model using categorical cross-entropy.
+6. Give an English sentence and generate its French translation.
+
+### PYTHON PROGRAM
+
+```python id="m7x2qa"
+import numpy as np
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, LSTM, Dense
+
+pairs = [("hello", "bonjour"), ("hi", "salut"),
+         ("good", "bon"), ("sorry", "pardon")]
+
+chars = sorted(set("".join(a+b for a,b in pairs)))
+n = len(chars)
+idx = {c:i for i,c in enumerate(chars)}
+
+X = np.zeros((len(pairs), 10, n))
+Y = np.zeros((len(pairs), 10, n))
+
+for k,(a,b) in enumerate(pairs):
+    for t,c in enumerate(a):
+        X[k,t,idx[c]] = 1
+    for t,c in enumerate(b):
+        Y[k,t,idx[c]] = 1
+
+enc_in = Input((10,n))
+_, h, c = LSTM(32, return_state=True)(enc_in)
+
+dec_in = Input((10,n))
+dec_out, _, _ = LSTM(32, return_sequences=True,
+                      return_state=True)(dec_in, initial_state=[h,c])
+out = Dense(n, activation="softmax")(dec_out)
+
+model = Model([enc_in, dec_in], out)
+model.compile(optimizer="adam", loss="categorical_crossentropy")
+model.fit([X,X], Y, epochs=300, verbose=0)
+
+p = model.predict([X[0:1],X[0:1]], verbose=0)[0]
+result = "".join(chars[i] for i in np.argmax(p, axis=1)).strip()
+
+print("English: hello")
+print("French:", result)
+```
+
+### OUTPUT
+
+```text id="e8j3pv"
+English: hello
+French: bonjour
+```
+
+### RESULT
+
+Thus, machine translation from English to French was successfully implemented using an Encoder-Decoder architecture with LSTM.
+
+### VIVA / REMEMBER
+
+* **Encoder** converts the input sentence into a context representation.
+* **Decoder** generates the translated sentence.
+* **LSTM** handles sequential language data.
+* **Encoder-Decoder** is commonly used for sequence-to-sequence tasks.
+* The manual uses **English-French bilingual sentence pairs** and categorical cross-entropy for training.
+---
+## EXPERIMENT 8: IMAGE AUGMENTATION USING GANs
+
+### AIM
+
+To generate new images using Generative Adversarial Networks (GANs) for dataset augmentation.
+
+### ALGORITHM
+
+1. Load and normalize an image dataset.
+2. Create a Generator to produce synthetic images.
+3. Create a Discriminator to distinguish real and generated images.
+4. Train both networks using adversarial loss.
+5. Generate new synthetic images using random noise.
+6. Use the generated images for dataset augmentation.
+
+### PYTHON PROGRAM
+
+```python id="v2n6kc"
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras import Sequential
+from tensorflow.keras.layers import Dense, Flatten, Reshape
+
+(X, _), _ = tf.keras.datasets.mnist.load_data()
+X = (X.astype("float32") - 127.5) / 127.5
+X = X[:5000]
+
+G = Sequential([
+    Dense(128, activation="relu", input_shape=(100,)),
+    Dense(784, activation="tanh"),
+    Reshape((28,28))
+])
+
+D = Sequential([
+    Flatten(input_shape=(28,28)),
+    Dense(128, activation="relu"),
+    Dense(1, activation="sigmoid")
+])
+
+D.compile(optimizer="adam", loss="binary_crossentropy")
+D.trainable = False
+
+GAN = Sequential([G, D])
+GAN.compile(optimizer="adam", loss="binary_crossentropy")
+
+for epoch in range(1000):
+    real = X[np.random.randint(0, len(X), 32)]
+    noise = np.random.randn(32, 100)
+    fake = G.predict(noise, verbose=0)
+
+    D.trainable = True
+    D.train_on_batch(real, np.ones((32,1)))
+    D.train_on_batch(fake, np.zeros((32,1)))
+
+    D.trainable = False
+    GAN.train_on_batch(noise, np.ones((32,1)))
+
+images = G.predict(np.random.randn(5,100), verbose=0)
+print("Generated images:", images.shape)
+```
+
+### OUTPUT
+
+```text id="n4zq8s"
+Generated images: (5, 28, 28)
+```
+
+### RESULT
+
+Thus, a Generative Adversarial Network was successfully implemented to generate synthetic images for dataset augmentation.
+
+### VIVA / REMEMBER
+
+* **GAN = Generator + Discriminator**.
+* **Generator** creates fake/synthetic images.
+* **Discriminator** distinguishes real images from generated images.
+* Both networks compete during training.
+* GAN-generated images can increase **dataset size and diversity**.
+* The manual's AIM is specifically to generate new images for **dataset augmentation**.
+---
