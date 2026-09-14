@@ -641,3 +641,108 @@ Thus, Link State Routing was successfully simulated using Dijkstra's algorithm.
 
 **Remember:** Link State → **Dijkstra → Smallest unvisited node**
 ---
+## 10) Simulation of Error Detection Using CRC
+
+### AIM
+
+To simulate error detection using Cyclic Redundancy Check (CRC) at the sender and receiver sides.
+
+### ALGORITHM
+
+1. Enter the data and generator in binary.
+2. Append zeros to the data.
+3. Perform binary XOR division using the generator.
+4. Obtain the CRC remainder.
+5. Append the remainder to the data to form the transmitted code.
+6. At the receiver, divide the received code using the same generator.
+7. If the remainder is all zeros, display "No Error".
+8. Otherwise, display "Error Detected".
+
+### JAVA PROGRAM
+
+```java id="crcmain"
+import java.util.*;
+
+class CRC {
+    static String divide(String data, String gen) {
+        char[] a = data.toCharArray();
+
+        for (int i = 0; i <= a.length - gen.length(); i++) {
+            if (a[i] == '1') {
+                for (int j = 0; j < gen.length(); j++)
+                    a[i + j] = (a[i + j] == gen.charAt(j)) ? '0' : '1';
+            }
+        }
+
+        return new String(a).substring(a.length - gen.length() + 1);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter data: ");
+        String data = sc.next();
+
+        System.out.print("Enter generator: ");
+        String gen = sc.next();
+
+        String zeros = "0".repeat(gen.length() - 1);
+        String crc = divide(data + zeros, gen);
+        String code = data + crc;
+
+        System.out.println("CRC Remainder: " + crc);
+        System.out.println("Transmitted Code: " + code);
+
+        System.out.print("Enter received code: ");
+        String received = sc.next();
+
+        String rem = divide(received, gen);
+
+        if (rem.contains("1"))
+            System.out.println("Error Detected");
+        else
+            System.out.println("No Error");
+    }
+}
+```
+
+### OUTPUT — NO ERROR
+
+```text
+Enter data: 110101
+Enter generator: 1011
+CRC Remainder: 111
+Transmitted Code: 110101111
+Enter received code: 110101111
+No Error
+```
+
+### OUTPUT — ERROR
+
+```text
+Enter data: 110101
+Enter generator: 1011
+CRC Remainder: 111
+Transmitted Code: 110101111
+Enter received code: 110100111
+Error Detected
+```
+
+### RESULT
+
+Thus, error detection was successfully simulated using the Cyclic Redundancy Check (CRC) technique.
+
+### VIVA
+
+**CRC:** Cyclic Redundancy Check is an error-detection technique used to detect errors in transmitted data.
+
+**Sender:** Calculates the CRC remainder and appends it to the data.
+
+**Receiver:** Divides the received code using the same generator.
+
+**Remainder = 0:** No error.
+
+**Remainder ≠ 0:** Error detected.
+
+**Remember:** Data + Zeros → XOR Division → CRC → Transmit → Divide Again
+---
