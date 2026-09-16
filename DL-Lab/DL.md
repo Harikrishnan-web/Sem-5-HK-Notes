@@ -605,3 +605,62 @@ Thus, a Generative Adversarial Network was successfully implemented to generate 
 * GAN-generated images can increase **dataset size and diversity**.
 * The manual's AIM is specifically to generate new images for **dataset augmentation**.
 ---
+
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras import Sequential
+from tensorflow.keras.layers import Dense, Reshape, Flatten
+
+# Load MNIST dataset
+(X, _), (_, _) = tf.keras.datasets.mnist.load_data()
+
+X = X.astype("float32") / 255.0
+X = X.reshape(-1, 784)
+
+# Generator
+generator = Sequential([
+    Dense(128, activation="relu", input_shape=(100,)),
+    Dense(784, activation="sigmoid"),
+    Reshape((28, 28))
+])
+
+# Discriminator
+discriminator = Sequential([
+    Flatten(input_shape=(28, 28)),
+    Dense(128, activation="relu"),
+    Dense(1, activation="sigmoid")
+])
+
+discriminator.compile(optimizer="adam",
+                      loss="binary_crossentropy",
+                      metrics=["accuracy"])
+
+# GAN
+discriminator.trainable = False
+
+gan = Sequential([generator, discriminator])
+
+gan.compile(optimizer="adam",
+            loss="binary_crossentropy")
+
+# Train GAN
+for i in range(1000):
+    noise = np.random.normal(0, 1, (32, 100))
+    fake_images = generator.predict(noise, verbose=0)
+
+    real_images = X[np.random.randint(0, len(X), 32)]
+
+    discriminator.trainable = True
+    discriminator.train_on_batch(
+        real_images.reshape(32, 28, 28), np.ones((32, 1)))
+    discriminator.train_on_batch(
+        fake_images, np.zeros((32, 1)))
+
+    discriminator.trainable = False
+    gan.train_on_batch(noise, np.ones((32, 1)))
+
+# Generate new images
+noise = np.random.normal(0, 1, (5, 100))
+new_images = generator.predict(noise, verbose=0)
+
+print("5 new images generated successfully.")
