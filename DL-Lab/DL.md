@@ -605,7 +605,7 @@ Thus, a Generative Adversarial Network was successfully implemented to generate 
 * GAN-generated images can increase **dataset size and diversity**.
 * The manual's AIM is specifically to generate new images for **dataset augmentation**.
 ---
-
+``` python 
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras import Sequential
@@ -664,3 +664,4 @@ noise = np.random.normal(0, 1, (5, 100))
 new_images = generator.predict(noise, verbose=0)
 
 print("5 new images generated successfully.")
+```
